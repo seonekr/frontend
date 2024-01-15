@@ -40,10 +40,11 @@ const RegisterUser = () => {
                     <li>
                       <input
                         type="radio"
-                        id="user_type01"
-                        name="user_type"
+                        id="user"
+                        checked={"user" == signup}
+                        onChange={selectSignup}
                       />
-                      <label htmlFor="user_type01" className="">
+                      <label htmlFor="user" className="">
                         <FaUsers id="icon_user_sell"/>
                         User
                       </label>
@@ -53,8 +54,9 @@ const RegisterUser = () => {
                     <li>
                       <input
                         type="radio"
-                        id="user_type02"
-                        name="user_type"
+                        id="seller"
+                        checked={"seller" == signup}
+                        onChange={selectSignup}
                       />
                       <label htmlFor="user_type02" className="user_type02">
                         <FaUsers id="icon_user_sell"/>
@@ -63,7 +65,7 @@ const RegisterUser = () => {
                     </li>
                 </ul>
               </div>
-              <button className="btn_register_next">Next</button>
+              <button onClick={handleNextClick} className="btn_register_next">Next</button>
             </div>
         </div>
     </>
