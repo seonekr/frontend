@@ -1,4 +1,3 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginUser from "./components/loginAndSignup/LoginUser";
 import RegisterUser from "./components/loginAndSignup/RegisterUser";
 import ForgotPassword from "./components/forgotPassword/ForgotPassword";
