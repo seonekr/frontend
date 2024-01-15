@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+  :root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --orange: #ff471a;
+    --gray: #ccc;
+    --black: #000;
+  }
+.MorePage{
+    width: 40%;
+    margin: auto;
+    padding: 40PX 0;
+}
+
+.profile_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 10px 20px;
+}
+.left_box{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.right_box button{
+    padding: 5px 15px;
+    font-size: 16px;
+    /* background-color: var(--white); */
+    border-radius: 5px;
+    border:  1px solid var(--gray);
+    cursor: pointer;
+}
+
+.hr{
+    margin-top: 0.5rem;
+    color: var(--gray);
+}
+
+.menu_icon{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#icon_more{
+    width: 50px;
+    height: 25px;
+}
