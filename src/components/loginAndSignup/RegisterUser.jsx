@@ -2,17 +2,12 @@ import React from "react";
 import "./registerUser.css";
 import { Link } from "react-router-dom";
 import { FaUsers } from "react-icons/fa";
-import { MdArrowBack } from "react-icons/md";
 
 
 const RegisterUser = () => {
   return (
     <>
         <div className="signup_page">
-            <Link to="/loginuser" className="box_iconBack">
-              <MdArrowBack id='iconBack'/>
-            </Link>
-
             <h3 className="title_mt20">
                 Join the membership
             </h3>
