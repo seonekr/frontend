@@ -15,6 +15,50 @@ a {
   --gray: #ccc;
   --black: #000;
 }
+form {
+  display: grid;
+  margin: 0 auto;
+  gap: 15px;
+  width: 40%;
+}
+
+form input,
+form button {
+  width: 100%;
+  padding: 1rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--gray);
+}
+
+form button {
+  background-color: var(--orange);
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+form input:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.google-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gray);
+  border-radius: 14px;
+  padding: 1rem 3rem;
+  width: 100%;
+}
+
+.google-login svg {
+    height: 6vh;
+
+}
 
 
 
