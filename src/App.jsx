@@ -9,6 +9,7 @@ import AdditionalSeller from "./components/additionalSeller/AdditionalSeller";
 import ProfileEdit from './components/profile/ProfileEdit';
 import Profile from './components/profile/Profile';
 import SellerEdit from './components/sellerRegister/SellerEdit';
+import Terms from './components/termsandprivacy/Terms';
 import More from "./components/more/More";
 import Home from "./components/Home";
 import ProductDetial from "./components/products/ProductDetial";
@@ -29,6 +30,7 @@ function App() {
           <Route path="/profile" Component={Profile} />
           <Route path="/selleredit" Component={SellerEdit} />
           <Route path="/more" Component={More} />
+          <Route path="/terms" Component={Terms} />
           <Route path="/" Component={Home} />
           <Route path="/productdetial" Component={ProductDetial} />
         </Routes>
