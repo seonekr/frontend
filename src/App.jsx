@@ -16,12 +16,12 @@ function App() {
       <Router>
         <Routes>
           <Route path="/loginuser" Component={LoginUser} />
-          <Route path="/registerUser" Component={RegisterUser} />
-          <Route path="/forgotPassword" Component={ForgotPassword} />
-          <Route path="/userRegister" Component={UserRegister} />
-          <Route path="/sellerRegister" Component={SellerRegister} />
-          <Route path="/sigupGoogle" Component={SigupGoogle} />
-          <Route path="/additionalSeller" Component={AdditionalSeller} />
+          <Route path="/registeruser" Component={RegisterUser} />
+          <Route path="/forgotpassword" Component={ForgotPassword} />
+          <Route path="/userregister" Component={UserRegister} />
+          <Route path="/sellerregister" Component={SellerRegister} />
+          <Route path="/sigupgoogle" Component={SigupGoogle} />
+          <Route path="/additionalseller" Component={AdditionalSeller} />
           <Route path="/more" Component={More} />
           <Route path="/" Component={Home} />
           <Route path="/productdetial" Component={ProductDetial} />
