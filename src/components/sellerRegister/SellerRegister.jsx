@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from "react-router-dom";
-import axios from 'axios';
+import React from 'react'
+import "./sellerRegister.css"
 import { IoArrowBack } from "react-icons/io5";
-import "./sellerRegister.css";
 
 const SellerRegister = () => {
   const [userData, setUserData] = useState({
@@ -79,15 +77,15 @@ const SellerRegister = () => {
 
   return (
     <>
-      <div className="box_forgot">
-        <Link to="/loginuser" className="box_iconBack">
-          <IoArrowBack id="box_icon_Back" />
-          <p>Back</p>
-        </Link>
-        <h2>Seller registration</h2>
-        <div className="title">
-          I'm in the process of signing up as a seller!
-        </div>
+        <div className="box_forgot">
+            {/* <Link to="/loginuser" className="box_iconBack">
+                <IoArrowBack id="box_icon_Back" />
+                <p>Back</p>
+            </Link> */}
+            <h2>Seller registratio</h2>
+            <div className="title">
+                I'm in the process of signing up as a seller!
+            </div>
 
         <form className='container_form' onSubmit={handleUserStoreSubmit}>
           <div className='title_seller'>
