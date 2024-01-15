@@ -5,6 +5,7 @@ import { IoLogOutOutline } from "react-icons/io5";
 import { IoKeySharp } from "react-icons/io5";
 import { BsBackpack4Fill } from "react-icons/bs";
 import { IoPeopleCircle } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 export const More = () => {
   return (
@@ -12,14 +13,14 @@ export const More = () => {
       <div className="MorePage">
         <div className="profile_box">
           <div className="left_box">
-            <img src="#" alt="" /><IoPeopleCircle />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/1200px-Unknown_person.jpg" alt="" />
             <div className="user_name">
               Name: Sompong
             </div>
           </div>
-          <div className="right_box">
+          <Link to="/profile" className="right_box">
             <button>View</button>
-          </div>
+          </Link>
         </div>
 
         <hr className='hr'/>

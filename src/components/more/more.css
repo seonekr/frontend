@@ -15,7 +15,7 @@
 .MorePage{
     width: 40%;
     margin: auto;
-    padding: 40PX 0;
+    padding: 60PX 0;
 }
 
 
@@ -29,6 +29,10 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+}
+.left_box img{
+    width: 10%;
+    border-radius: 50%;
 }
 .right_box button{
     padding: 5px 15px;

@@ -6,6 +6,9 @@ import UserRegister from "./components/userRegister/UserRegister";
 import SellerRegister from "./components/sellerRegister/SellerRegister";
 import SigupGoogle from "./components/sigupforGoogle/SigupGoogle";
 import AdditionalSeller from "./components/additionalSeller/AdditionalSeller";
+import ProfileEdit from './components/profile/ProfileEdit';
+import Profile from './components/profile/Profile';
+import SellerEdit from './components/sellerRegister/SellerEdit';
 import More from "./components/more/More";
 import Home from "./components/Home";
 import ProductDetial from "./components/products/ProductDetial";
@@ -16,12 +19,15 @@ function App() {
       <Router>
         <Routes>
           <Route path="/loginuser" Component={LoginUser} />
-          <Route path="/registerUser" Component={RegisterUser} />
-          <Route path="/forgotPassword" Component={ForgotPassword} />
-          <Route path="/userRegister" Component={UserRegister} />
-          <Route path="/sellerRegister" Component={SellerRegister} />
-          <Route path="/sigupGoogle" Component={SigupGoogle} />
-          <Route path="/additionalSeller" Component={AdditionalSeller} />
+          <Route path="/registeruser" Component={RegisterUser} />
+          <Route path="/forgotpassword" Component={ForgotPassword} />
+          <Route path="/userregister" Component={UserRegister} />
+          <Route path="/sellerregister" Component={SellerRegister} />
+          <Route path="/sigupgoogle" Component={SigupGoogle} />
+          <Route path="/additionalseller" Component={AdditionalSeller} />
+          <Route path="/profileedit" Component={ProfileEdit} />
+          <Route path="/profile" Component={Profile} />
+          <Route path="/selleredit" Component={SellerEdit} />
           <Route path="/more" Component={More} />
           <Route path="/" Component={Home} />
           <Route path="/productdetial" Component={ProductDetial} />
