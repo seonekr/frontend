@@ -58,7 +58,7 @@ const RegisterUser = () => {
                         checked={"seller" == signup}
                         onChange={selectSignup}
                       />
-                      <label htmlFor="user_type02" className="user_type02">
+                      <label htmlFor="seller" className="user_type02">
                         <FaUsers id="icon_user_sell"/>
                         Seller
                       </label>
