@@ -25,12 +25,9 @@ function App() {
           <Route path="/sellerregister" Component={SellerRegister} />
           <Route path="/sigupgoogle" Component={SigupGoogle} />
           <Route path="/additionalseller" Component={AdditionalSeller} />
-<<<<<<< HEAD
           <Route path="/profileedit" Component={ProfileEdit} />
           <Route path="/profile" Component={Profile} />
           <Route path="/selleredit" Component={SellerEdit} />
-=======
->>>>>>> fd1490e2475a57726576018a8a8a5c690aa345a9
           <Route path="/more" Component={More} />
           <Route path="/" Component={Home} />
           <Route path="/productdetial" Component={ProductDetial} />
