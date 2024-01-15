@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from "react";
 import "./sellerRegister.css"
 import { IoArrowBack } from "react-icons/io5";
 
