@@ -1,20 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  :root {
-    --blue: #1e90ff;
-    --white: #ffffff;
-    --orange: #ff471a;
-    --gray: #ccc;
-    --black: #000;
-  }
 
 .box_forgot {
     width: 80%;
@@ -26,13 +9,14 @@
     margin-top: 1.5rem;
     font-size: 18px;
 }
-.container_form{
+.container_form_sellerregister{
     margin-top: 3rem;
 }
 
 .title_seller{
     font-size: 18px;
     text-align: start;
+    margin-top: 2rem;
 }
 .title_seller2{
     margin-top: 2rem;
@@ -49,9 +33,31 @@
     font-size: 15px;
     transition: all 0.3s;
 }
-/* .box_certification{
-   display: flexbox;
-} */
+.container_form_sellerregister {
+  display: grid;
+  margin: 0 auto;
+  gap: 15px;
+  width: 40%;
+}
+
+.container_form_sellerregister input,
+.container_form_sellerregister button {
+  width: 100%;
+  padding: 1rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--gray);
+}
+
+.container_form_sellerregister button {
+  background-color: var(--orange);
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.container_form_sellerregister input:focus {
+  outline: none;
+}
 
 
 

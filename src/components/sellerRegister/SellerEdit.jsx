@@ -21,7 +21,7 @@ const SellerEdit = () => {
             <div className='box_seller_edit'>
                 <p>Seller</p>
             </div>
-            <form className='container_form'>
+            <form className='container_form_selleredit'>
                 <input type="email" placeholder="humascot@gmail.com" required />
                 <input type="text" placeholder=" Fruit Country " required />
                 <input type="text" placeholder=" 99 Daehak-ro, Daejeon Metropolitan City " required />

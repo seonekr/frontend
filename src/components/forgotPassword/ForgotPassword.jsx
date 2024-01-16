@@ -12,7 +12,7 @@ const ForgotPassword = () => {
         </Link>
         <h2>Find password</h2>
         <div className="title">Please change your password after verifying your email!</div>
-        <form className='container_form'>
+        <form className='container_form_forgot'>
           <div className='box_infor'>Enter basic information</div>
           <input type="text" placeholder="Email" required />
           <input type="text" placeholder="Verification number" required />

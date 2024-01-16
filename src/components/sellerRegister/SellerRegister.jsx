@@ -89,7 +89,7 @@ const SellerRegister = () => {
                 I'm in the process of signing up as a seller!
             </div>
 
-        <form className='container_form' onSubmit={handleUserStoreSubmit}>
+        <form className='container_form_sellerregister' onSubmit={handleUserStoreSubmit}>
           <div className='title_seller'>
             Enter basic information
           </div>

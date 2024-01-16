@@ -6,18 +6,20 @@ import { MdArrowBack } from "react-icons/md";
 const SigupGoogle = () => {
   return (
     <>
-    <div className="box_forgot">
-            {/* <Link to="#" className="box_iconBack">
-              <MdArrowBack id='iconBack'/>
-            </Link> */}
+    <div className="box_google">
+            <div className='boxgoback'>
+              <Link to="/registeruser" className="box_iconBack">
+                  <MdArrowBack id='iconBack'/>
+              </Link>
+            </div>
             <h2>Seller registratio</h2>
             <div className="title">
                 Please enter additional information to register as a seller!
             </div>
 
-            <form className='container_form'>
+            <form className='container_form_google'>
 
-                <div className='title_seller2'>
+                <div className='title_google'>
                     Enter additional informatiom
                 </div>
                 <input type="text" placeholder="Store name (required)" required />
