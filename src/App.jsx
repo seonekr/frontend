@@ -12,7 +12,9 @@ import SellerEdit from './components/sellerRegister/SellerEdit';
 import Terms from './components/termsandprivacy/Terms';
 import More from "./components/more/More";
 import Home from "./components/homePage/HomePage";
-import ProductDetial from "./components/products/ProductDetial";
+import ProductDetails from "./components/products/ProductDetails";
+import Cart from "./components/cart/Cart";
+import Order from "./components/order/Order";
 
 function App() {
   return (
@@ -32,7 +34,9 @@ function App() {
           <Route path="/more" Component={More} />
           <Route path="/terms" Component={Terms} />
           <Route path="/" Component={Home} />
-          <Route path="/productdetial" Component={ProductDetial} />
+          <Route path="/productDetails" Component={ProductDetails} />
+          <Route path="/cart" Component={Cart} />
+          <Route path="/order" Component={Order} />
         </Routes>
       </Router>
     </>

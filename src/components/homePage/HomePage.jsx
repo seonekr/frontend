@@ -1,7 +1,7 @@
 import "./homePage.css";
 import Header from "../header/Header";
-import Banner from "../header/Banner";
 import Menu from "../menuFooter/Menu";
+import Banner from "../header/Banner";
 import ProductHome from "../products/ProductHome";
 import Category from "./Category";
 

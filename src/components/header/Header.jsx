@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./header.css";
 import { FaMagnifyingGlass, FaCartShopping, FaRegUser } from "react-icons/fa6";
-import { Link, useLocation } from "react-router-dom";
+import { Link} from "react-router-dom";
 import Logo1 from "../../img/Logo1.png";
 
 const Header = () => {
@@ -18,9 +18,9 @@ const Header = () => {
               </div>
               <div className="boxLiMenu">
                 <div className="linkLi">
-                  <Link to="#" className="link active">Home</Link>
+                  <Link to="/" className="link active">Home</Link>
                   <Link to="#" className="link ">Chat</Link>
-                  <Link to="#" className="link ">Orders</Link>
+                  <Link to="/order" className="link ">Orders</Link>
                 </div>
               </div>
             </div>
@@ -42,14 +42,14 @@ const Header = () => {
                 </div>
                 <div>
                   <div className="userAndstore">
-                    <Link to="/account">
+                    <Link to="/more">
                       <FaRegUser className="head_colorr" />
                     </Link>
                     {/* <Link to="/account">
                       <BsShop className="head_colorr" />
                     </Link> */}
                     <div>
-                      <Link to="/login" className="head_colorr">
+                      <Link to="/loginuser" className="head_colorr">
                         Login
                       </Link>
                     </div>
