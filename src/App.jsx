@@ -6,8 +6,12 @@ import UserRegister from "./components/userRegister/UserRegister";
 import SellerRegister from "./components/sellerRegister/SellerRegister";
 import SigupGoogle from "./components/sigupforGoogle/SigupGoogle";
 import AdditionalSeller from "./components/additionalSeller/AdditionalSeller";
+import ProfileEdit from './components/profile/ProfileEdit';
+import Profile from './components/profile/Profile';
+import SellerEdit from './components/sellerRegister/SellerEdit';
+import Terms from './components/termsandprivacy/Terms';
 import More from "./components/more/More";
-import Home from "./components/Home";
+import Home from "./components/homePage/ProductHome";
 import ProductDetial from "./components/products/ProductDetial";
 
 function App() {
@@ -22,7 +26,11 @@ function App() {
           <Route path="/sellerregister" Component={SellerRegister} />
           <Route path="/sigupgoogle" Component={SigupGoogle} />
           <Route path="/additionalseller" Component={AdditionalSeller} />
+          <Route path="/profileedit" Component={ProfileEdit} />
+          <Route path="/profile" Component={Profile} />
+          <Route path="/selleredit" Component={SellerEdit} />
           <Route path="/more" Component={More} />
+          <Route path="/terms" Component={Terms} />
           <Route path="/" Component={Home} />
           <Route path="/productdetial" Component={ProductDetial} />
         </Routes>

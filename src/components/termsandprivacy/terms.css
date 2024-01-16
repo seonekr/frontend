@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  :root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --orange: #ff471a;
+    --gray: #ccc;
+    --black: #000;
+  }
+
+.box_terms {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+    text-align: center;
+}
+.container_terms{
+    width: 50%;
+    margin: auto;
+    margin-top: 1.5rem;
+    font-size: 18px;
+}
+.box_iconBack_terms{
+    margin-right: 35rem;
+}
+#iconBack_terms{
+    width: 30px;
+    height: 30px;
+}
+
+
+/* ============== Responsive =============== */
+
+@media (max-width: 768px) {
+    .box_terms {
+      width: 100%;
+      top: 40%;
+      left: 50%;
+    }
+    .container_terms{
+        width: 85%;
+    }
+    .box_iconBack{
+        margin-right: 20rem;
+    }
+    #iconBack{
+        width: 30px;
+        height: 30px;
+    }
+    
+  }
