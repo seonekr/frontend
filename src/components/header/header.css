@@ -82,8 +82,7 @@
     height: 50px;
     border-radius: 30px;
     overflow: hidden;
-    border: 0.5px solid #F5F6F2;
-    background: #F5F6F2;
+
 
 }
 
@@ -95,7 +94,9 @@
     height: 100%;
     padding: 10px 20px;
     border-radius: 3px;
-    font-size: 18px;
+    font-size: 18px;    
+    border: 0.5px solid #F5F6F2;
+    background: #F5F6F2;
 }
 
 .search_wrap .search_box .btn {

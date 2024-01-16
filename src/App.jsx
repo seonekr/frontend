@@ -15,6 +15,8 @@ import More from "./components/more/More";
 import Home from "./components/homePage/HomePage";
 import ProductDetails from "./components/products/ProductDetails";
 import Cart from "./components/cart/Cart";
+import SuccessfulBuy from "./components/cart/SuccessfulBuy";
+import Address from "./components/cart/Address";
 import Payment from "./components/cart/Payment";
 import Order from "./components/order/Order";
 import Bill from "./components/order/Bill";
@@ -46,6 +48,8 @@ function App() {
           <Route path="/" Component={Home} />
           <Route path="/productDetails" Component={ProductDetails} />
           <Route path="/cart" Component={Cart} />
+          <Route path="/successfulBuy" Component={SuccessfulBuy} />
+          <Route path="/address" Component={Address} />
           <Route path="/payment" Component={Payment} />
           <Route path="/order" Component={Order} />
           <Route path="/bill" Component={Bill} />
