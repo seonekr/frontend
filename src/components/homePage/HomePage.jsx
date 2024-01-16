@@ -4,7 +4,6 @@ import Menu from "../menuFooter/Menu";
 import Banner from "../header/Banner";
 import ProductHome from "../products/ProductHome";
 import Category from "./Category";
-import axios from "axios";
 import { useEffect } from "react";
 
 const HomePage = () => {
