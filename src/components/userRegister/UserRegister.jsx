@@ -47,6 +47,7 @@ const UserRegister = () => {
     }
   };
 
+
   return (
     <>
         <div className="box_forgot">
@@ -66,7 +67,7 @@ const UserRegister = () => {
 
               <input type="text" placeholder="Certication Number" required />
               <input type="text" placeholder="Nickname (maximun 10 characters)" required />
-              <input type="password" placeholder="passwords" required />
+              <input type="password" placeholder="Passwords" required />
               <input type="password" placeholder="Verify password" required />
               <button type="submit">Check</button>
             </form>
