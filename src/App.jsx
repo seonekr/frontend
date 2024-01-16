@@ -19,6 +19,8 @@ import Stores from "./components/stores/Store";
 import Store_management from "./components/store_management/Store_management";
 import AddProduct from "./components/addProduct/AddProduct";
 import EditProduct from "./components/editProduct/EditProduct";
+import ReviewStore from "./components/reviewStore/ReviewStore";
+import Payment_store from "./components/payment_store/PaymentStore";
 
 function App() {
   return (
@@ -45,6 +47,8 @@ function App() {
           <Route path="/store_management" Component={Store_management} />
           <Route path="/addProduct" Component={AddProduct} />
           <Route path="/editProduct" Component={EditProduct} />
+          <Route path="/eviewStore" Component={ReviewStore} />
+          <Route path="/payment_store" Component={Payment_store} />
         </Routes>
       </Router>
     </>
