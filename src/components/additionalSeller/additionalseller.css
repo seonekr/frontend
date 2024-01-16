@@ -1,20 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  :root {
-    --blue: #1e90ff;
-    --white: #ffffff;
-    --orange: #ff471a;
-    --gray: #ccc;
-    --black: #000;
-  }
 
 .box_forgot {
     width: 80%;
@@ -26,14 +9,15 @@
     margin-top: 1.5rem;
     font-size: 18px;
 }
-.container_form{
-    margin-top: 3rem;
+.container_form_addition{
+    margin-top: 2rem;
 }
 
-.title_seller2{
+.title_addition{
     margin-top: 1rem;
     font-size: 18px;
     text-align: start;
+    margin-top: 2rem;
 }
 .box_text{
     border-radius: 15px;
@@ -52,6 +36,31 @@
     width: 30px;
     height: 40px;
 }
+.container_form_addition {
+    display: grid;
+    margin: 0 auto;
+    gap: 15px;
+    width: 40%;
+  }
+  
+  .container_form_addition input,
+  .container_form_addition button {
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 14px;
+    border: 1px solid var(--gray);
+  }
+  
+  .container_form_addition button {
+    background-color: var(--orange);
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.2rem;
+  }
+  
+  .container_form_addition input:focus {
+    outline: none;
+  }
 
 
 /* ============== Responsive =============== */
@@ -62,18 +71,15 @@
       top: 40%;
       left: 50%;
     }
-    .container_form {
+    .container_form_addition {
       width: 100%;
     }
-    .container_form input {
+    .container_form_addition input {
       width: 90%;
       margin: auto;
     }
   
-    .title_seller{
-        margin-left: 1.5rem;
-    }
-    .title_seller2{
+    .title_addition{
         margin-left: 1.5rem;
     }
     .box_text{

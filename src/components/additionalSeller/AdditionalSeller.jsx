@@ -15,9 +15,9 @@ const AdditionalSeller = () => {
                 Please enter additional information to register as a seller!
             </div>
 
-            <form className='container_form'>
+            <form className='container_form_addition'>
 
-                <div className='title_seller2'>
+                <div className='title_addition'>
                     Enter additional informatiom
                 </div>
                 <input type="text" placeholder="Store name (required)" required />
