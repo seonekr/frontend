@@ -93,7 +93,7 @@ const SellerRegister = () => {
           <div className='title_seller'>
             Enter basic information
           </div>
-          <div className='box_certification'>
+          <div className='container_form_sellerregister2'>
             <input
               type="email"
               name="email"
@@ -102,6 +102,7 @@ const SellerRegister = () => {
               onChange={handleUserChange}
               required
             />
+            <div className='verification'>Ceritification</div>
           </div>
           <input
             type="text"
