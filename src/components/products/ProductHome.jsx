@@ -1,12 +1,10 @@
 import "./productHome.css";
-import Header from "../header/Header";
 import productImage from "../../img/productImage.png";
 
 const ProductHome = () => {
  
   return (
     <div>
-      <Header />
       <section id="product">
         <div className="productHead_content">
           <h1 className="htxthead">
