@@ -24,13 +24,13 @@ const HomePage = () => {
   };
 
   return (
-    <>
+    <div>
       <Header />
       <Banner />
       <Category />
       <ProductHome />
       <Menu />
-    </>
+    </div>
   );
 };
 
