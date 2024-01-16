@@ -11,7 +11,7 @@ import Profile from './components/profile/Profile';
 import SellerEdit from './components/sellerRegister/SellerEdit';
 import Terms from './components/termsandprivacy/Terms';
 import More from "./components/more/More";
-import Home from "./components/Home";
+import Home from "./components/homePage/ProductHome";
 import ProductDetial from "./components/products/ProductDetial";
 
 function App() {
