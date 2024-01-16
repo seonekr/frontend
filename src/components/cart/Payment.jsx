@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../header/Header";
 import { IoIosArrowBack } from "react-icons/io";
-
+import { FiCopy } from "react-icons/fi";
 const Payment = () => {
 
   return (
@@ -43,7 +43,7 @@ const Payment = () => {
                 <p>Account number</p>
                 <p>123435346578589</p>
               </div>
-              <IoIosArrowBack />
+              <FiCopy className="iconnn_copy_account"/>
             </div>
           </div>
           <h3>Confirm transfer</h3>

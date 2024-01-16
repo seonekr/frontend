@@ -3,9 +3,10 @@
     margin: 6rem auto;
 }
 
-.h2_boxPayment{
+.h2_boxPayment {
     text-align: center;
 }
+
 .adress_payment_content {
     padding: 30px;
     display: grid;
@@ -20,6 +21,11 @@
 
 .box_address p {
     padding: 30px 10px;
+}
+
+.iconnn_copy_account {
+    cursor: pointer;
+    font-size: 23px;
 }
 
 .address {
@@ -44,35 +50,37 @@
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.10);
 }
 
-.details_ProductInPayMentBox ul li{
+.details_ProductInPayMentBox ul li {
     list-style: none;
 }
 
-.detailsProduct_li{
+.detailsProduct_li {
     display: grid;
     gap: 10px;
 }
 
-.boxaccount_number{
+.boxaccount_number {
     padding: 10px;
 }
-.boxaccount_number_p{
+
+.boxaccount_number_p {
     display: grid;
     gap: 10px;
     font-size: 18px;
 }
-.box_transfer_p_line{
+
+.box_transfer_p_line {
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
 }
 
-.boxaccount_number{
+.boxaccount_number {
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
 }
 
-.image_confirm_transfer{
+.image_confirm_transfer {
     display: flex;
     gap: 1rem;
     padding: 20px;
@@ -82,7 +90,7 @@
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.10);
 }
 
-.save{
+.save {
     width: 100%;
     margin-top: 2rem;
     padding: 15px 0;
