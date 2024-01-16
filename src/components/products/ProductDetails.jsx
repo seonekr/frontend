@@ -16,7 +16,7 @@ function ProductDetails() {
     <>
       <Header />
       <div className="contentBody">
-        <Link to="#" className="box_container_back_icons_back">
+        <Link to="/" className="box_container_back_icons_back">
           <IoIosArrowBack id="icons_back" />
           <p>Back</p>
         </Link>
@@ -80,6 +80,7 @@ function ProductDetails() {
                     <p className="echSize">XL</p>
                   </div>
                 </div>
+
                 {/* Amount product */}
                 <div className="container_item_icon">
                   <div className="container_minus_plus" >
@@ -93,12 +94,12 @@ function ProductDetails() {
                   </div>
                 </div>
                 <div className="Count_product">
-                  <button type="submit" className="echbtn btnBut" >
+                  <Link to="/payment" className="echbtn btnBut" >
                     Buy Now
-                  </button>
-                  <button type="submit" className="echbtn btnAdd" >
+                  </Link>
+                  <Link to="/cart" className="echbtn btnAdd" >
                     Add To Cart
-                  </button>
+                  </Link>
                 </div>
               </div>
             </form>

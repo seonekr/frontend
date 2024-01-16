@@ -80,7 +80,7 @@ body {
 .boxProduct_deteils {
     width: 100%;
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 0;
     margin: 2rem 0;
 }
@@ -196,7 +196,7 @@ body {
 }
 
 .echbtn {
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 5px;
     font-size: 17px;
     cursor: pointer;
@@ -227,15 +227,6 @@ body {
 }
 
 /* ----------- END Text Name, Price and Description ---------------- */
-
-
-
-/* -----------Start Image gallery ---------------- */
-
-/* ----------- END Image gallery ---------------- */
-
-
-
 
 /* ----------- box_item_icon  ---------------- */
 .container_item_icon {

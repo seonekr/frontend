@@ -26,12 +26,12 @@ const Header = () => {
             </div>
 
             <div className="ulHead_box">
-              <form class="search_wrap search_wrap_2">
-                <div class="search_box">
-                  <div class="btn btn_common">
+              <form className="search_wrap search_wrap_2">
+                <div className="search_box">
+                  <div className="btn btn_common">
                     <FaMagnifyingGlass className="iconSearch" />
                   </div>
-                  <input type="text" class="input" placeholder="search..."></input>
+                  <input type="text" className="input" placeholder="search..."></input>
                 </div>
               </form>
               <div className="right_ofHeadBox">
