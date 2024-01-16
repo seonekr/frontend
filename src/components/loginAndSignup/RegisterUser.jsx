@@ -36,7 +36,7 @@ const RegisterUser = () => {
             Join the membership
           </h3>
           <p>Please sign up to use the service!</p>
-          <div className="form">
+          <div className="box_form_register">
             <div className="input_wrap">
               <ul>
                 <li>

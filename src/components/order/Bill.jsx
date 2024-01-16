@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Menu from "../menu/Menu";
 import Header from "../header/Header";
+import Menu from "../menuFooter/Menu";
 import { IoIosArrowBack } from "react-icons/io";
 import "./bill.css";
 
