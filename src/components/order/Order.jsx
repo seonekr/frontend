@@ -12,12 +12,12 @@ const Order = () => {
       <Header />
       <section id="container_order_item">
         <div className="container_order_all">
-          <Link to="#" className="box_management_iconnback">
+          <Link to="/" className="box_management_iconnback">
             <IoIosArrowBack id="icons_back" />
             <p>Back</p>
           </Link>
           <h2>Order</h2>
-          <Link to="#" className="box_item_order">
+          <Link to="/bill" className="box_item_order">
             <div>
               <div className="box_item_order_text">
                 <p>No: 01</p>
@@ -29,7 +29,7 @@ const Order = () => {
             </div>
           </Link>
 
-          <Link to="/order/bill" className="box_item_order">
+          <Link to="/bill" className="box_item_order">
             <div>
               <div className="box_item_order_text">
                 <p>No: 01</p>

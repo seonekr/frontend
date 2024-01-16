@@ -15,6 +15,7 @@ import Home from "./components/homePage/HomePage";
 import ProductDetails from "./components/products/ProductDetails";
 import Cart from "./components/cart/Cart";
 import Order from "./components/order/Order";
+import Bill from "./components/order/Bill";
 import Stores from "./components/stores/Store";
 import Store_management from "./components/store_management/Store_management";
 import AddProduct from "./components/addProduct/AddProduct";
@@ -43,6 +44,7 @@ function App() {
           <Route path="/productDetails" Component={ProductDetails} />
           <Route path="/cart" Component={Cart} />
           <Route path="/order" Component={Order} />
+          <Route path="/bill" Component={Bill} />
           <Route path="/stores" Component={Stores} />
           <Route path="/store_management" Component={Store_management} />
           <Route path="/addProduct" Component={AddProduct} />
