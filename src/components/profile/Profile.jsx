@@ -18,7 +18,7 @@ const Profile = () => {
                 <p>Name: Sompong</p>
             </div>
                 
-            <form className='container_form'>
+            <form className='container_form_profile'>
                 <input type="email" placeholder="humascot@gmail.com" required />
                 
                 <button type="submit" >Edit profile</button>

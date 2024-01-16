@@ -1,17 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
-  
-:root {
-  --blue: #1e90ff;
-  --white: #ffffff;
-  --orange: #ff471a;
-  --gray: #ccc;
-  --black: #000;
-}
+
 .ProfilePage_edit{
     width: 80%;
     margin: auto;
@@ -42,7 +29,7 @@
     font-size: 18px;
     font-weight: 600;
     color: var(--gray);
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .box_text{
@@ -55,6 +42,32 @@
     font-size: 15px;
     transition: all 0.3s;
 }
+.container_form_profileedit {
+    display: grid;
+    margin: 0 auto;
+    gap: 16px;
+    width: 40%;
+    margin-top: 1rem;
+  }
+  
+  .container_form_profileedit input,
+  .container_form_profileedit button {
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 14px;
+    border: 1px solid var(--gray);
+  }
+  
+  .container_form_profileedit button {
+    background-color: var(--orange);
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.2rem;
+  }
+  
+  .container_form_profileedit input:focus {
+    outline: none;
+  }
 
 /*============== Responsive =====================*/
 @media (max-width: 768px) {
@@ -66,8 +79,11 @@
     .boxgoback{
         margin-left: 1rem;
     }
-    .container_form input {
+    .container_form_profileedit{
+        width: 85%;
+    }
+    .container_form_profileedit input {
         width: 100%;
-      }
+    }
    
   }

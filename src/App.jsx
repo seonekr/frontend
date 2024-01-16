@@ -10,6 +10,7 @@ import ProfileEdit from './components/profile/ProfileEdit';
 import Profile from './components/profile/Profile';
 import SellerEdit from './components/sellerRegister/SellerEdit';
 import Terms from './components/termsandprivacy/Terms';
+import Privacy from './components/termsandprivacy/Privacy';
 import More from "./components/more/More";
 import Home from "./components/homePage/HomePage";
 import ProductDetails from "./components/products/ProductDetails";
@@ -40,6 +41,7 @@ function App() {
           <Route path="/selleredit" Component={SellerEdit} />
           <Route path="/more" Component={More} />
           <Route path="/terms" Component={Terms} />
+          <Route path="/privacy" Component={Privacy} />
           <Route path="/" Component={Home} />
           <Route path="/productDetails" Component={ProductDetails} />
           <Route path="/cart" Component={Cart} />
