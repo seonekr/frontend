@@ -17,7 +17,7 @@ const HomePage = () => {
       redirect: "follow",
     };
 
-    fetch("http://127.0.0.1:8000/store", requestOptions)
+    fetch(import.meta.env.VITE_API+"/store", requestOptions)
       .then((response) => response.json())
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
