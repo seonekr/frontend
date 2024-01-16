@@ -31,7 +31,7 @@ function ProductDetails() {
                 <h1 className="txt_nameP">name</h1>
                 <p className="money_txt">price</p>
                 <p className="txt_description">description</p>
-                <Link to="#" className="store_boxLink">
+                <Link to="/stores" className="store_boxLink">
                   <BiStore className="iconn_linkbox" />
                   <p>Lorem ipsum</p>
                 </Link>
