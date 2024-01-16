@@ -80,7 +80,7 @@ const SellerRegister = () => {
     <>
         <div className="box_forgot">
             <div className='boxgoback'>
-              <Link to="#" className="box_iconBack">
+              <Link to="/registeruser" className="box_iconBack">
                   <MdArrowBack id='iconBack'/>
               </Link>
             </div>

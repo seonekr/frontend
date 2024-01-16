@@ -40,10 +40,11 @@ form {
     width: 80%;
     margin: auto;
     text-align: center;
+    margin-top: 2rem;
 }
 .title_mt20{
     font-size: 22px;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 .signup_page p{
     font-size: 18px;
@@ -58,7 +59,7 @@ form {
     display: flex;
 }
 .input_wrap ul{
-    width: 250px;
+    width: 220px;
     height: 58px;
     margin: auto;
     border: 1px solid #ccc;
@@ -72,15 +73,8 @@ form {
     width: 30px;
     margin: auto;
     display: flex;
-    gap: 4rem;
-    align-items: center;
-    justify-content: center;
-}
-.input_wrap ul li{
-    width: 30px;
-    margin: auto;
+    gap: 2rem;
     display: flex;
-    gap: 4rem;
     align-items: center;
     justify-content: center;
 }
@@ -97,44 +91,57 @@ form {
     background: #FF4F16;
 
 }
-
-.box_iconBack{
-    margin-right: 28rem;
+.box_back{
+  padding: 10px 0;
+}
+.box_iconBack_user{
+  margin-right: 32rem;
 }
 #iconBack{
-    width: 30px;
-    height: 40px;
+  width: 30px;
+  height: 40px;
 }
+#icon_user_sell{
+  width:100px;
+  height: 28px;
+}
+.user_type02{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
 
 /*============== Responsive =====================*/
 @media (max-width: 768px) {
-    .signup_page {
-      width: 100%;
-      top: 40%;
-      left: 50%;
-    }
-    .form{
-        width: 90%;
-        margin: auto ;
-    }
+  .signup_page {
+    width: 100%;
+    top: 40%;
+    left: 50%;
+  }
+  .form{
+      width: 90%;
+      margin: auto ;
+  }
+
+  .input_wrap {
+    width: 100%;
+  }
   
-    .input_wrap {
-      width: 100%;
-    }
-   
-    .btn_register_next {
-      width: 100%;
-    }
-    .input input {
-      width: 100%;
-    }
-  
-    .box_form input {
-      width: 100%;
-    }
-  
-    .login_btn{
-      width: 100%;
-    }
+  .btn_register_next {
+    width: 100%;
+  }
+  .input input {
+    width: 100%;
+  }
+
+  .box_form input {
+    width: 100%;
+  }
+
+  .login_btn{
+    width: 100%;
+  }
 }
   
