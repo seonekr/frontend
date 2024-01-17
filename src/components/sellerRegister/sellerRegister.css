@@ -89,12 +89,15 @@
       top: 40%;
       left: 50%;
     }
-    .container_form {
+    .container_form_sellerregister {
       width: 100%;
     }
-    .container_form input {
+    .container_form_sellerregister input {
       width: 90%;
       margin: auto;
+    }
+    .verification{
+      right: 25px;
     }
   
     .title_seller{

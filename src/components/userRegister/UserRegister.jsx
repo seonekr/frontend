@@ -12,6 +12,7 @@ const UserRegister = () => {
     verifyPassword: '',
   });
 
+
   const [passwordMatch, setPasswordMatch] = useState(true);
 
   const handleChange = (e) => {
@@ -48,6 +49,9 @@ const UserRegister = () => {
   };
 
 
+ 
+
+
   return (
     <>
         <div className="box_forgot">
@@ -61,14 +65,40 @@ const UserRegister = () => {
               <div className='box_title'>Enter basic information</div>
 
               <div className='container_form_user2'>
-                <input type="email" placeholder="Email" required />
-                <div className='verification'>Ceritification</div>
+                <input 
+                  type="email" 
+                  placeholder="Email" 
+                  required 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <div className='verification' onClick={handleRegistration} >Ceritification</div>
               </div>
 
-              <input type="text" placeholder="Certication Number" required />
-              <input type="text" placeholder="Nickname (maximun 10 characters)" required />
-              <input type="password" placeholder="Passwords" required />
-              <input type="password" placeholder="Verify password" required />
+              <input 
+                type="text" 
+                placeholder="Certication Number" 
+                required 
+              />
+
+              <input 
+                type="text" 
+                placeholder="Nickname (maximun 10 characters)" 
+                required 
+              />
+
+              <input 
+                type="password" 
+                placeholder="Passwords" 
+                required 
+              />
+
+              <input 
+                type="password" 
+                placeholder="Verify password" 
+                required 
+              />
+              
               <button type="submit">Check</button>
             </form>
         </div>
