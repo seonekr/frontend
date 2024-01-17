@@ -29,6 +29,7 @@
 }
 
 .inputproduct {
+    width: 100%;
     padding: 15px 10px;
     border-radius: 7px;
     border: 1px solid #DDDCE1;
