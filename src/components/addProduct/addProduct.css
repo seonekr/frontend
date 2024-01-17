@@ -103,6 +103,7 @@
 }
 
 .btn_save_productUser {
+    cursor: pointer;
     top: -15px;
     right: 30px;
     position: absolute;

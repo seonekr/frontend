@@ -1,9 +1,10 @@
 import "./productHome.css";
 import productImage from "../../img/productImage.png";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const ProductHome = () => {
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     AllProducts();
@@ -17,9 +18,12 @@ const ProductHome = () => {
 
     fetch(import.meta.env.VITE_API + "/store", requestOptions)
       .then((response) => response.json())
-      .then((result) => console.log(result))
+      .then((result) => {
+        setProducts(result);
+      })
       .catch((error) => console.log("error", error));
   };
+
 
   return (
     <div>
@@ -43,104 +47,21 @@ const ProductHome = () => {
         </div>
 
         <div className="product-area">
-          <Link to="/productDetails" className="box-product" >
-            <div>
-              <div className="img">
-                <img src={productImage} alt="image" />
-              </div>
-              <ul className="txtOFproduct2">
-                <li className="name">Name</li>
-                <li className="price">Price</li>
-                <li className="desc">desc</li>
-              </ul>
-            </div>
-          </Link>
-          <Link to="/productDetails" className="box-product" >
-            <div>
-              <div className="img">
-                <img src={productImage} alt="image" />
-              </div>
-              <ul className="txtOFproduct2">
-                <li className="name">Name</li>
-                <li className="price">Price</li>
-                <li className="desc">desc</li>
-              </ul>
-            </div>
-          </Link>
-          <Link to="/productDetails" className="box-product" >
-            <div>
-              <div className="img">
-                <img src={productImage} alt="image" />
-              </div>
-              <ul className="txtOFproduct2">
-                <li className="name">Name</li>
-                <li className="price">Price</li>
-                <li className="desc">desc</li>
-              </ul>
-            </div>
-          </Link>
-          <Link to="/productDetails" className="box-product" >
-            <div>
-              <div className="img">
-                <img src={productImage} alt="image" />
-              </div>
-              <ul className="txtOFproduct2">
-                <li className="name">Name</li>
-                <li className="price">Price</li>
-                <li className="desc">desc</li>
-              </ul>
-            </div>
-          </Link>
-          <Link to="/productDetails" className="box-product" >
-            <div>
-              <div className="img">
-                <img src={productImage} alt="image" />
-              </div>
-              <ul className="txtOFproduct2">
-                <li className="name">Name</li>
-                <li className="price">Price</li>
-                <li className="desc">desc</li>
-              </ul>
-            </div>
-          </Link>
-          <Link to="/productDetails" className="box-product" >
-            <div>
-              <div className="img">
-                <img src={productImage} alt="image" />
-              </div>
-              <ul className="txtOFproduct2">
-                <li className="name">Name</li>
-                <li className="price">Price</li>
-                <li className="desc">desc</li>
-              </ul>
-            </div>
-          </Link>
-          <Link to="/productDetails" className="box-product" >
-            <div>
-              <div className="img">
-                <img src={productImage} alt="image" />
-              </div>
-              <ul className="txtOFproduct2">
-                <li className="name">Name</li>
-                <li className="price">Price</li>
-                <li className="desc">desc</li>
-              </ul>
-            </div>
-          </Link>
+          {products.map((product, index) => (
 
-          <Link to="/productDetails" className="box-product" >
-            <div>
-              <div className="img">
-                <img src={productImage} alt="image" />
+            <div  className="box-product" key={index}>
+              <div>
+                <div className="img">
+                  <img src={product.image} alt="image" />
+                </div>
+                <ul className="txtOFproduct2">
+                  <li className="name">{product.name}</li>
+                  <li className="price">{product.price}</li>
+                  <li className="desc">{product.description}</li>
+                </ul>
               </div>
-              <ul className="txtOFproduct2">
-                <li className="name">Name</li>
-                <li className="price">Price</li>
-                <li className="desc">desc</li>
-              </ul>
             </div>
-          </Link>
-
+          ))}
 
         </div>
       </section>
