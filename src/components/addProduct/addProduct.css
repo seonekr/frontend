@@ -113,7 +113,24 @@
     text-align: center;
     color: #fff;
     border-radius: 10px;
+    border: none;
     background: #FF4F16;
+    box-shadow: 0px 30px 20px -20px rgba(0, 0, 0, 0.15);
+}
+
+.btn_Delete_productUser {
+    cursor: pointer;
+    top: -15px;
+    right: 200px;
+    position: absolute;
+    width: 150px;
+    margin-top: 2rem;
+    padding: 12px 0;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    background: red;
     box-shadow: 0px 30px 20px -20px rgba(0, 0, 0, 0.15);
 }
 
@@ -147,6 +164,13 @@
         gap: 1rem;
     }
     .btn_save_productUser {
+        position: unset;
+        width: 100%;
+        padding: 20px 0;
+        border-radius: 30px;
+    }
+    
+    .btn_Delete_productUser {
         position: unset;
         width: 100%;
         padding: 20px 0;

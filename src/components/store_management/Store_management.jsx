@@ -5,6 +5,7 @@ import { IoCameraSharp } from "react-icons/io5";
 import banner_no from "../../img/banner_no.jpg";
 import no_shopping_cart1 from "../../img/no_shopping_cart1.png";
 import productImage from "../../img/productImage.png";
+import { FaPen } from "react-icons/fa6";
 
 function Store_management() {
     return (
@@ -28,8 +29,9 @@ function Store_management() {
                         </Link>
                     </div>
                     <div className="product-area">
-                        <Link to="/editProduct" className="box-product" >
-                            <div>
+                        <div  className="box-product" >
+                            <div className="editproduct_boxIocno">
+                                <Link to="/editProduct" className="iconn_pendit_product" ><FaPen/></Link>
                                 <div className="img">
                                     <img src={productImage} alt="image" />
                                 </div>
@@ -39,7 +41,7 @@ function Store_management() {
                                     <li className="desc">desc</li>
                                 </ul>
                             </div>
-                        </Link>
+                        </div>
                     </div>
                     {/* <div className="body_content_product">
                         <div className="proItem">

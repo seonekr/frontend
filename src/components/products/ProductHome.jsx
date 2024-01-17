@@ -48,11 +48,10 @@ const ProductHome = () => {
 
         <div className="product-area">
           {products.map((product, index) => (
-
             <div  className="box-product" key={index}>
               <div>
                 <div className="img">
-                  <img src={product.image} alt="image" />
+                  <img src={productImage} alt="image" />
                 </div>
                 <ul className="txtOFproduct2">
                   <li className="name">{product.name}</li>

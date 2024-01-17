@@ -7,7 +7,7 @@ import { CiImageOn } from "react-icons/ci";
 import { useState, useEffect } from "react";
 
 function AddProduct() {
-    
+
     const [product, setProduct] = useState({
         name: "",
         price: "",
@@ -58,7 +58,7 @@ function AddProduct() {
         }
     };
 
-       
+
     const handleColorInputChange = (e) => {
         const { value } = e.target;
         setProduct((prevProduct) => ({
@@ -201,7 +201,7 @@ function AddProduct() {
                     <h3>Product image:</h3>
                     <div className="boxicon_img_input">
                         <CiImageOn className='boxicon_img_iconn' />
-                        <input type="file" name='image'  className="input" onChange={handleInputChange}/>
+                        <input type="file" name='image' className="input" onChange={handleInputChange} />
                     </div>
                 </div>
 
@@ -209,14 +209,12 @@ function AddProduct() {
                     <h3>Details image:</h3>
                     <div className="boxicon_img_input">
                         <CiImageOn className='boxicon_img_iconn' />
-                        <input type="file" name='image_details' className="input" onChange={handleInputChange}/>
+                        <input type="file" name='image_details' className="input" onChange={handleInputChange} />
                     </div>
                 </div>
 
-                <button type="submit">
-                    <div className='btn_save_productUser'>
-                        Save
-                    </div>
+                <button type="submit" className='btn_save_productUser'>
+                    Save
                 </button>
             </form>
         </>
