@@ -48,10 +48,14 @@ const ProductHome = () => {
 
         <div className="product-area">
           {products.map((product, index) => (
-            <div  className="box-product" key={index}>
+            <div className="box-product" key={index}>
               <div>
                 <div className="img">
-                  <img src={productImage} alt="image" />
+                  <img src={product.image} alt="" /> 
+                  {/* <img src={
+                    import.meta.env.VITE_API +
+                    "/uploads/images/" +
+                    product.image} alt="image" /> */}
                 </div>
                 <ul className="txtOFproduct2">
                   <li className="name">{product.name}</li>

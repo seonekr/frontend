@@ -3,8 +3,34 @@ import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import './paymentStore.css'
 import { CiImageOn } from "react-icons/ci";
+import { useState, useEffect } from "react";
 
 function PaymentStore() {
+
+    const [accounts, setaccount] = useState({
+        nameBank: "",
+        accountNumber: "",
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setaccount((prevProduct) => ({
+            ...prevProduct,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        try {
+
+
+        } catch (error) {
+            console.error("Error submitting form:", error);
+        }
+        console.log(nameBank);
+    };
+
     return (
         <>
             <div className="header_box_management">
@@ -17,16 +43,16 @@ function PaymentStore() {
                 </div>
                 <div></div>
             </div>
-            <div className="box_container_review1">
+            <form className="box_container_review1" onSubmit={handleSubmit}>
                 <div className="add_payment_box">
                     <h3>Add payment</h3>
                     <div className='inputproduct_box'>
                         <p>Bank  name:</p>
-                        <input className="inputproduct" type="text" placeholder='name...' />
+                        <input className="inputproduct" type="text" name='nameBank' placeholder='name...' onChange={handleInputChange} />
                     </div>
                     <div className='inputproduct_box'>
                         <p>Account number:</p>
-                        <input className="inputproduct" type="text" placeholder='account number...' />
+                        <input className="inputproduct" type="text" name='accountNumber' placeholder='account number...' onChange={handleInputChange} />
                     </div>
                     <div className="add_img_product_box">
                         <p>QR Code:</p>
@@ -35,13 +61,12 @@ function PaymentStore() {
                             <input type="file" className="input" />
                         </div>
                     </div>
-                    <Link to="#" >
-                        <div className='btn_save_productUser'>
-                            Save
-                        </div>
-                    </Link>
+
+                    <button type='submit' className='btn_save_productUser'>
+                        Save
+                    </button>
                 </div>
-            </div>
+            </form>
 
         </>
     )

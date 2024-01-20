@@ -1,5 +1,5 @@
-import React from "react";
-import {Link} from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./productDetails.css";
 import Header from "../header/Header";
 import Menu from "../menuFooter/Menu";
@@ -12,6 +12,13 @@ import productImage from "../../img/productImage.png";
 import detailproduct from "../../img/detailproduct.jpg";
 
 function ProductDetails() {
+  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedSize, setSelectedSize] = useState("");
+
+  // Add more colors and sizes as needed
+  const colors = ["Red", "Blue", "Green", "Yellow"];
+
+
   return (
     <>
       <Header />
@@ -35,37 +42,23 @@ function ProductDetails() {
                   <BiStore className="iconn_linkbox" />
                   <p>Lorem ipsum</p>
                 </Link>
+
                 {/* Checked colors */}
                 <div className="color_product">
                   <h5>Color:</h5>
-                  <div >
-                    <label >Red</label>
-                    <input
-                      className="echColor"
-                      type="radio"
-                    />
-                  </div>
-                  <div >
-                    <label >Red</label>
-                    <input
-                      className="echColor"
-                      type="radio"
-                    />
-                  </div>
-                  <div >
-                    <label >Red</label>
-                    <input
-                      className="echColor"
-                      type="radio"
-                    />
-                  </div>
-                  <div >
-                    <label >Red</label>
-                    <input
-                      className="echColor"
-                      type="radio"
-                    />
-                  </div>
+                  {colors.map((color, index) => (
+                    <div key={index}>
+                      <label>{color}</label>
+                      <input
+                        className="echColor"
+                        type="radio"
+                        name="color"
+                        value={color}
+                        onChange={(e) => setSelectedColor(e.target.value)}
+                        checked={selectedColor === color}
+                      />
+                    </div>
+                  ))}
                 </div>
 
                 <div className="size_product">
