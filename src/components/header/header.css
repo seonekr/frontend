@@ -82,11 +82,12 @@
     height: 50px;
     border-radius: 30px;
     overflow: hidden;
-
-
+    z-index: 999;
+    border: 0.5px solid #F5F6F2;
+    background: #F5F6F2;
 }
 
-.search_wrap .search_box .input {
+.search_wrap .search_box .input_search_heaederr {
     position: absolute;
     top: 0;
     left: 0;
@@ -94,12 +95,14 @@
     height: 100%;
     padding: 10px 20px;
     border-radius: 3px;
-    font-size: 18px;    
+    border-radius: 30px;
+    font-size: 18px;
     border: 0.5px solid #F5F6F2;
     background: #F5F6F2;
+
 }
 
-.search_wrap .search_box .btn {
+.search_wrap .search_box .btn_common {
     position: absolute;
     top: 0;
     right: 0;
@@ -109,7 +112,7 @@
     cursor: pointer;
 }
 
-.search_wrap .search_box .btn.btn_common .iconSearch {
+.search_wrap .search_box .btn_common .iconSearch {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -118,13 +121,13 @@
     font-size: 20px;
 }
 
-.search_wrap.search_wrap_2 .search_box .btn {
+.search_wrap.search_wrap_2 .search_box .btn_common {
     left: 0;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
 
-.search_wrap.search_wrap_2 .search_box .input {
+.search_wrap.search_wrap_2 .search_box .input_search_heaederr {
     padding-left: 80px;
 }
 
@@ -245,7 +248,7 @@
 
     }
 
-    .search_wrap .search_box .input {
+    .search_wrap .search_box .input_search_heaederr {
         position: absolute;
         top: 0;
         left: 0;
@@ -256,7 +259,7 @@
         font-size: 18px;
     }
 
-    .search_wrap .search_box .btn {
+    .search_wrap .search_box .btn_common {
         position: absolute;
         top: 0;
         right: 0;
@@ -266,7 +269,7 @@
         cursor: pointer;
     }
 
-    .search_wrap .search_box .btn.btn_common .iconSearch {
+    .search_wrap .search_box .btn_common .iconSearch {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -275,13 +278,13 @@
         font-size: 20px;
     }
 
-    .search_wrap.search_wrap_2 .search_box .btn {
+    .search_wrap.search_wrap_2 .search_box .btn_common {
         left: 0;
         border-top-left-radius: 3px;
         border-bottom-left-radius: 3px;
     }
 
-    .search_wrap.search_wrap_2 .search_box .input {
+    .search_wrap.search_wrap_2 .search_box .input_search_heaederr {
         padding-left: 80px;
     }
 
