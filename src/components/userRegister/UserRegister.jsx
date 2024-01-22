@@ -63,7 +63,7 @@ const UserRegister = () => {
         <div className="title">
           You are in the process of signing up as a user!
         </div>
-        <div className="container_form_user">
+        <form className="container_form_user">
           <div className="box_title">Enter basic information</div>
           <div className='container_form_user2'>
             <input
@@ -116,9 +116,10 @@ const UserRegister = () => {
           <button type="button" onClick={handleRegister}>
             Register
           </button>
-        </div>
+        </form>
+        {message && <p>{message}</p>}
       </div>
-      {message && <p>{message}</p>}
+      
     </>
   );
 };

@@ -96,6 +96,13 @@
       width: 90%;
       margin: auto;
     }
+    .container_form_sellerregister textarea {
+      width: 90%;
+    }
+    .container_form_sellerregister button {
+      width: 90%;
+      margin: auto;
+    }
     .verification{
       right: 25px;
     }
@@ -109,9 +116,6 @@
     .box_text{
         width: 90%;
         margin: auto;
-    }
-    .submit{
-        width: 90%;
     }
   }
   
