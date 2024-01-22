@@ -33,12 +33,32 @@
   width: 40%;
 }
 
+.container_form_user2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+ 
+}
+.container_form_user2 input{
+  border: none;
+}
+.verification{
+  right: 5px;
+  position: absolute;
+  padding: 8px 10px;
+  border: 1px solid var(--gray);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
 .container_form_user input,
 .container_form_user button {
   width: 100%;
   padding: 1rem 1rem;
   border-radius: 14px;
   border: 1px solid var(--gray);
+  font-size: 16px;
 }
 
 .container_form_user button {

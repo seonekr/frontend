@@ -22,16 +22,16 @@ function ReviewStore() {
             </div>
             <div className="box_container_review">
                 <div className="link_btn_store">
-                    <Link to="#" className="btn_link_store ">
+                    <Link to="/stores" className="btn_link_store ">
                         Sale items
                     </Link>
                     <Link to="#" className="btn_link_store">
                         Dashboard
                     </Link>
-                    <Link to="#" className="btn_link_store link_store_active">
+                    <Link to="/eviewStore" className="btn_link_store link_store_active">
                         Review
                     </Link>
-                    <Link to="#" className="btn_link_store">
+                    <Link to="/payment_store" className="btn_link_store">
                         Payment
                     </Link>
                 </div>

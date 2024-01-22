@@ -10,10 +10,13 @@ import ProfileEdit from './components/profile/ProfileEdit';
 import Profile from './components/profile/Profile';
 import SellerEdit from './components/sellerRegister/SellerEdit';
 import Terms from './components/termsandprivacy/Terms';
+import Privacy from './components/termsandprivacy/Privacy';
 import More from "./components/more/More";
 import Home from "./components/homePage/HomePage";
 import ProductDetails from "./components/products/ProductDetails";
 import Cart from "./components/cart/Cart";
+import SuccessfulBuy from "./components/cart/SuccessfulBuy";
+import Address from "./components/cart/Address";
 import Payment from "./components/cart/Payment";
 import Order from "./components/order/Order";
 import Bill from "./components/order/Bill";
@@ -23,6 +26,8 @@ import AddProduct from "./components/addProduct/AddProduct";
 import EditProduct from "./components/editProduct/EditProduct";
 import ReviewStore from "./components/reviewStore/ReviewStore";
 import Payment_store from "./components/payment_store/PaymentStore";
+import AddPaymentStore from "./components/payment_store/AddPaymentStore";
+import Dashboard_seller from "./components/stores/Dashboard_seller";
 
 function App() {
   return (
@@ -41,9 +46,12 @@ function App() {
           <Route path="/selleredit" Component={SellerEdit} />
           <Route path="/more" Component={More} />
           <Route path="/terms" Component={Terms} />
+          <Route path="/privacy" Component={Privacy} />
           <Route path="/" Component={Home} />
           <Route path="/productDetails" Component={ProductDetails} />
           <Route path="/cart" Component={Cart} />
+          <Route path="/successfulBuy" Component={SuccessfulBuy} />
+          <Route path="/address" Component={Address} />
           <Route path="/payment" Component={Payment} />
           <Route path="/order" Component={Order} />
           <Route path="/bill" Component={Bill} />
@@ -53,6 +61,8 @@ function App() {
           <Route path="/editProduct" Component={EditProduct} />
           <Route path="/eviewStore" Component={ReviewStore} />
           <Route path="/payment_store" Component={Payment_store} />
+          <Route path="/addPaymentStore" Component={AddPaymentStore} />
+          <Route path="/dashboard_seller" Component={Dashboard_seller} />
         </Routes>
       </Router>
     </>

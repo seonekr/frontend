@@ -3,8 +3,10 @@ import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import './paymentStore.css'
 import { CiImageOn } from "react-icons/ci";
+import QRCODE from "../../img/QRCODE.png";
 
 function PaymentStore() {
+
     return (
         <>
             <div className="header_box_management">
@@ -17,31 +19,27 @@ function PaymentStore() {
                 </div>
                 <div></div>
             </div>
-            <div className="box_container_review1">
+            <form className="box_container_review1" >
                 <div className="add_payment_box">
-                    <h3>Add payment</h3>
-                    <div className='inputproduct_box'>
-                        <p>Bank  name:</p>
-                        <input className="inputproduct" type="text" placeholder='name...' />
+                    <h3>Payment</h3>
+                    <div className='inputproduct_box_dplay'>
+                        <p>Bank  name: ...</p>
                     </div>
-                    <div className='inputproduct_box'>
-                        <p>Account number:</p>
-                        <input className="inputproduct" type="text" placeholder='account number...' />
+                    <div className='inputproduct_box_dplay'>
+                        <p>Account number: ...</p>
                     </div>
                     <div className="add_img_product_box">
                         <p>QR Code:</p>
-                        <div className="boxicon_img_input">
-                            <CiImageOn className='boxicon_img_iconn' />
-                            <input type="file" className="input" />
+                        <div className="imag_qrcode_store">
+                            <img src={QRCODE} alt="" />
                         </div>
                     </div>
-                    <Link to="#" >
-                        <div className='btn_save_productUser'>
-                            Save
-                        </div>
+
+                    <Link to="/addPaymentStore" type='submit' className='btn_save_productUser'>
+                        Add/Edit
                     </Link>
                 </div>
-            </div>
+            </form>
 
         </>
     )

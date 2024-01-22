@@ -79,32 +79,36 @@
 /*============== Responsive =====================*/
 @media (max-width: 768px) {
   .signup_page {
-    width: 100%;
-    top: 40%;
-    left: 50%;
+    width: 90%;
   }
   .box_form_register{
-      width: 90%;
-      margin: auto ;
+      width: 100%;
   }
-
   .input_wrap {
-    width: 100%;
+    width: 90%;
+    display: flex;
+    gap: 1rem;
   }
-  
   .btn_register_next {
     width: 100%;
+    max-width: none;
   }
   .input input {
     width: 100%;
   }
-
-  .box_form input {
+  .box_form_register input {
     width: 100%;
   }
-
   .login_btn{
     width: 100%;
+  }
+  #icon_user_sell{
+    width:25px;
+    height: 20px;
+  }
+  .user_type02{
+    display: flex;
+    gap: 0.5rem;
   }
 }
   

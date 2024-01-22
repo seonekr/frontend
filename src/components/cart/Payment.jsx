@@ -6,90 +6,62 @@ import Menu from "../menuFooter/Menu";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../header/Header";
-
+import { IoIosArrowBack } from "react-icons/io";
+import { FiCopy } from "react-icons/fi";
 const Payment = () => {
 
   return (
     <>
       <Header />
       <div className="guopBoxPayment_container">
-        <div className="header_box_payment">
-          <h3>Payment</h3>
-        </div>
-        <form >
-          <div className="adress_payment_content">
-            <div className="box_address">
-              <Link to="#" className="address">
-                <FiPlus /> Update address
-              </Link>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, explicabo?
-              </p>
-            </div>
-            <div className="details_ProductInPayMentBox">
-              <h3>Details</h3>
-              <ul>
-                <li className="detailsProduct_li">
-                  <div>Product ID: </div>
-                  <div>Product Name: </div>
-                  <div>Size: </div>
-                  <div>Color: </div>
-                  <div>Price: </div>
-                  <div>Product Counts: </div>
-                  <div>
-                    Have to pay:
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div></div>
-
-            <div className="box">
-              <div className="transfer">
-                <div className="select-option">
-                  <input
-                    type="radio"
-                    id="onePay"
-                    value="onePay"
-                  />
-                  <label htmlFor="onePay">Bcel One</label>
-                </div>
-                <div className="select-option">
-                  <input
-                    type="radio"
-                    id="wechat"
-                    value="wechat"
-                  />
-                  <label htmlFor="wechat">WeChat</label>
-                </div>
+        <h2 className="h2_boxPayment">Payment</h2>
+        <div className="adress_payment_content">
+          <h3>Address:</h3>
+          <div className="box_address">
+            <Link to="/address" className="address">
+              <FiPlus /> Update address
+            </Link>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, explicabo?
+            </p>
+          </div>
+          <h3>Details:</h3>
+          <div className="details_ProductInPayMentBox">
+            <ul>
+              <li className="detailsProduct_li">
+                <p>Product Name: </p>
+                <p>Size: </p>
+                <p>Color: </p>
+                <p>Price: </p>
+              </li>
+            </ul>
+          </div>
+          <div className="box_transfer">
+            <p className="box_transfer_p_line">Please transfer money to this account</p>
+            <div className="boxaccount_number">
+              <div className="boxaccount_number_p">
+                <p>Account number</p>
+                <p>123435346578589</p>
               </div>
-              <div className="boxImageqr">
-                <div className="qr">
-                  <img src={qrcode} alt="" />
-                </div>
-              </div>
-            </div>
-
-            <div className="box_description">
-              <h3>Confirm transfer</h3>
-              <div className="image_confirm_transfer">
-                <label htmlFor="img">
-                  <img alt="Main Product" />
-                  <p>Choose image</p>
-                  <input type="file" id="img" />
-                </label>
-              </div>
-            </div>
-
-            <div className="save">
-              {/* <button type="submit">
-                  Confirm
-                </button> */}
-              {/* The button will show when user input information */}
-              <Link to="#" >Confirm</Link>
+              <FiCopy className="iconnn_copy_account"/>
             </div>
           </div>
-        </form>
+          <h3>Confirm transfer</h3>
+          <div className="box_description">
+            <p>Please attach proof of  money transfer!</p>
+            <div className="image_confirm_transfer">
+              <p>Choose image</p>
+              <input type="file" id="img" />
+            </div>
+          </div>
+          <Link to="/successfulBuy" className="save">
+            Confirm
+            {/* <button type="submit">
+                  Confirm
+                </button> */}
+            {/* The button will show when user input information */}
+          </Link>
+        </div>
       </div>
       <Menu />
     </>

@@ -103,16 +103,17 @@ function EditProduct() {
                 <div className="add_img_product_box">
                     <h3>Details image:</h3>
                     <div className="boxicon_img_input">
-                        <CiImageOn className='boxicon_img_iconn'/>
+                        <CiImageOn className='boxicon_img_iconn' />
                         <input type="file" className="input" />
                     </div>
                 </div>
 
-                <Link to="#" >
-                    <div className='btn_save_productUser'>
-                        Save
-                    </div>
-                </Link>
+                <button type="submit" className='btn_save_productUser'>
+                    Save
+                </button>
+                <button type="submit" className='btn_Delete_productUser'>
+                    Delete
+                </button>
             </div>
         </>
     )

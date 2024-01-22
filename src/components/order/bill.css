@@ -73,7 +73,7 @@
 /* Responsive */
 @media screen and (max-width: 431px) {
     .bill {
-        width: 100%;
+        width: 95%;
         overflow: hidden;
     }
 

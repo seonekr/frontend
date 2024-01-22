@@ -1,17 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
-  
-:root {
-  --blue: #1e90ff;
-  --white: #ffffff;
-  --orange: #ff471a;
-  --gray: #ccc;
-  --black: #000;
-}
+
 .ProfilePage{
     width: 80%;
     margin: auto;
@@ -29,29 +16,29 @@
     border-radius: 50%;
 }
 
-form {
+.container_form_profile {
     display: grid;
     margin: 0 auto;
     gap: 16px;
     width: 40%;
   }
   
-  form input,
-  form button {
+  .container_form_profile input,
+  .container_form_profile button {
     width: 100%;
     padding: 1rem 1rem;
     border-radius: 14px;
     border: 1px solid var(--gray);
   }
   
-  form button {
+  .container_form_profile button {
     background-color: var(--orange);
     cursor: pointer;
     color: var(--white);
     font-size: 1.2rem;
   }
   
-  form input:focus {
+  .container_form_profile input:focus {
     outline: none;
   }
 
@@ -59,15 +46,22 @@ form {
 
 /*============== Responsive =====================*/
 @media (max-width: 768px) {
-    .ProfilePage{
-        width: 100%;
-    }
-    .container_form input {
-        width: 100%;
-    }
-    .box_prof img{
-        width: 30px;
-        margin-left: 1rem;
-    }
-   
+  .ProfilePage{
+    width: 100%;
   }
+  .container_form_profile {
+    width: 85%;
+  }
+  .container_form_profile input{
+    width: 100%;
+
+  }
+  .boxgoback{
+    margin-left: 1.3rem;
+  }
+  .box_prof img{
+      width: 30px;
+      margin-left: 1.3rem;
+  }
+   
+}

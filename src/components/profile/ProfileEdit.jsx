@@ -22,7 +22,7 @@ const ProfileEdit = () => {
             <div className='box_user_profile'>
                 <p>User</p><FaRegUserCircle />
             </div>
-            <form className='container_form'>
+            <form className='container_form_profileedit'>
                 <input type="email" placeholder="humascot@gmail.com" required />
                 <input type="password" placeholder=" Please enter yourcurrent password " required />
                 <input type="password" placeholder=" Please enter a new password " required />
