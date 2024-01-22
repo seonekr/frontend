@@ -2,9 +2,8 @@ import "./store_management.css";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoCameraSharp } from "react-icons/io5";
-import banner_no from "../../img/banner_no.jpg";
-import no_shopping_cart1 from "../../img/no_shopping_cart1.png";
-import productImage from "../../img/productImage.png";
+import banner_no from "../../../img/banner_no.jpg";
+import productImage from "../../../img/productImage.png";
 import { FaPen } from "react-icons/fa6";
 
 function Store_management() {

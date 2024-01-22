@@ -1,8 +1,8 @@
 import "./store.css";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
-import banner from "../../img/banner.jpg";
-import productImage from "../../img/productImage.png";
+import banner from "../../../img/banner.jpg";
+import productImage from "../../../img/productImage.png";
 
 const Store = () => {
   return (

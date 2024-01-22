@@ -1,0 +1,43 @@
+.container_order_store {
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.box_item_order_Store {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 20px 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    border-radius: 10px;
+}
+.h2_store{
+    text-align: center;
+}
+.box_item_order_text_Store {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.txtheadeproductorder_store {
+    margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 431px) {
+    .container_order_store {
+        width: 95%;
+        margin-top: 0;
+        padding: 15px 0;
+    }
+
+    .box_item_order_Store {
+        margin-top: 2rem;
+        padding: 20px;
+    }
+
+    .txtheadeproductorder_store {
+        margin-top: 10px;
+    }
+}

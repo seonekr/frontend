@@ -1,8 +1,6 @@
 import "./addPaymentStore.css";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
-import banner from "../../img/banner.jpg";
-import productImage from "../../img/productImage.png";
 import { useState, useEffect } from "react";
 import { CiImageOn } from "react-icons/ci";
 

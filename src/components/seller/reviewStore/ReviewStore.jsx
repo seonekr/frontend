@@ -2,10 +2,10 @@ import React from 'react'
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import './reivewStore.css'
-import user from "../../img/user.png";
-import icon_star from "../../img/icon_star.png"
-import icon_star2 from "../../img/icon_star2.png"
-import productImage from "../../img/productImage.png";
+import user from "../../../img/user.png";
+import icon_star from "../../../img/icon_star.png"
+import icon_star2 from "../../../img/icon_star2.png"
+import productImage from "../../../img/productImage.png";
 
 function ReviewStore() {
     return (
@@ -25,11 +25,8 @@ function ReviewStore() {
                     <Link to="/stores" className="btn_link_store ">
                         Sale items
                     </Link>
-                    <Link to="#" className="btn_link_store">
+                    <Link to="/dashboard_seller" className="btn_link_store link_store_active">
                         Dashboard
-                    </Link>
-                    <Link to="/eviewStore" className="btn_link_store link_store_active">
-                        Review
                     </Link>
                     <Link to="/payment_store" className="btn_link_store">
                         Payment

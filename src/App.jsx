@@ -33,10 +33,11 @@ import Stores from "./components/seller/stores/Store";
 import Store_management from "./components/seller/store_management/Store_management";
 import AddProduct from "./components/seller/addProduct/AddProduct";
 import EditProduct from "./components/seller/editProduct/EditProduct";
-import ReviewStore from "./components/seller/stores/reviewStore/ReviewStore";
+import ReviewStore from "./components/seller/reviewStore/ReviewStore";
 import Payment_store from "./components/seller/payment_store/PaymentStore";
 import AddPaymentStore from "./components/seller/payment_store/AddPaymentStore";
 import Dashboard_seller from "./components/seller/stores/Dashboard_seller";
+import OrderStore from "./components/seller/orderStore/OrderStore";
 
 function App() {
   return (
@@ -83,6 +84,7 @@ function App() {
           <Route path="/payment_store" Component={Payment_store} />
           <Route path="/addPaymentStore" Component={AddPaymentStore} />
           <Route path="/dashboard_seller" Component={Dashboard_seller} />
+          <Route path="/orderStore" Component={OrderStore} />
         </Routes>
       </Router>
     </>

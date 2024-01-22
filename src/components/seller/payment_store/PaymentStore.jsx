@@ -3,7 +3,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import './paymentStore.css'
 import { CiImageOn } from "react-icons/ci";
-import QRCODE from "../../img/QRCODE.png";
+import QRCODE from "../../../img/QRCODE.png";
 import { useState, useEffect } from "react";
 
 function PaymentStore() {

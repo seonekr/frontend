@@ -1,9 +1,6 @@
 import "./Dashboard_seller.css";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
-import banner from "../../img/banner.jpg";
-import productImage from "../../img/productImage.png";
-
 import { BsHandbagFill } from "react-icons/bs";
 import { TbShoppingCartStar } from "react-icons/tb";
 
@@ -38,7 +35,7 @@ const Dashboard_seller = () => {
           <div className="dasboard_box_container">
             <h3>Dashboard</h3>
             <div className="box_dasb_content">
-              <Link to="#" className="box_item_dasb box_bgColor1">
+              <Link to="/orderStore" className="box_item_dasb box_bgColor1">
                 <p>Order</p>
                 <p>5</p>
                 <div className="view_moreLink">
@@ -59,7 +56,7 @@ const Dashboard_seller = () => {
                   View
                 </div>
               </Link>
-              <Link to="#" className="box_item_dasb box_bgColor4">
+              <Link to="/eviewStore" className="box_item_dasb box_bgColor4">
                 <p>Review</p>
                 <p>5</p>
                 <div className="view_moreLink">
