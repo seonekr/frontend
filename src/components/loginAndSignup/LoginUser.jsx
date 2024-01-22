@@ -3,101 +3,34 @@ import { Link } from "react-router-dom";
 import "./loginUser.css"
 
 const LoginUser = () => {
-
   const login_en = "Login"
 
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
 
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const navigate = useNavigate();
+  const handleEmail = (e) => {
+    const value = e.target.value;
+    setEmail(value); 
+  };
 
+  const handlePass = (e) => {
+    const value = e.target.value;
+    setPass(value);
+  };
 
-  // // Start login with google function
-  // const clientId = "130876132345-i2vshcum1jogj249d9hu9bua01co7mr6.apps.googleusercontent.com"
-  // const [proflieG, setproflieG] = useState([])
-
-  // useEffect(() => {
-  //   const initClient = () => {
-  //     gapi.client.init({
-  //       clientId: clientId,
-  //       scope: ''
-  //     })
-  //   }
-  //   gapi.load("client:auth2", initClient)
-  // }, [])
-
-  // // End login with google function
-
-  // const handleEmail = (e) => {
-  //   const value = e.target.value;
-  //   setEmail(value);
-  // };
-
-  // const handlePassword = (e) => {
-  //   const value = e.target.value;
-  //   setPassword(value);
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault(); // Prevent the default form submission behavsior
-  //   const validationErrors = {};
-
-  //   if (!email.trim()) {
-  //     validationErrors.email = "email is required";
-  //   }
-  //   if (!password.trim()) {
-  //     validationErrors.password = "password is required";
-  //   }
-
-  //   if (Object.keys(validationErrors).length > 0) {
-  //     setErrors(validationErrors);
-  //     return;
-  //   }
-  //   var myHeaders = new Headers();
-  //   myHeaders.append("Content-Type", "application/json");
-
-  //   var raw = JSON.stringify({
-  //     email: email,
-  //     password: password,
-  //   });
-
-  //   var requestOptions = {
-  //     method: "POST",
-  //     headers: myHeaders,
-  //     body: raw,
-  //     redirect: "follow",
-  //   };
-
-  //   fetch(import.meta.env.VITE_API + "/login", requestOptions)
-  //     .then((response) => response.json())
-  //     .then((result) => {
-  //       if (result.Status === "Success") {
-  //         const token = result.token;
-  //         const userID = result.userID;
-  //         if (result.urole === "Admin") {
-  //           localStorage.setItem("token", token);
-  //           localStorage.setItem("userID", userID);
-  //           navigate("/dashborad");
-  //         } else if (result.urole === "Customer") {
-  //           localStorage.setItem("token", token);
-  //           localStorage.setItem("userID", userID);
-  //           navigate("/");
-  //         } else {
-  //           setError(result.Error);
-  //           navigate("/login");
-  //         }
-  //       } else {
-  //         setError(result.Error);
-  //       }
-  //     })
-  //     .catch((error) => console.log("error", error));
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent the default form submission behavsior
+    // Handle form submission logic here
+    console.log('Form submitted');
+    console.log('Email:', email);
+    console.log('Password:', pass);
+  };
 
 
   return (
     <>
       <section>
-      <form className="box_container_login2">
+      <form onSubmit={handleSubmit} className="box_container_login2">
         <div className="cover">
           <h2 className="box_container_login_text">{login_en}</h2>
           <p className="box_pleaselogin">Please Log in to use the service!</p>
@@ -107,16 +40,16 @@ const LoginUser = () => {
               className="input_form"
               type="email"
               placeholder="Enter Your Email"
-              // value={email}
-              // onChange={handleEmail}
+              value={email} 
+              onChange={handleEmail}
             />
             <label>Password</label>
             <input
               className="input_form"
               type="password"
               placeholder="Enter Your Password"
-              // value={password}
-              // onChange={handlePassword}
+              value={pass} 
+              onChange={handlePass}
             />
           </div>
 
