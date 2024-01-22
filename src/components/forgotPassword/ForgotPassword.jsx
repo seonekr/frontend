@@ -16,13 +16,31 @@ const ForgotPassword = () => {
           <div className='box_infor'>Enter basic information</div>
 
           <div className='container_form_forgot2'>
-            <input type="email" placeholder="Email" required />
-            <div className='verification'>Ceritification</div>
+            <input 
+              type="email" 
+              placeholder="Email" 
+              required 
+            />
+
+            <div className='verification'>Verification</div>
           </div>
 
-          <input type="number" placeholder="Verification number" required />
-          <input type="password" placeholder="New passwords" required />
-          <input type="password" placeholder="Confirm your new password" required />
+          <input 
+            type="text" 
+            placeholder="Verification number" 
+            required 
+          />
+          <input 
+            type="password" 
+            placeholder="New passwords" 
+            required 
+          />
+          <input 
+            type="password" 
+            placeholder="Confirm your new password" 
+            required 
+          />
+
           <button type="submit">Confirmation</button>
         </form>
       </div>

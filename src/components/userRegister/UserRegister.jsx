@@ -75,7 +75,7 @@ const UserRegister = () => {
               required
             />
             <div className='verification' onClick={handleSendVerification}>
-              Send Verification Email
+              Verification
             </div>
           </div>
           <input

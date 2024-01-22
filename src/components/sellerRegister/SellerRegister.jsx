@@ -102,7 +102,7 @@ const SellerRegister = () => {
               onChange={handleUserChange}
               required
             />
-            <div className='verification'>Ceritification</div>
+            <div className='verification'>Verification</div>
           </div>
           <input
             type="text"
