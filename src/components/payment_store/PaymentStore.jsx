@@ -3,33 +3,9 @@ import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import './paymentStore.css'
 import { CiImageOn } from "react-icons/ci";
-import { useState, useEffect } from "react";
+import QRCODE from "../../img/QRCODE.png";
 
 function PaymentStore() {
-
-    const [accounts, setaccount] = useState({
-        nameBank: "",
-        accountNumber: "",
-    });
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setaccount((prevProduct) => ({
-            ...prevProduct,
-            [name]: value,
-        }));
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        try {
-
-
-        } catch (error) {
-            console.error("Error submitting form:", error);
-        }
-        console.log(nameBank);
-    };
 
     return (
         <>
@@ -43,28 +19,25 @@ function PaymentStore() {
                 </div>
                 <div></div>
             </div>
-            <form className="box_container_review1" onSubmit={handleSubmit}>
+            <form className="box_container_review1" >
                 <div className="add_payment_box">
-                    <h3>Add payment</h3>
-                    <div className='inputproduct_box'>
-                        <p>Bank  name:</p>
-                        <input className="inputproduct" type="text" name='nameBank' placeholder='name...' onChange={handleInputChange} />
+                    <h3>Payment</h3>
+                    <div className='inputproduct_box_dplay'>
+                        <p>Bank  name: ...</p>
                     </div>
-                    <div className='inputproduct_box'>
-                        <p>Account number:</p>
-                        <input className="inputproduct" type="text" name='accountNumber' placeholder='account number...' onChange={handleInputChange} />
+                    <div className='inputproduct_box_dplay'>
+                        <p>Account number: ...</p>
                     </div>
                     <div className="add_img_product_box">
                         <p>QR Code:</p>
-                        <div className="boxicon_img_input">
-                            <CiImageOn className='boxicon_img_iconn' />
-                            <input type="file" className="input" />
+                        <div className="imag_qrcode_store">
+                            <img src={QRCODE} alt="" />
                         </div>
                     </div>
 
-                    <button type='submit' className='btn_save_productUser'>
-                        Save
-                    </button>
+                    <Link to="/addPaymentStore" type='submit' className='btn_save_productUser'>
+                        Add/Edit
+                    </Link>
                 </div>
             </form>
 

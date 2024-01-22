@@ -26,6 +26,8 @@ import AddProduct from "./components/addProduct/AddProduct";
 import EditProduct from "./components/editProduct/EditProduct";
 import ReviewStore from "./components/reviewStore/ReviewStore";
 import Payment_store from "./components/payment_store/PaymentStore";
+import AddPaymentStore from "./components/payment_store/AddPaymentStore";
+import Dashboard_seller from "./components/stores/Dashboard_seller";
 
 function App() {
   return (
@@ -59,6 +61,8 @@ function App() {
           <Route path="/editProduct" Component={EditProduct} />
           <Route path="/eviewStore" Component={ReviewStore} />
           <Route path="/payment_store" Component={Payment_store} />
+          <Route path="/addPaymentStore" Component={AddPaymentStore} />
+          <Route path="/dashboard_seller" Component={Dashboard_seller} />
         </Routes>
       </Router>
     </>

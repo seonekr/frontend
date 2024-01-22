@@ -1,5 +1,5 @@
 import "./store.css";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import banner from "../../img/banner.jpg";
 import productImage from "../../img/productImage.png";
@@ -26,11 +26,8 @@ const Store = () => {
             <Link to="/stores" className="btn_link_store link_store_active">
               Sale items
             </Link>
-            <Link to="#" className="btn_link_store">
+            <Link to="/dashboard_seller" className="btn_link_store">
               Dashboard
-            </Link>
-            <Link to="/eviewStore" className="btn_link_store">
-              Review
             </Link>
             <Link to="/payment_store" className="btn_link_store">
               Payment

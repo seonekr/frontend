@@ -34,7 +34,6 @@ const ProductHome = () => {
           </h1>
           <div className="categoryBoxfiler">
             <form className="boxfilterseach">
-              <label>Select Filter</label>
               <select className="filter_priceProduct">
                 <option value="default">All Product</option>
                 <option value="higherPrice">Higher Price</option>
