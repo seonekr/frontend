@@ -68,4 +68,8 @@ a {
         width: 100%;
         overflow: hidden;
     }
+
+    .product-area{
+        padding: 10px;
+    }
 }

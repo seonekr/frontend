@@ -19,16 +19,37 @@ const OrderStore = () => {
             </div>
             <div className="container_order_store">
                 <h2 className="h2_store">Order</h2>
-                <div className="box_item_order_Store">
-                    <Link to="/bill" >
-                        <div className="box_item_order_text_Store">
-                            <p>No: 01</p>
-                            <p>10.1.2024</p>
-                        </div>
-                        <p className="txtheadeproductorder_store">
+                <div className="heade_productorder_store">
+                    <Link to="/billStore" className="box_item_order_text_Store">
+                        <p>No: 01</p>
+                        <p >
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, qui!
                         </p>
+                        <p>10.1.2024</p>
                     </Link>
+                    <button className="btn_confirm_orderD nConfrim">
+                        Pending
+                    </button>
+
+                    {/* <button className="btn_confirm_orderD fnConfrim">
+                        Paid
+                    </button> */}
+                </div>
+                <div className="heade_productorder_store">
+                    <Link to="/billStore" className="box_item_order_text_Store">
+                        <p>No: 02</p>
+                        <p >
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, qui!
+                        </p>
+                        <p>10.1.2024</p>
+                    </Link>
+                    {/* <button className="btn_confirm_orderD nConfrim">
+                        Pending
+                    </button> */}
+
+                    <button className="btn_confirm_orderD fnConfrim">
+                        Paid
+                    </button>
                 </div>
 
             </div>

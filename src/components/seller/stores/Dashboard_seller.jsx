@@ -130,7 +130,7 @@ const Dashboard_seller = () => {
                   </div>
                   <div className="detial">
                     <span>
-                      <p className="blue"></p>ble
+                      <p className="blue"></p>blue
                     </span>
                     <span>
                       <p className="red"></p>red
