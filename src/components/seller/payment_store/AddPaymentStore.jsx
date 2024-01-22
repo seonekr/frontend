@@ -8,29 +8,24 @@ import { CiImageOn } from "react-icons/ci";
 
 const AddPaymentStore = () => {
 
-    const [accounts, setaccount] = useState({
+    const [dataPayment, setdataPayment] = useState({
         nameBank: "",
+        accountName: "",
         accountNumber: "",
     });
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setaccount((prevProduct) => ({
-            ...prevProduct,
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setdataPayment((prevState) => ({
+            ...prevState,
             [name]: value,
         }));
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        try {
-
-
-        } catch (error) {
-            console.error("Error submitting form:", error);
-        }
-        console.log(nameBank);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(dataPayment);
     };
+
     return (
         <>
             <div className="header_box_management">
@@ -49,6 +44,10 @@ const AddPaymentStore = () => {
                     <div className='inputproduct_box'>
                         <p>Bank  name:</p>
                         <input className="inputproduct" type="text" name='nameBank' placeholder='name...' onChange={handleInputChange} />
+                    </div>
+                    <div className='inputproduct_box'>
+                        <p>Account  name:</p>
+                        <input className="inputproduct" type="text" name='accountName' placeholder='Account name...' onChange={handleInputChange} />
                     </div>
                     <div className='inputproduct_box'>
                         <p>Account number:</p>

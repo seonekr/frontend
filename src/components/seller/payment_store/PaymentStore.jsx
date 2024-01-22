@@ -4,8 +4,15 @@ import { Link } from "react-router-dom";
 import './paymentStore.css'
 import { CiImageOn } from "react-icons/ci";
 import QRCODE from "../../img/QRCODE.png";
+import { useState, useEffect } from "react";
 
 function PaymentStore() {
+    const dataPayment = ({
+        nameBank: "asfasf",
+        accountName: "asfasf",
+        accountNumber: "12412412",
+        Image: QRCODE,
+    });
 
     return (
         <>
@@ -22,22 +29,28 @@ function PaymentStore() {
             <form className="box_container_review1" >
                 <div className="add_payment_box">
                     <h3>Payment</h3>
-                    <div className='inputproduct_box_dplay'>
-                        <p>Bank  name: ...</p>
-                    </div>
-                    <div className='inputproduct_box_dplay'>
-                        <p>Account number: ...</p>
-                    </div>
-                    <div className="add_img_product_box">
-                        <p>QR Code:</p>
-                        <div className="imag_qrcode_store">
-                            <img src={QRCODE} alt="" />
+                    <div>
+                        <div className='inputproduct_box_dplay'>
+                            <p>Bank: {dataPayment.nameBank}</p>
+                        </div>
+                        <div className='inputproduct_box_dplay'>
+                            <p>Account  name: {dataPayment.accountName}</p>
+                        </div>
+                        <div className='inputproduct_box_dplay'>
+                            <p>Account number: {dataPayment.accountNumber}</p>
+                        </div>
+                        <div className="add_img_product_box">
+                            <p>QR Code:</p>
+                            <div className="imag_qrcode_store">
+                                <img src={dataPayment.Image} alt="" />
+                            </div>
                         </div>
                     </div>
-
                     <Link to="/addPaymentStore" type='submit' className='btn_save_productUser'>
                         Add/Edit
                     </Link>
+
+
                 </div>
             </form>
 

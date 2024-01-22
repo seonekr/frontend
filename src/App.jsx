@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+//------ Login-SignUp Page ------//
 import LoginUser from "./components/loginAndSignup/LoginUser";
 import RegisterUser from "./components/loginAndSignup/RegisterUser";
 import ForgotPassword from "./components/forgotPassword/ForgotPassword";
@@ -6,12 +8,17 @@ import UserRegister from "./components/userRegister/UserRegister";
 import SellerRegister from "./components/sellerRegister/SellerRegister";
 import SigupGoogle from "./components/sigupforGoogle/SigupGoogle";
 import AdditionalSeller from "./components/additionalSeller/AdditionalSeller";
+
+
+//------ Profile Page ------//
 import ProfileEdit from './components/profile/ProfileEdit';
 import Profile from './components/profile/Profile';
 import SellerEdit from './components/sellerRegister/SellerEdit';
 import Terms from './components/termsandprivacy/Terms';
 import Privacy from './components/termsandprivacy/Privacy';
 import More from "./components/more/More";
+
+//------ Home Page ------//
 import Home from "./components/homePage/HomePage";
 import ProductDetails from "./components/products/ProductDetails";
 import Cart from "./components/cart/Cart";
@@ -20,20 +27,24 @@ import Address from "./components/cart/Address";
 import Payment from "./components/cart/Payment";
 import Order from "./components/order/Order";
 import Bill from "./components/order/Bill";
-import Stores from "./components/stores/Store";
-import Store_management from "./components/store_management/Store_management";
-import AddProduct from "./components/addProduct/AddProduct";
-import EditProduct from "./components/editProduct/EditProduct";
-import ReviewStore from "./components/reviewStore/ReviewStore";
-import Payment_store from "./components/payment_store/PaymentStore";
-import AddPaymentStore from "./components/payment_store/AddPaymentStore";
-import Dashboard_seller from "./components/stores/Dashboard_seller";
+
+//------ Seller ------//
+import Stores from "./components/seller/stores/Store";
+import Store_management from "./components/seller/store_management/Store_management";
+import AddProduct from "./components/seller/addProduct/AddProduct";
+import EditProduct from "./components/seller/editProduct/EditProduct";
+import ReviewStore from "./components/seller/stores/reviewStore/ReviewStore";
+import Payment_store from "./components/seller/payment_store/PaymentStore";
+import AddPaymentStore from "./components/seller/payment_store/AddPaymentStore";
+import Dashboard_seller from "./components/seller/stores/Dashboard_seller";
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
+
+          {/* --------- Login-Signup page---------- */}
           <Route path="/loginuser" Component={LoginUser} />
           <Route path="/registeruser" Component={RegisterUser} />
           <Route path="/forgotpassword" Component={ForgotPassword} />
@@ -41,12 +52,18 @@ function App() {
           <Route path="/sellerregister" Component={SellerRegister} />
           <Route path="/sigupgoogle" Component={SigupGoogle} />
           <Route path="/additionalseller" Component={AdditionalSeller} />
+
+
+          {/* --------- Profile page---------- */}
           <Route path="/profileedit" Component={ProfileEdit} />
           <Route path="/profile" Component={Profile} />
           <Route path="/selleredit" Component={SellerEdit} />
           <Route path="/more" Component={More} />
           <Route path="/terms" Component={Terms} />
           <Route path="/privacy" Component={Privacy} />
+
+
+          {/* --------- Home Page ---------- */}
           <Route path="/" Component={Home} />
           <Route path="/productDetails" Component={ProductDetails} />
           <Route path="/cart" Component={Cart} />
@@ -55,6 +72,9 @@ function App() {
           <Route path="/payment" Component={Payment} />
           <Route path="/order" Component={Order} />
           <Route path="/bill" Component={Bill} />
+
+
+          {/* --------- Seller ---------- */}
           <Route path="/stores" Component={Stores} />
           <Route path="/store_management" Component={Store_management} />
           <Route path="/addProduct" Component={AddProduct} />

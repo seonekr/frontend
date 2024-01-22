@@ -45,7 +45,7 @@ const Dashboard_seller = () => {
                   View
                 </div>
               </Link>
-              <Link to="#" className="box_item_dasb box_bgColor2">
+              <Link to="/store_management" className="box_item_dasb box_bgColor2">
                 <p>Product</p>
                 <p>5</p>
                 <div className="view_moreLink">
