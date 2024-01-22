@@ -50,6 +50,7 @@ const UserRegister = () => {
     }).then((response) => {
       console.log(response.data);
     });
+    // console.log(formData)
   };
 
   return (
@@ -63,7 +64,7 @@ const UserRegister = () => {
         <div className="title">
           You are in the process of signing up as a user!
         </div>
-        <form className="container_form_user">
+        <form className="container_form_user"> 
           <div className="box_title">Enter basic information</div>
           <div className='container_form_user2'>
             <input

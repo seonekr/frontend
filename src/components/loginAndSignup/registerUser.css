@@ -80,6 +80,10 @@
 @media (max-width: 768px) {
   .signup_page {
     width: 90%;
+    
+  }
+  .box_iconBack_user{
+    padding: 0 10px;
   }
   .box_form_register{
       width: 100%;
@@ -90,7 +94,7 @@
     gap: 1rem;
   }
   .btn_register_next {
-    width: 100%;
+    width: 90%;
     max-width: none;
   }
   .input input {
