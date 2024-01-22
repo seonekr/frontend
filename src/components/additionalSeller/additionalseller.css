@@ -1,0 +1,104 @@
+
+.box_forgot {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+    text-align: center;
+}
+.title{
+    margin-top: 1.5rem;
+    font-size: 18px;
+}
+.container_form_addition{
+    margin-top: 2rem;
+}
+
+.title_addition{
+    margin-top: 1rem;
+    font-size: 18px;
+    text-align: start;
+    margin-top: 2rem;
+}
+.box_text{
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    background: #fff;
+    width: 100%;
+    height: 100px;
+    padding: 10px 15px;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+.box_iconBack{
+    margin-right: 28rem;
+}
+#iconBack{
+    width: 30px;
+    height: 40px;
+}
+.container_form_addition {
+    display: grid;
+    margin: 0 auto;
+    gap: 15px;
+    width: 40%;
+  }
+  
+  .container_form_addition input,
+  .container_form_addition button {
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 14px;
+    border: 1px solid var(--gray);
+  }
+  
+  .container_form_addition button {
+    background-color: var(--orange);
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.2rem;
+  }
+  
+  .container_form_addition input:focus {
+    outline: none;
+  }
+
+
+/* ============== Responsive =============== */
+
+@media (max-width: 768px) {
+    .box_forgot {
+      width: 100%;
+      top: 40%;
+      left: 50%;
+    }
+    .container_form_addition {
+      width: 100%;
+    }
+    .container_form_addition input {
+      width: 90%;
+      margin: auto;
+    }
+  
+    .title_addition{
+        margin-left: 1.5rem;
+    }
+    .box_text{
+        width: 90%;
+        margin: auto;
+    }
+    .box_iconBack{
+        margin-right: 20rem;
+    }
+    #iconBack{
+        width: 30px;
+        height: 40px;
+    }
+    .box_iconBack{
+        margin-right: 22rem;
+    }
+    #iconBack{
+        width: 30px;
+        height: 30px;
+    }
+    
+  }
