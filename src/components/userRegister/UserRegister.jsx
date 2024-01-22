@@ -119,8 +119,6 @@ const UserRegister = () => {
         </div>
       </div>
       {message && <p>{message}</p>}
-      
-      <p>fdvbfd</p>
     </>
   );
 };
