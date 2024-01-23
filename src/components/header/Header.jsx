@@ -1,7 +1,8 @@
 import React from "react";
 import "./header.css";
+import { HiOutlineBuildingStorefront } from "react-icons/hi2";
 import { FaMagnifyingGlass, FaCartShopping, FaRegUser } from "react-icons/fa6";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo1 from "../../img/Logo1.png";
 
 const Header = () => {
@@ -40,21 +41,16 @@ const Header = () => {
                     <FaCartShopping className="head_colorr" />
                   </Link>
                 </div>
-                <div>
-                  <div className="userAndstore">
-                    <Link to="/more">
-                      <FaRegUser className="head_colorr" />
-                    </Link>
-                    {/* <Link to="/account">
-                      <BsShop className="head_colorr" />
-                    </Link> */}
-                    <div>
-                      <Link to="/loginuser" className="head_colorr">
-                        Login
-                      </Link>
-                    </div>
-                  </div>
-
+                {/* for seller */}
+                {/* <div className="userAndstore">
+                  <Link to="/stores">
+                    <HiOutlineBuildingStorefront  className="head_colorr" />
+                  </Link>
+                </div> */}
+                <div className="userAndstore">
+                  <Link to="/more">
+                    <FaRegUser className="head_colorr" />
+                  </Link>
                 </div>
               </div>
             </div>

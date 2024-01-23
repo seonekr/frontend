@@ -193,6 +193,9 @@ a {
 }
 
 @media screen and (max-width: 431px) {
+    #product {
+        margin: 0 auto 6rem auto;
+    }
     .product-area {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
