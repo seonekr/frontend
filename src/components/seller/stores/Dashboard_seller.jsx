@@ -24,10 +24,10 @@ const Dashboard_seller = () => {
             <Link to="/stores" className="btn_link_store ">
               Sale items
             </Link>
-            <Link to="/dashboard_seller" className="btn_link_store link_store_active">
+            <Link to="/dashboard-seller" className="btn_link_store link_store_active">
               Dashboard
             </Link>
-            <Link to="/payment_store" className="btn_link_store">
+            <Link to="/payment-store" className="btn_link_store">
               Payment
             </Link>
           </div>
@@ -35,14 +35,14 @@ const Dashboard_seller = () => {
           <div className="dasboard_box_container">
             <h3>Dashboard</h3>
             <div className="box_dasb_content">
-              <Link to="/orderStore" className="box_item_dasb box_bgColor1">
+              <Link to="/order-store" className="box_item_dasb box_bgColor1">
                 <p>Order</p>
                 <p>5</p>
                 <div className="view_moreLink">
                   View
                 </div>
               </Link>
-              <Link to="/store_management" className="box_item_dasb box_bgColor2">
+              <Link to="/store-management" className="box_item_dasb box_bgColor2">
                 <p>Product</p>
                 <p>5</p>
                 <div className="view_moreLink">
@@ -56,7 +56,7 @@ const Dashboard_seller = () => {
                   View
                 </div>
               </Link>
-              <Link to="/eviewStore" className="box_item_dasb box_bgColor4">
+              <Link to="/eview-store" className="box_item_dasb box_bgColor4">
                 <p>Review</p>
                 <p>5</p>
                 <div className="view_moreLink">

@@ -46,7 +46,7 @@ function PaymentStore() {
                             </div>
                         </div>
                     </div>
-                    <Link to="/addPaymentStore" type='submit' className='btn_save_productUser'>
+                    <Link to="/add-payment-store" type='submit' className='btn_save_productUser'>
                         Add/Edit
                     </Link>
 

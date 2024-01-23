@@ -109,7 +109,7 @@ function AddProduct() {
     return (
         <>
             <div className="header_box_management">
-                <Link to="/store_management" className="box_management_iconnback">
+                <Link to="/store-management" className="box_management_iconnback">
                     <IoIosArrowBack id="icons_back" />
                     <p>Back</p>
                 </Link>

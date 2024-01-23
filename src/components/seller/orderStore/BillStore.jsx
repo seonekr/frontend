@@ -7,7 +7,7 @@ const BillStore = () => {
   return (
     <>
       <div className="header_box_management">
-        <Link to="/orderStore" className="box_management_iconnback">
+        <Link to="/order-store" className="box_management_iconnback">
           <IoIosArrowBack id="icons_back" />
           <p>Back</p>
         </Link>

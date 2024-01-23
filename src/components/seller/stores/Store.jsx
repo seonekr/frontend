@@ -19,7 +19,7 @@ const Store = () => {
             <div className="title_nameStore">
               <h3>online shop</h3>
             </div>
-            <Link to="/store_management" className="btn_add_editStore">
+            <Link to="/store-management" className="btn_add_editStore">
               Add/Edit
             </Link>
           </div>

@@ -9,6 +9,7 @@ import { FaPen } from "react-icons/fa6";
 
 function Store_management() {
 
+    //PopUp box add banner
     const [isPopupVisible, setPopupVisible] = useState(false);
 
     const togglePopup = () => {
@@ -30,15 +31,19 @@ function Store_management() {
                         <div></div>
                     </div>
                     <div className="banner_no_box">
-                        <img src={banner_no} alt="" />
+                        <div className="banner_no_box_img">
+                            <img src={productImage} alt="" />
+                        </div>
                         <div className="edit_image">
                             <a className="trigger_popup_fricc" onClick={togglePopup}>
                                 <IoCameraSharp />
                             </a>
+                            {/* PopUp box add banner */}
                             {isPopupVisible && (
                                 <form className="hover_bkgr_fricc">
+                                    <p>Image banner</p>
                                     <div className="popupCloseButton" onClick={togglePopup}>&times;</div>
-                                    <label htmlFor="#" className="popup_txt_Boximagae">
+                                    <label className="popup_txt_Boximagae">
                                         <input type="file" name='image' />
                                     </label>
                                     <button className="banner_confirm_btn">Confirm</button>
@@ -47,10 +52,10 @@ function Store_management() {
                         </div>
                     </div>
 
-                    <div className="product-area">
+                    <div className="group_container_product">
                         <div className="box-product" >
                             <div className="editproduct_boxIocno">
-                                <Link to="/editProduct" className="iconn_pendit_product" ><FaPen /></Link>
+                                <Link to="/edit-product" className="iconn_pendit_product" ><FaPen /></Link>
                                 <div className="img">
                                     <img src={productImage} alt="image" />
                                 </div>
@@ -61,6 +66,46 @@ function Store_management() {
                                 </ul>
                             </div>
                         </div>
+                        <div className="box-product" >
+                            <div className="editproduct_boxIocno">
+                                <Link to="/edit-product" className="iconn_pendit_product" ><FaPen /></Link>
+                                <div className="img">
+                                    <img src={productImage} alt="image" />
+                                </div>
+                                <ul className="txtOFproduct2">
+                                    <li className="name">Name</li>
+                                    <li className="price">Price</li>
+                                    <li className="desc">desc</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="box-product" >
+                            <div className="editproduct_boxIocno">
+                                <Link to="/edit-product" className="iconn_pendit_product" ><FaPen /></Link>
+                                <div className="img">
+                                    <img src={productImage} alt="image" />
+                                </div>
+                                <ul className="txtOFproduct2">
+                                    <li className="name">Name</li>
+                                    <li className="price">Price</li>
+                                    <li className="desc">desc</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="box-product" >
+                            <div className="editproduct_boxIocno">
+                                <Link to="/edit-product" className="iconn_pendit_product" ><FaPen /></Link>
+                                <div className="img">
+                                    <img src={productImage} alt="image" />
+                                </div>
+                                <ul className="txtOFproduct2">
+                                    <li className="name">Name</li>
+                                    <li className="price">Price</li>
+                                    <li className="desc">desc</li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <Link to="/addProduct" className="btn_addProdcut">
