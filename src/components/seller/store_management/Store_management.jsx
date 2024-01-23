@@ -32,7 +32,7 @@ function Store_management() {
                     </div>
                     <div className="banner_no_box">
                         <div className="banner_no_box_img">
-                            <img src={productImage} alt="" />
+                            <img src={banner_no} alt="" />
                         </div>
                         <div className="edit_image">
                             <a className="trigger_popup_fricc" onClick={togglePopup}>
@@ -108,7 +108,7 @@ function Store_management() {
 
                     </div>
                 </div>
-                <Link to="/addProduct" className="btn_addProdcut">
+                <Link to="/add-product" className="btn_addProdcut">
                     Add Product
                 </Link>
             </div>
