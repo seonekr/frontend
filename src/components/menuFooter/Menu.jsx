@@ -1,6 +1,7 @@
 import "./menu.css"
 import { Link } from "react-router-dom";
 import QrdownloadApp from '../../img/QrdownloadApp.png'
+import Logo1 from '../../img/Logo1.png'
 import { FaCartShopping } from "react-icons/fa6";
 import { HiOutlineHome } from "react-icons/hi";
 import { BsShop, BsClipboardCheck } from "react-icons/bs";
@@ -14,12 +15,9 @@ const Menu = () => {
             <footer className="footerBox">
                 <div className="footer_Container">
                     <div className="footconentBox">
-                        <h3 className="txt_footHead">About us</h3>
-                        <p><Link to="/" className="txt_pFoot">Something</Link></p>
-                        <p><Link to="/" className="txt_pFoot">Something</Link></p>
-                        <p><Link to="/" className="txt_pFoot">Something</Link></p>
-                        <p><Link to="/" className="txt_pFoot">Something</Link></p>
-                        <p><Link to="/" className="txt_pFoot">Something</Link></p>
+                        <h3 className="txt_footHead">About</h3>
+                        <Link to="/" className="txt_pFoot"><img src={Logo1} alt="" /></Link>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, laudantium?</p>
                     </div>
 
                     <div className="footconentBox">
