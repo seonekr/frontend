@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import banner from "../../../img/banner.jpg";
 import productImage from "../../../img/productImage.png";
+import React, { useState, useEffect } from "react";
 
 const Store = () => {
+
   return (
     <>
       <div className="box_store">
@@ -26,10 +28,10 @@ const Store = () => {
             <Link to="/stores" className="btn_link_store link_store_active">
               Sale items
             </Link>
-            <Link to="/dashboard_seller" className="btn_link_store">
+            <Link to="/dashboard-seller" className="btn_link_store">
               Dashboard
             </Link>
-            <Link to="/payment_store" className="btn_link_store">
+            <Link to="/payment-store" className="btn_link_store">
               Payment
             </Link>
           </div>
@@ -45,100 +47,12 @@ const Store = () => {
                   <img src={productImage} alt="image" />
                 </div>
                 <ul className="txtOFproduct2">
-                  <li className="name">Name</li>
-                  <li className="price">Price</li>
-                  <li className="desc">desc</li>
+                  <li className="name">asd</li>
+                  <li className="price">123</li>
+                  <li className="desc">aasdfasdf</li>
                 </ul>
               </div>
             </div>
-
-            <div className="box-product" >
-              <div>
-                <div className="img">
-                  <img src={productImage} alt="image" />
-                </div>
-                <ul className="txtOFproduct2">
-                  <li className="name">Name</li>
-                  <li className="price">Price</li>
-                  <li className="desc">desc</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="box-product" >
-              <div>
-                <div className="img">
-                  <img src={productImage} alt="image" />
-                </div>
-                <ul className="txtOFproduct2">
-                  <li className="name">Name</li>
-                  <li className="price">Price</li>
-                  <li className="desc">desc</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="box-product" >
-              <div>
-                <div className="img">
-                  <img src={productImage} alt="image" />
-                </div>
-                <ul className="txtOFproduct2">
-                  <li className="name">Name</li>
-                  <li className="price">Price</li>
-                  <li className="desc">desc</li>
-                </ul>
-              </div>
-            </div>
-            <div className="box-product" >
-              <div>
-                <div className="img">
-                  <img src={productImage} alt="image" />
-                </div>
-                <ul className="txtOFproduct2">
-                  <li className="name">Name</li>
-                  <li className="price">Price</li>
-                  <li className="desc">desc</li>
-                </ul>
-              </div>
-            </div>
-            <div className="box-product" >
-              <div>
-                <div className="img">
-                  <img src={productImage} alt="image" />
-                </div>
-                <ul className="txtOFproduct2">
-                  <li className="name">Name</li>
-                  <li className="price">Price</li>
-                  <li className="desc">desc</li>
-                </ul>
-              </div>
-            </div>
-            <div className="box-product" >
-              <div>
-                <div className="img">
-                  <img src={productImage} alt="image" />
-                </div>
-                <ul className="txtOFproduct2">
-                  <li className="name">Name</li>
-                  <li className="price">Price</li>
-                  <li className="desc">desc</li>
-                </ul>
-              </div>
-            </div>
-            <div className="box-product" >
-              <div>
-                <div className="img">
-                  <img src={productImage} alt="image" />
-                </div>
-                <ul className="txtOFproduct2">
-                  <li className="name">Name</li>
-                  <li className="price">Price</li>
-                  <li className="desc">desc</li>
-                </ul>
-              </div>
-            </div>
-
           </div>
 
         </div>

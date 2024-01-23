@@ -12,12 +12,6 @@ import productImage from "../../img/productImage.png";
 import detailproduct from "../../img/detailproduct.jpg";
 
 function ProductDetails() {
-  const [selectedColor, setSelectedColor] = useState("");
-  const [selectedSize, setSelectedSize] = useState("");
-
-  // Add more colors and sizes as needed
-  const colors = ["Red", "Blue", "Green", "Yellow"];
-
 
   return (
     <>
@@ -42,24 +36,6 @@ function ProductDetails() {
                   <BiStore className="iconn_linkbox" />
                   <p>Lorem ipsum</p>
                 </Link>
-
-                {/* Checked colors */}
-                <div className="color_product">
-                  <h5>Color:</h5>
-                  {colors.map((color, index) => (
-                    <div key={index}>
-                      <label>{color}</label>
-                      <input
-                        className="echColor"
-                        type="radio"
-                        name="color"
-                        value={color}
-                        onChange={(e) => setSelectedColor(e.target.value)}
-                        checked={selectedColor === color}
-                      />
-                    </div>
-                  ))}
-                </div>
 
                 <div className="size_product">
                   <p>Size:</p>
@@ -165,6 +141,7 @@ function ProductDetails() {
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est numquam sapiente voluptates ut porro quisquam eveniet voluptas sed. Nulla ducimus odit esse quam corporis, dolorem labore. Ipsa quis repudiandae nihil.</p>
                 </div>
               </div>
+
               <div className="box_comment_connntent">
                 <div className="box_head_user">
                   <div className="box_head_user_title">
@@ -190,6 +167,7 @@ function ProductDetails() {
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est numquam sapiente voluptates ut porro quisquam eveniet voluptas sed. Nulla ducimus odit esse quam corporis, dolorem labore. Ipsa quis repudiandae nihil.</p>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
