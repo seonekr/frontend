@@ -186,7 +186,6 @@ const Cart = () => {
                     </div>
                   </div>
                 </div>
-
               </div>
 
               <div className="box_item_total">
