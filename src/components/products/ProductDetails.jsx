@@ -12,11 +12,43 @@ import productImage from "../../img/productImage.png";
 import detailproduct from "../../img/detailproduct.jpg";
 
 function ProductDetails() {
-  const [selectedColor, setSelectedColor] = useState("");
-  const [selectedSize, setSelectedSize] = useState("");
 
-  // Add more colors and sizes as needed
-  const colors = ["Red", "Blue", "Green", "Yellow"];
+  const [goods] = useState([
+    { id: 1, name: "Product 1", price: 20, categoryID: 1, storeID: 1, desc: "desc", size: ["s", "m", "l", "xl"] },
+    { id: 2, name: "Product 2", price: 30, categoryID: 2, storeID: 2, desc: "desc", size: ["s", "m", "l", "xl", "xxl"] },
+    { id: 3, name: "Product 3", price: 20, categoryID: 1, storeID: 3, desc: "desc", size: ["s", "m", "l", "xl", "xxl"] },
+    { id: 4, name: "Product 4", price: 20, categoryID: 1, storeID: 1, desc: "desc", size: ["s", "m", "l", "xl", "xxl"] },
+    { id: 5, name: "Product 4", price: 50, categoryID: 1, storeID: 1, desc: "desc", size: ["s", "m", "l", "xl", "xxl"] },
+  ]);
+
+  const [imageGoods] = useState([
+    { id: 1, image: productImage, goodsID: 1 },
+    { id: 2, image: productImage, goodsID: 2 },
+    { id: 3, image: productImage, goodsID: 3 },
+    { id: 4, image: productImage, goodsID: 4 },
+    { id: 5, image: productImage, goodsID: 5 },
+  ]);
+
+  const [store] = useState([
+    { id: 1, name: "store 1", address: "vientiane", phone: "02099933393", company_number: "927835", sellerID: 2, sub_address: "sikhot" },
+    { id: 2, name: "store 2", address: "vientiane", phone: "02053635454", company_number: "456354", sellerID: 1, sub_address: "donkoy" },
+    { id: 3, name: "store 3", address: "vientiane", phone: "20298876565", company_number: "645364", sellerID: 3, sub_address: "donkoy" }
+  ]);
+
+  // Filter goods with id equal to 1
+  const filteredGoods = goods.filter((good) => good.id === 1);
+
+  // Joining data by goods ID (assuming only one item in filteredGoods)
+  const joinedData = filteredGoods.map((good) => {
+    const imageInfo = imageGoods.find((img) => img.goodsID === good.id);
+    const storeInfo = store.find((s) => s.id === good.storeID);
+
+    return {
+      ...good,
+      image: imageInfo ? imageInfo.image : null,
+      store: storeInfo ? storeInfo : null,
+    };
+  });
 
 
   return (
@@ -27,54 +59,59 @@ function ProductDetails() {
           <IoIosArrowBack id="icons_back" />
           <p>Back</p>
         </Link>
+
+        <ul>
+        {joinedData.map((item) => (
+          <li key={item.id}>
+            <p>Name: {item.name}</p>
+            <p>Price: {item.price}</p>
+            <p>CategoryID: {item.categoryID}</p>
+            {/* Displaying sizes */}
+            {item.size && (
+              <p>Sizes: {item.size.join(', ')}</p>
+            )}
+            {/* Add more fields as needed */}
+            {item.image && <img src={item.image} alt={`Product ${item.id}`} />}
+            {item.store && (
+              <div>
+                <p>Store Name: {item.store.name}</p>
+                <p>Store Address: {item.store.address}</p>
+                {/* Add more store fields as needed */}
+              </div>
+            )}
+            <hr />
+          </li>
+        ))}
+      </ul>
+
         <div className="box_betavinOfob">
-          <div className="boxProduct_deteils">
+        {joinedData.map((item) => (
+          <div className="boxProduct_deteils" key={item.id}>
             <div className="product-page-img">
               <img src={productImage} alt="" />
             </div>
 
             <form >
               <div className="txtContentproduct">
-                <h1 className="txt_nameP">name</h1>
-                <p className="money_txt">price</p>
-                <p className="txt_description">description</p>
+                <h1 className="txt_nameP">{item.name}</h1>
+                <p className="money_txt">{item.price} $</p>
+                <p className="txt_description">{item.desc}</p>
                 <Link to="/stores" className="store_boxLink">
                   <BiStore className="iconn_linkbox" />
-                  <p>Lorem ipsum</p>
+                  <p>Go to store</p>
                 </Link>
-
-                {/* Checked colors */}
-                <div className="color_product">
-                  <h5>Color:</h5>
-                  {colors.map((color, index) => (
-                    <div key={index}>
-                      <label>{color}</label>
-                      <input
-                        className="echColor"
-                        type="radio"
-                        name="color"
-                        value={color}
-                        onChange={(e) => setSelectedColor(e.target.value)}
-                        checked={selectedColor === color}
-                      />
-                    </div>
-                  ))}
-                </div>
 
                 <div className="size_product">
                   <p>Size:</p>
-                  <div>
-                    <p className="echSize">M</p>
+                  {item.size && (
+                  <div className="size">
+                    {item.size.map((size, index) => (
+                    <p className="echSize" key={index}>{size}</p>
+                    ))}
                   </div>
-                  <div>
-                    <p className="echSize">L</p>
-                  </div>
-                  <div>
-                    <p className="echSize">XL</p>
-                  </div>
+                  )}
                 </div>
 
-                {/* Amount product */}
                 <div className="container_item_icon">
                   <div className="container_minus_plus" >
                     -
@@ -97,6 +134,9 @@ function ProductDetails() {
               </div>
             </form>
           </div>
+          ))}
+
+
           <div className="description_container">
             <img src={detailproduct} alt="" />
           </div>
@@ -193,12 +233,11 @@ function ProductDetails() {
             </div>
           </div>
         </div>
-
-        <h2 className="box_betavinOfob asd2">
+        {/* <h2 className="box_betavinOfob asd2">
           <span className="spennofStyle"> </span>
           More products
-        </h2>
-        <div className="product-area">
+        </h2> */}
+        {/* <div className="product-area">
           <div className="box-product" >
             <div>
               <div className="img">
@@ -251,7 +290,7 @@ function ProductDetails() {
             </div>
           </div>
 
-        </div>
+        </div> */}
       </div>
       <Menu />
     </>

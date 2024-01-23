@@ -130,9 +130,13 @@ body {
     font-size: 16px;
 }
 
-
-.color_product,
 .size_product {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.size_product .size {
     display: flex;
     gap: 1rem;
     align-items: center;

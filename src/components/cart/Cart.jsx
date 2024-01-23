@@ -37,12 +37,12 @@ const Cart = () => {
     { id: 3, name: "store 3", address: "vientiane", phone: "20298876565", company_number: "645364", sellerID: 3, sub_address: "donkoy" }
   ]);
 
-  const [user] = useState([
-    { id: 1, email: "email@gmail.com", nickname: "will", isSeller: 1, profile: "productImage" },
-    { id: 2, email: "email@gmail.com", nickname: "dom", isSeller: 1, profile: "productImage" },
-    { id: 3, email: "email@gmail.com", nickname: "taylor", isSeller: 1, profile: "productImage" },
-    { id: 4, email: "email@gmail.com", nickname: "max", isSeller: 0, profile: "productImage" },
-  ]);
+  // const [user] = useState([
+  //   { id: 1, email: "email@gmail.com", nickname: "will", isSeller: 1, profile: "productImage" },
+  //   { id: 2, email: "email@gmail.com", nickname: "dom", isSeller: 1, profile: "productImage" },
+  //   { id: 3, email: "email@gmail.com", nickname: "taylor", isSeller: 1, profile: "productImage" },
+  //   { id: 4, email: "email@gmail.com", nickname: "max", isSeller: 0, profile: "productImage" },
+  // ]);
 
   const getGoodsByStore = (storeId) => {
     return goods.filter((good) => good.storeID === storeId);
@@ -53,14 +53,14 @@ const Cart = () => {
   };
 
   // Function to get category by ID
-  const getCategoryById = (categoryId) => {
-    return category.find((cat) => cat.id === categoryId);
-  };
+  // const getCategoryById = (categoryId) => {
+  //   return category.find((cat) => cat.id === categoryId);
+  // };
 
   // Function to get user by ID
-  const getUserById = (userId) => {
-    return user.find((userItem) => userItem.id === userId);
-  };
+  // const getUserById = (userId) => {
+  //   return user.find((userItem) => userItem.id === userId);
+  // };
 
 
     // Function to calculate total price of goods for a store
