@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
+
 :root {
   --blue: #1e90ff;
   --white: #ffffff;
@@ -10,3 +12,4 @@
   --gray: #ccc;
   --black: #000;
 }
+
