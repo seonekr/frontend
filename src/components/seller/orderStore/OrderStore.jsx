@@ -8,7 +8,7 @@ const OrderStore = () => {
 
         <>
             <div className="header_box_management">
-                <Link to="/store_management" className="box_management_iconnback">
+                <Link to="/store-management" className="box_management_iconnback">
                     <IoIosArrowBack id="icons_back" />
                     <p>Back</p>
                 </Link>
@@ -20,7 +20,7 @@ const OrderStore = () => {
             <div className="container_order_store">
                 <h2 className="h2_store">Order</h2>
                 <div className="heade_productorder_store">
-                    <Link to="/billStore" className="box_item_order_text_Store">
+                    <Link to="/bill-store" className="box_item_order_text_Store">
                         <p>No: 01</p>
                         <p >
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, qui!
@@ -36,17 +36,13 @@ const OrderStore = () => {
                     </button> */}
                 </div>
                 <div className="heade_productorder_store">
-                    <Link to="/billStore" className="box_item_order_text_Store">
+                    <Link to="/bill-store" className="box_item_order_text_Store">
                         <p>No: 02</p>
                         <p >
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, qui!
                         </p>
                         <p>10.1.2024</p>
                     </Link>
-                    {/* <button className="btn_confirm_orderD nConfrim">
-                        Pending
-                    </button> */}
-
                     <button className="btn_confirm_orderD fnConfrim">
                         Paid
                     </button>

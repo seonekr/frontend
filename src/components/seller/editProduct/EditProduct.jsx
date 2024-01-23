@@ -9,7 +9,7 @@ function EditProduct() {
     return (
         <>
             <div className="header_box_management">
-                <Link to="/store_management" className="box_management_iconnback">
+                <Link to="/store-management" className="box_management_iconnback">
                     <IoIosArrowBack id="icons_back" />
                     <p>Back</p>
                 </Link>
@@ -55,36 +55,6 @@ function EditProduct() {
                         </div>
                         <div className="size_content_box">
                             <input className="inputproduct" type="text" placeholder='Add size...' />
-                            <div className="addsize_btn">
-                                Add
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="Color_product_box">
-                    <h3>Color:</h3>
-                    <div className="size_product_box_container">
-                        <div className="box_sizeTso_add">
-                            <div className="box_sizeTo_add_item">
-                                <p>Red</p>
-                                <IoIosClose className='iconn_close_addSize' />
-                            </div>
-                            <div className="box_sizeTo_add_item">
-                                <p>Blue</p>
-                                <IoIosClose className='iconn_close_addSize' />
-                            </div>
-                            <div className="box_sizeTo_add_item">
-                                <p>Black</p>
-                                <IoIosClose className='iconn_close_addSize' />
-                            </div>
-                            <div className="box_sizeTo_add_item">
-                                <p>While</p>
-                                <IoIosClose className='iconn_close_addSize' />
-                            </div>
-                        </div>
-                        <div className="size_content_box">
-                            <input className="inputproduct" type="text" placeholder='Add color...' />
                             <div className="addsize_btn">
                                 Add
                             </div>

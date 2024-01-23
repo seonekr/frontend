@@ -27,7 +27,7 @@ const AddPaymentStore = () => {
     return (
         <>
             <div className="header_box_management">
-                <Link to="/payment_store" className="box_management_iconnback">
+                <Link to="/payment-store" className="box_management_iconnback">
                     <IoIosArrowBack id="icons_back" />
                     <p>Back</p>
                 </Link>

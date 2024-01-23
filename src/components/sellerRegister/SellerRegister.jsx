@@ -59,19 +59,20 @@ const SellerRegister = () => {
   };
 
   const handleSellerRegister = async () => {
-    if (userData.password !== userData.verifyPassword) {
+    if (userData.password !== userData.password) {
       setPasswordMatch(false);
       return;
     }
 
-    await axios({
-      method: "post",
-      url: "http://127.0.0.1:8000/user/signup",
-      data: userData,
-    }).then((response) => {
-      console.log(response.data);
-    });
-    // console.log(userData)
+    // await axios({
+    //   method: "post",
+    //   url: "http://127.0.0.1:8000/user/signup",
+    //   data: userData,
+    // }).then((response) => {
+    //   console.log(response.data);
+    // });
+    
+    console.log(userData)
   };
 
 

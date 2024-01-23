@@ -3,10 +3,19 @@ import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoCameraSharp } from "react-icons/io5";
 import banner_no from "../../../img/banner_no.jpg";
+import { useState } from "react";
 import productImage from "../../../img/productImage.png";
 import { FaPen } from "react-icons/fa6";
 
 function Store_management() {
+
+    //PopUp box add banner
+    const [isPopupVisible, setPopupVisible] = useState(false);
+
+    const togglePopup = () => {
+        setPopupVisible(!isPopupVisible);
+    };
+
     return (
         <>
             <div className="box_store">
@@ -22,15 +31,31 @@ function Store_management() {
                         <div></div>
                     </div>
                     <div className="banner_no_box">
-                        <img src={banner_no} alt="" />
-                        <Link to="#" className="edit_image">
-                            <IoCameraSharp />
-                        </Link>
+                        <div className="banner_no_box_img">
+                            <img src={banner_no} alt="" />
+                        </div>
+                        <div className="edit_image">
+                            <a className="trigger_popup_fricc" onClick={togglePopup}>
+                                <IoCameraSharp />
+                            </a>
+                            {/* PopUp box add banner */}
+                            {isPopupVisible && (
+                                <form className="hover_bkgr_fricc">
+                                    <p>Image banner</p>
+                                    <div className="popupCloseButton" onClick={togglePopup}>&times;</div>
+                                    <label className="popup_txt_Boximagae">
+                                        <input type="file" name='image' />
+                                    </label>
+                                    <button className="banner_confirm_btn">Confirm</button>
+                                </form>
+                            )}
+                        </div>
                     </div>
-                    <div className="product-area">
-                        <div  className="box-product" >
+
+                    <div className="group_container_product">
+                        <div className="box-product" >
                             <div className="editproduct_boxIocno">
-                                <Link to="/editProduct" className="iconn_pendit_product" ><FaPen/></Link>
+                                <Link to="/edit-product" className="iconn_pendit_product" ><FaPen /></Link>
                                 <div className="img">
                                     <img src={productImage} alt="image" />
                                 </div>
@@ -41,15 +66,49 @@ function Store_management() {
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    {/* <div className="body_content_product">
-                        <div className="proItem">
-                            <img src={no_shopping_cart1} alt="" />
-                            <p>There are no products</p>
+                        <div className="box-product" >
+                            <div className="editproduct_boxIocno">
+                                <Link to="/edit-product" className="iconn_pendit_product" ><FaPen /></Link>
+                                <div className="img">
+                                    <img src={productImage} alt="image" />
+                                </div>
+                                <ul className="txtOFproduct2">
+                                    <li className="name">Name</li>
+                                    <li className="price">Price</li>
+                                    <li className="desc">desc</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div> */}
+                        <div className="box-product" >
+                            <div className="editproduct_boxIocno">
+                                <Link to="/edit-product" className="iconn_pendit_product" ><FaPen /></Link>
+                                <div className="img">
+                                    <img src={productImage} alt="image" />
+                                </div>
+                                <ul className="txtOFproduct2">
+                                    <li className="name">Name</li>
+                                    <li className="price">Price</li>
+                                    <li className="desc">desc</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="box-product" >
+                            <div className="editproduct_boxIocno">
+                                <Link to="/edit-product" className="iconn_pendit_product" ><FaPen /></Link>
+                                <div className="img">
+                                    <img src={productImage} alt="image" />
+                                </div>
+                                <ul className="txtOFproduct2">
+                                    <li className="name">Name</li>
+                                    <li className="price">Price</li>
+                                    <li className="desc">desc</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <Link to="/addProduct" className="btn_addProdcut">
+                <Link to="/add-product" className="btn_addProdcut">
                     Add Product
                 </Link>
             </div>

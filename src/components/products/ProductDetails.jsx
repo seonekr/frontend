@@ -12,43 +12,11 @@ import productImage from "../../img/productImage.png";
 import detailproduct from "../../img/detailproduct.jpg";
 
 function ProductDetails() {
+  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedSize, setSelectedSize] = useState("");
 
-  const [goods] = useState([
-    { id: 1, name: "Product 1", price: 20, categoryID: 1, storeID: 1, desc: "desc", size: ["s", "m", "l", "xl"] },
-    { id: 2, name: "Product 2", price: 30, categoryID: 2, storeID: 2, desc: "desc", size: ["s", "m", "l", "xl", "xxl"] },
-    { id: 3, name: "Product 3", price: 20, categoryID: 1, storeID: 3, desc: "desc", size: ["s", "m", "l", "xl", "xxl"] },
-    { id: 4, name: "Product 4", price: 20, categoryID: 1, storeID: 1, desc: "desc", size: ["s", "m", "l", "xl", "xxl"] },
-    { id: 5, name: "Product 4", price: 50, categoryID: 1, storeID: 1, desc: "desc", size: ["s", "m", "l", "xl", "xxl"] },
-  ]);
-
-  const [imageGoods] = useState([
-    { id: 1, image: productImage, goodsID: 1 },
-    { id: 2, image: productImage, goodsID: 2 },
-    { id: 3, image: productImage, goodsID: 3 },
-    { id: 4, image: productImage, goodsID: 4 },
-    { id: 5, image: productImage, goodsID: 5 },
-  ]);
-
-  const [store] = useState([
-    { id: 1, name: "store 1", address: "vientiane", phone: "02099933393", company_number: "927835", sellerID: 2, sub_address: "sikhot" },
-    { id: 2, name: "store 2", address: "vientiane", phone: "02053635454", company_number: "456354", sellerID: 1, sub_address: "donkoy" },
-    { id: 3, name: "store 3", address: "vientiane", phone: "20298876565", company_number: "645364", sellerID: 3, sub_address: "donkoy" }
-  ]);
-
-  // Filter goods with id equal to 1
-  const filteredGoods = goods.filter((good) => good.id === 1);
-
-  // Joining data by goods ID (assuming only one item in filteredGoods)
-  const joinedData = filteredGoods.map((good) => {
-    const imageInfo = imageGoods.find((img) => img.goodsID === good.id);
-    const storeInfo = store.find((s) => s.id === good.storeID);
-
-    return {
-      ...good,
-      image: imageInfo ? imageInfo.image : null,
-      store: storeInfo ? storeInfo : null,
-    };
-  });
+  // Add more colors and sizes as needed
+  const colors = ["Red", "Blue", "Green", "Yellow"];
 
 
   return (
@@ -205,6 +173,7 @@ function ProductDetails() {
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est numquam sapiente voluptates ut porro quisquam eveniet voluptas sed. Nulla ducimus odit esse quam corporis, dolorem labore. Ipsa quis repudiandae nihil.</p>
                 </div>
               </div>
+
               <div className="box_comment_connntent">
                 <div className="box_head_user">
                   <div className="box_head_user_title">
@@ -230,6 +199,7 @@ function ProductDetails() {
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est numquam sapiente voluptates ut porro quisquam eveniet voluptas sed. Nulla ducimus odit esse quam corporis, dolorem labore. Ipsa quis repudiandae nihil.</p>
                 </div>
               </div>
+
             </div>
           </div>
         </div>

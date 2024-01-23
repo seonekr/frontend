@@ -109,7 +109,7 @@ function AddProduct() {
     return (
         <>
             <div className="header_box_management">
-                <Link to="/store_management" className="box_management_iconnback">
+                <Link to="/store-management" className="box_management_iconnback">
                     <IoIosArrowBack id="icons_back" />
                     <p>Back</p>
                 </Link>
@@ -159,38 +159,6 @@ function AddProduct() {
                                 onChange={handleSizeInputChange}
                             />
                             <div className="addsize_btn" onClick={addSizeInput}>
-                                Add
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div className="Color_product_box">
-                    <h3>Color:</h3>
-                    <div className="size_product_box_container">
-                        <div className="box_sizeTso_add" >
-                            {product.colors.map((color, index) => (
-                                <div className="box_sizeTo_add_item" key={index}>
-                                    <p>{color}</p>
-                                    <span
-                                        className="spanCancelBox"
-                                        onClick={() => removeColorInput(index)}
-                                    >
-                                        <IoIosClose className='iconn_close_addSize' />
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className="size_content_box">
-                            <input
-                                className="inputproduct"
-                                type="text"
-                                placeholder='Add color...'
-                                onChange={handleColorInputChange}
-                            />
-                            <div className="addsize_btn" onClick={addColorInput}>
                                 Add
                             </div>
                         </div>
