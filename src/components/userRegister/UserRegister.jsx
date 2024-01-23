@@ -43,14 +43,14 @@ const UserRegister = () => {
       return;
     }
 
-    await axios({
-      method: "post",
-      url: "http://127.0.0.1:8000/user/signup",
-      data: formData,
-    }).then((response) => {
-      console.log(response.data);
-    });
-    // console.log(formData)
+    // await axios({
+    //   method: "post",
+    //   url: "http://127.0.0.1:8000/user/signup",
+    //   data: formData,
+    // }).then((response) => {
+    //   console.log(response.data);
+    // });
+    console.log(formData)
   };
 
   return (
