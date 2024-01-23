@@ -68,9 +68,9 @@ function App() {
 
           {/* --------- Home Page ---------- */}
           <Route path="/" Component={Home} />
-          <Route path="/productDetails" Component={ProductDetails} />
+          <Route path="/product-details" Component={ProductDetails} />
           <Route path="/cart" Component={Cart} />
-          <Route path="/successfulBuy" Component={SuccessfulBuy} />
+          <Route path="/successfulbuy" Component={SuccessfulBuy} />
           <Route path="/address" Component={Address} />
           <Route path="/payment" Component={Payment} />
           <Route path="/order" Component={Order} />
@@ -79,15 +79,15 @@ function App() {
 
           {/* --------- Seller ---------- */}
           <Route path="/stores" Component={Stores} />
-          <Route path="/store_management" Component={Store_management} />
-          <Route path="/addProduct" Component={AddProduct} />
-          <Route path="/editProduct" Component={EditProduct} />
-          <Route path="/eviewStore" Component={ReviewStore} />
-          <Route path="/payment_store" Component={Payment_store} />
-          <Route path="/addPaymentStore" Component={AddPaymentStore} />
-          <Route path="/dashboard_seller" Component={Dashboard_seller} />
-          <Route path="/orderStore" Component={OrderStore} />
-          <Route path="/billStore" Component={BillStore} />
+          <Route path="/store-management" Component={Store_management} />
+          <Route path="/add-product" Component={AddProduct} />
+          <Route path="/edit-product" Component={EditProduct} />
+          <Route path="/eview-store" Component={ReviewStore} />
+          <Route path="/payment-store" Component={Payment_store} />
+          <Route path="/add-payment-store" Component={AddPaymentStore} />
+          <Route path="/dashboard-seller" Component={Dashboard_seller} />
+          <Route path="/order-store" Component={OrderStore} />
+          <Route path="/bill-store" Component={BillStore} />
         </Routes>
       </Router>
     </>
