@@ -50,6 +50,7 @@ const ForgotPassword = () => {
     }).then((response) => {
       console.log(response.data);
     });
+    // console.log(formData)
   };
 
   return (
@@ -73,7 +74,9 @@ const ForgotPassword = () => {
               value={formData.email}
             />
 
-            <div className='verification' onClick={handleSendVerification}>Verification</div>
+            <div className='verification' onClick={handleSendVerification}>
+              Verification
+            </div>
           </div>
 
           <input 
@@ -104,7 +107,9 @@ const ForgotPassword = () => {
           {!passwordMatch && (
             <p className="error-text">Passwords do not match.</p>
           )}
-          <button type="submit" onClick={handleForgotpassword}>Confirmation</button>
+          <button type="submit" onClick={handleForgotpassword}>
+            Confirmation
+          </button>
         </form>
         {message && <p>{message}</p>}
       </div>

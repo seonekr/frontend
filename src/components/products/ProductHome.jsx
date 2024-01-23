@@ -45,16 +45,12 @@ const ProductHome = () => {
           </div>
         </div>
 
-        <div className="product-area">
+        {/* <div className="product-area">
           {products.map((product, index) => (
             <div className="box-product" key={index}>
               <div>
                 <div className="img">
-                  <img src={product.image} alt="" /> 
-                  {/* <img src={
-                    import.meta.env.VITE_API +
-                    "/uploads/images/" +
-                    product.image} alt="image" /> */}
+                  <img src={productImage} alt="" />
                 </div>
                 <ul className="txtOFproduct2">
                   <li className="name">{product.name}</li>
@@ -64,8 +60,59 @@ const ProductHome = () => {
               </div>
             </div>
           ))}
+        </div> */}
 
+        <div className="product-area">
+            <div className="box-product">
+              <div>
+                <div className="img">
+                  <img src={productImage} alt="" />
+                </div>
+                <ul className="txtOFproduct2">
+                  <li className="name">asd</li>
+                  <li className="price">asd</li>
+                  <li className="desc">asdas</li>
+                </ul>
+              </div>
+            </div>
+            <div className="box-product">
+              <div>
+                <div className="img">
+                  <img src={productImage} alt="" />
+                </div>
+                <ul className="txtOFproduct2">
+                  <li className="name">asd</li>
+                  <li className="price">asd</li>
+                  <li className="desc">asdas</li>
+                </ul>
+              </div>
+            </div>
+            <div className="box-product">
+              <div>
+                <div className="img">
+                  <img src={productImage} alt="" />
+                </div>
+                <ul className="txtOFproduct2">
+                  <li className="name">asd</li>
+                  <li className="price">asd</li>
+                  <li className="desc">asdas</li>
+                </ul>
+              </div>
+            </div>
+            <div className="box-product">
+              <div>
+                <div className="img">
+                  <img src={productImage} alt="" />
+                </div>
+                <ul className="txtOFproduct2">
+                  <li className="name">asd</li>
+                  <li className="price">asd</li>
+                  <li className="desc">asdas</li>
+                </ul>
+              </div>
+            </div>
         </div>
+
       </section>
     </div>
   );

@@ -30,7 +30,7 @@ const LoginUser = () => {
   return (
     <>
       <section>
-      <form onSubmit={handleSubmit} className="box_container_login2">
+      <form className="box_container_login2">
         <div className="cover">
           <h2 className="box_container_login_text">{login_en}</h2>
           <p className="box_pleaselogin">Please Log in to use the service!</p>
@@ -58,7 +58,7 @@ const LoginUser = () => {
           </div>
 
           <div className="loginbtn_login">
-            <Link  type="submit" className="login_btn" >
+            <Link onSubmit={handleSubmit}  type="submit" className="login_btn" >
               Login
             </Link>
           </div>
