@@ -1,54 +1,47 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
 
-  :root {
-    --blue: #1e90ff;
-    --white: #ffffff;
-    --orange: #ff471a;
-    --gray: #ccc;
-    --black: #000;
-  }
-.MorePage{
-    width: 40%;
+.MorePage {
+    width: 60%;
     margin: auto;
     padding: 60PX 0;
 }
 
 
-.profile_box{
+.profile_box {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px 10px 20px;
 }
-.left_box{
+
+.left_box {
     display: flex;
     gap: 1rem;
     align-items: center;
 }
-.left_box img{
+
+.left_box img {
     width: 10%;
     border-radius: 50%;
 }
-.right_box button{
-    padding: 5px 15px;
+.user_name{
+    font-size: 19px;
+}
+.right_box button {
+    padding: 10px 35px;
     font-size: 16px;
-    /* background-color: var(--white); */
-    border-radius: 5px;
-    border:  1px solid var(--gray);
+    border-radius: 7px;
+    border: none;
     cursor: pointer;
+    background-color: #ff471a;
+    color: #fff;
 }
 
-.hr{
+.hr {
     margin-top: 0.5rem;
-    color: var(--gray);
+    border: 1px solid #ddd;
 }
 
-.menu_icon{
+.menu_icon {
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -56,12 +49,13 @@
     cursor: pointer;
 }
 
-#icon_more{
+#icon_more {
     width: 50px;
     height: 25px;
+    color: #282B30;
 }
 
-.menu_icon:hover{
+.menu_icon:hover {
     color: var(--orange);
     transition: 0.5s;
 }
@@ -69,8 +63,7 @@
 /*============== Responsive =====================*/
 @media (max-width: 768px) {
     .MorePage {
-      width: 100%;
+        width: 100%;
     }
-     
-  }
-  
+
+}
