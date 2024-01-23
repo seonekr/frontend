@@ -56,6 +56,8 @@
 .box_item_icon span input {
     width: 100%;
     text-align: center;
+    font-size: 1rem;
+    border: none;
 }
 
 .icon_minus_plus {
@@ -183,6 +185,9 @@
     .box_cart_container {
         width: 100%;
         margin: 7rem auto 2rem auto;
+    }
+    .box_item_icon input {
+        border: none;
     }
     .box_container_cart {
         display: block;
