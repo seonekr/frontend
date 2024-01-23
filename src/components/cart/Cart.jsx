@@ -102,7 +102,7 @@ const Cart = () => {
   const decrementCount = (goodsID) => {
     setGoodsCount((prevCounts) => ({
       ...prevCounts,
-      [goodsID]: Math.max(0, (prevCounts[goodsID] || 0) - 1),
+      [goodsID]: Math.max(1, (prevCounts[goodsID] || 0) - 1),
     }));
   };
 
@@ -181,7 +181,7 @@ const Cart = () => {
             </ul>
           )}
         </div>
-      ))} */}
+        ))} */}
 
         <div className="box_container_cart">
           <div>
@@ -211,11 +211,7 @@ const Cart = () => {
                     <div className="box_item_icon">
                       <div className="icon_minus_plus" onClick={() => decrementCount(good.id)}>-</div>
                       <span>
-                      <input
-                        type="text"
-                        value={goodsCount[good.id] || 0}
-                        onChange={() => { }}
-                      />
+                      {goodsCount[good.id] || 0}
                       </span>
                       <div className="icon_minus_plus" onClick={() => incrementCount(good.id)}>+</div>
                     </div>
