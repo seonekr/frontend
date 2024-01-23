@@ -1,17 +1,18 @@
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../header/Header";
 import Menu from "../menuFooter/Menu";
 import productImage from "../../img/productImage.png";
 import { AiOutlineDelete } from "react-icons/ai";
 import { IoIosArrowBack } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
 import "./cart.css";
 
 const Cart = () => {
 
 
   const [products, setProducts] = useState([
-    { productID: 1, productName: 'Product 1', productType: "clothes", description: 'This is product 1', color: "colB", price: 10, images: [productImage], size: "m"},
+    { productID: 1, productName: 'Product 1', productType: "clothes", description: 'This is product 1', color: "colB", price: 10, images: [productImage], size: "m" },
     { productID: 2, productName: 'Product 2', productType: "clothes", description: 'This is product 2', color: "colW", price: 20, images: [productImage], size: "l" },
     { productID: 3, productName: 'Product 3', productType: "clothes", description: 'This is product 3', color: "colBlue", price: 30, images: [productImage], size: "xl" },
   ]);
@@ -33,7 +34,7 @@ const Cart = () => {
     setGrandTotal(grandTotal);
   }, [products, productCounts]);
 
-  
+
   const handleInputChange = (e, index, field) => {
     const updatedProducts = [...products];
     updatedProducts[index][field] = e.target.value;
@@ -78,8 +79,8 @@ const Cart = () => {
     navigate('/cart/payment/', {
       state: {
         productsCart: selectedProducts,
-        }
-  });
+      }
+    });
 
 
   };
@@ -94,15 +95,14 @@ const Cart = () => {
           <p>Back</p>
         </Link>
         <div className="box_container_cart">
-
           <div>
             <div className="container_cart_item">
-              <div className="box_item_image">
-                <img src={productImage} alt="" />
-                <div className="box_item_text">
-                  <p >Name</p>
-                  <p >Price</p>
-                  <p >description</p>
+              <div className="box_item_gourp">
+                <div className="sotre_name_box">
+                  <h3>Online shop1</h3>
+                  <div className="cart_close_item_iconn">
+                    <IoClose className="close_item_iconn" />
+                  </div>
                 </div>
                 <div className="box_item_image">
                   <img src={productImage} alt="" />
@@ -114,48 +114,20 @@ const Cart = () => {
                     <div className="btnicon_delete_order" >
                       <AiOutlineDelete id="btnicon_delete" />
                     </div>
-
-                <div className="box_item_icon">
-                  <div className="icon_minus_plus">
-                    -
-                  </div>
-                  <span>
-                    1
-                  </span>
-                  <div className="icon_minus_plus">
-                    +
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="container_cart_item">
-              <div className="box_item_image">
-                <img src={productImage} alt="" />
-                <div className="box_item_text">
-                  <p >Name</p>
-                  <p >Price</p>
-                  <p >description</p>
-                </div>
-              </div>
-              <div className="box_icon_order">
-                <div className="btnicon_delete_order" >
-                  <AiOutlineDelete id="btnicon_delete" />
-                </div>
-
-                <div className="box_item_icon">
-                  <div className="icon_minus_plus">
-                    -
-                  </div>
-                  <span>
-                    1
-                  </span>
-                  <div className="icon_minus_plus">
-                    +
+                    <div className="box_item_icon">
+                      <div className="icon_minus_plus">
+                        -
+                      </div>
+                      <span>
+                        1
+                      </span>
+                      <div className="icon_minus_plus">
+                        +
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
 
               <div className="box_item_total">
                 <h3>Cart Total</h3>
@@ -181,11 +153,69 @@ const Cart = () => {
               </div>
             </div>
 
+
+            <div className="container_cart_item">
+              <div className="box_item_gourp">
+                <div className="sotre_name_box">
+                  <h3>Online shop2</h3>
+                  <div className="cart_close_item_iconn">
+                    <IoClose className="close_item_iconn" />
+                  </div>
+                </div>
+                <div className="box_item_image">
+                  <img src={productImage} alt="" />
+                  <div className="box_item_text">
+                    <p >Name: asdasd</p>
+                    <p >Price: 1,000$</p>
+                  </div>
+                  <div className="box_icon_order">
+                    <div className="btnicon_delete_order" >
+                      <AiOutlineDelete id="btnicon_delete" />
+                    </div>
+
+                    <div className="box_item_icon">
+                      <div className="icon_minus_plus">
+                        -
+                      </div>
+                      <span>
+                        1
+                      </span>
+                      <div className="icon_minus_plus">
+                        +
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div className="box_item_total">
+                <h3>Cart Total</h3>
+                <div className="box_item_total_text">
+                  <p>Quantity:</p>
+                  <p>2</p>
+                </div>
+                <hr />
+                <div className="box_item_total_text">
+                  <p>Shipping: </p>
+                  <p>free</p>
+                </div>
+                <hr />
+                <div className="box_item_total_text">
+                  <h3>Total: </h3>
+                  <p>1,000$</p>
+                </div>
+                <div className="btn">
+                  <button type="submit" className="checkout_btn">
+                    Checkout
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-
-
         </div>
       </div>
+
       <Menu />
     </>
   );
@@ -194,63 +224,63 @@ const Cart = () => {
 export default Cart;
 
 
-        //     {products.map((product, index) => (
-        //       <div className='container_cart_item' key={index}>
-        //         <div className="box_item_image">
-        //           <img src={product.images[0]} alt='img'></img>
-        //           <div className='box_item_text'>
-        //             <input
-        //               type="text"
-        //               value={product.productName}
-        //               onChange={(e) => handleInputChange(e, index, "name")}
-        //               className='name'
-        //             />
-        //             <input
-        //               type="text"
-        //               value={product.description}
-        //               onChange={(e) => handleInputChange(e, index, "description")}
-        //               className='description'
-        //             />
-        //             <input
-        //               type="text"
-        //               value={product.price}
-        //               onChange={(e) => handleInputChange(e, index, "price")}
-        //             />
-        //           </div>
-        //         </div>
-        //         <div className='box_item_icon'>
-        //           <div className="icon_minus_plus" onClick={() => decrementCount(product.productID)}>-</div>
-        //           <span>
-        //             <input
-        //               type="text"
-        //               value={productCounts[product.productID] || 0}
-        //               onChange={() => { }}
-        //             />
-        //           </span>
-        //           <div className="icon_minus_plus" onClick={() => incrementCount(product.productID)}>+</div>
-        //         </div>
-        //       </div>
-        //     ))}
+//     {products.map((product, index) => (
+//       <div className='container_cart_item' key={index}>
+//         <div className="box_item_image">
+//           <img src={product.images[0]} alt='img'></img>
+//           <div className='box_item_text'>
+//             <input
+//               type="text"
+//               value={product.productName}
+//               onChange={(e) => handleInputChange(e, index, "name")}
+//               className='name'
+//             />
+//             <input
+//               type="text"
+//               value={product.description}
+//               onChange={(e) => handleInputChange(e, index, "description")}
+//               className='description'
+//             />
+//             <input
+//               type="text"
+//               value={product.price}
+//               onChange={(e) => handleInputChange(e, index, "price")}
+//             />
+//           </div>
+//         </div>
+//         <div className='box_item_icon'>
+//           <div className="icon_minus_plus" onClick={() => decrementCount(product.productID)}>-</div>
+//           <span>
+//             <input
+//               type="text"
+//               value={productCounts[product.productID] || 0}
+//               onChange={() => { }}
+//             />
+//           </span>
+//           <div className="icon_minus_plus" onClick={() => incrementCount(product.productID)}>+</div>
+//         </div>
+//       </div>
+//     ))}
 
-        //     {products.length > 0 ?
-        // <div className='box_item_total'>
-        //   <h1>Cart Total</h1>
-        //   <div className='box_item_total_text'>
-        //     <p>Subtotal:</p>
-        //     <p><input type="text" value={"$ " + price} onChange={() => { }} /></p>
-        //   </div>
-        //   <hr />
-        //   <div className='box_item_total_text'>
-        //     <p>Shipping: </p>
-        //     <p><input type="text" value={"$ " + shipping} onChange={() => { }} /></p>
-        //   </div>
-        //   <hr />
-        //   <div className='box_item_total_text'>
-        //     <h3>Total: </h3>
-        //     <p><input type="text" value={"$ " + grandTotal} onChange={() => { }} /></p>
-        //   </div>
-        //   <div className='btn'>
-        //     <Link to="/product_search/" className="Continues_btn">Continues Shopping</Link>
-        //     <button type='submit' className="checkout_btn">Checkout</button>
-        //   </div>
-        // </div>: <p className='cart'>Your cart is empty</p> }
+//     {products.length > 0 ?
+// <div className='box_item_total'>
+//   <h1>Cart Total</h1>
+//   <div className='box_item_total_text'>
+//     <p>Subtotal:</p>
+//     <p><input type="text" value={"$ " + price} onChange={() => { }} /></p>
+//   </div>
+//   <hr />
+//   <div className='box_item_total_text'>
+//     <p>Shipping: </p>
+//     <p><input type="text" value={"$ " + shipping} onChange={() => { }} /></p>
+//   </div>
+//   <hr />
+//   <div className='box_item_total_text'>
+//     <h3>Total: </h3>
+//     <p><input type="text" value={"$ " + grandTotal} onChange={() => { }} /></p>
+//   </div>
+//   <div className='btn'>
+//     <Link to="/product_search/" className="Continues_btn">Continues Shopping</Link>
+//     <button type='submit' className="checkout_btn">Checkout</button>
+//   </div>
+// </div>: <p className='cart'>Your cart is empty</p> }

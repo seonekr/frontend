@@ -15,7 +15,7 @@
     background-color: #fff;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .box_item_gourp {
@@ -44,6 +44,7 @@
 .box_item_image {
     padding: 20px;
     display: flex;
+    /* border-bottom: 1px solid #DDDD; */
 }
 
 .box_item_image img {
@@ -76,8 +77,6 @@
 .box_item_icon span input {
     width: 100%;
     text-align: center;
-    font-size: 1rem;
-    border: none;
 }
 
 .icon_minus_plus {
@@ -94,6 +93,10 @@
     cursor: pointer;
 }
 
+.box_item_total {
+    border-left: 1px solid #ddd;
+    padding-left: 10px;
+}
 
 .box_item_total_text {
     width: 100%;
@@ -144,7 +147,7 @@
 
 .box_icon_order {
     position: relative;
-    
+
 }
 
 .btnicon_delete_order {
@@ -183,6 +186,7 @@
         width: 100%;
         margin: 6rem auto 5rem auto;
     }
+
     .box_container_cart {
         display: block;
         overflow: hidden;
@@ -191,7 +195,7 @@
     .container_cart_item {
         grid-template-columns: 1fr;
         gap: 1rem;
-        padding:  10px 10px 20px 10px;
+        padding: 10px 10px 20px 10px;
         margin-bottom: 2rem;
     }
 
@@ -204,10 +208,12 @@
         width: 25%;
         object-fit: contain;
     }
+
     .btnicon_delete_order {
         top: 010px;
         right: 0;
     }
+
     .sotre_name_box {
         margin-top: 10px;
         margin-bottom: 0;
