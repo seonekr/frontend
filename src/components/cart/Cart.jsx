@@ -14,7 +14,8 @@ const Cart = () => {
     { id: 1, name: "Product 1", price: 20, categoryID: 1, storeID: 1, desc: "desc", color: ["red", "blue", "black"], size: ["s", "m", "l", "xl", "xxl"] },
     { id: 2, name: "Product 2", price: 30, categoryID: 2, storeID: 2, desc: "desc", color: ["blue", "green", "brown"], size: ["s", "m", "l", "xl", "xxl"] },
     { id: 3, name: "Product 3", price: 20, categoryID: 1, storeID: 3, desc: "desc", color: ["pink", "yellow", "orange"], size: ["s", "m", "l", "xl", "xxl"] },
-    { id: 4, name: "Product 4", price: 20, categoryID: 1, storeID: 1, desc: "desc", color: ["pink", "yellow", "orange"], size: ["s", "m", "l", "xl", "xxl"] }
+    { id: 4, name: "Product 4", price: 20, categoryID: 1, storeID: 1, desc: "desc", color: ["pink", "yellow", "orange"], size: ["s", "m", "l", "xl", "xxl"] },
+    { id: 5, name: "Product 4", price: 20, categoryID: 1, storeID: 1, desc: "desc", color: ["pink", "yellow", "orange"], size: ["s", "m", "l", "xl", "xxl"] },
   ]);
 
   const [category] = useState([
@@ -27,6 +28,7 @@ const Cart = () => {
     { id: 2, image: productImage, goodsID: 2 },
     { id: 3, image: productImage, goodsID: 3 },
     { id: 4, image: productImage, goodsID: 4 },
+    { id: 5, image: productImage, goodsID: 5 },
   ]);
 
   const [store] = useState([
@@ -61,6 +63,21 @@ const Cart = () => {
   };
 
 
+    // Function to calculate total price of goods for a store
+    const calculateTotalPrice = (goodsList) => {
+      return goodsList.reduce((total, good) => {
+        // Assuming price is in string format like "$20", so removing "$" and converting to number
+        const price = good.price;
+        return total + price;
+      }, 0);
+    };
+
+      // Function to count goods for a store
+  const countGoods = (storeId) => {
+    return getGoodsByStore(storeId).length;
+  };
+
+
   const [price, setPrice] = useState(0);
   const [shipping, setShipping] = useState(0);
   const [grandTotal, setGrandTotal] = useState(0);
@@ -68,22 +85,12 @@ const Cart = () => {
 
   const [goodsCount, setGoodsCount] = useState(goods.reduce((acc, product) => ({ ...acc, [product.id]: 1 }), {}));
 
-  useEffect(() => {
-    const totalPrice = goods.reduce((accumulator, product) => accumulator + product.price * (goodsCount[product.id] || 0), 0);
-    const shipping = 0;
-    const grandTotal = totalPrice + shipping;
 
-    setPrice(totalPrice);
-    setShipping(shipping);
-    setGrandTotal(grandTotal);
-  }, [goods, goodsCount]);
-
-
-  const handleInputChange = (e, index, field) => {
-    const updatedProducts = [...products];
-    updatedProducts[index][field] = e.target.value;
-    setProducts(updatedProducts);
-  };
+  // const handleInputChange = (e, index, field) => {
+  //   const updatedProducts = [...products];
+  //   updatedProducts[index][field] = e.target.value;
+  //   setProducts(updatedProducts);
+  // };
 
   const incrementCount = (goodsID) => {
     setGoodsCount((prevCounts) => ({
@@ -220,17 +227,12 @@ const Cart = () => {
                 <h3>Cart Total</h3>
                 <div className="box_item_total_text">
                   <p>Quantity:</p>
-                  <p>2</p>
-                </div>
-                <hr />
-                <div className="box_item_total_text">
-                  <p>Shipping: </p>
-                  <p>free</p>
+                  <p>{countGoods(storeItem.id)}</p>
                 </div>
                 <hr />
                 <div className="box_item_total_text">
                   <h3>Total: </h3>
-                  <p>1,000$</p>
+                  <p>$ {calculateTotalPrice(getGoodsByStore(storeItem.id))}</p>
                 </div>
                 <div className="btn">
                   <button type="submit" className="checkout_btn">
@@ -240,64 +242,6 @@ const Cart = () => {
               </div>
             </div>
             ))}
-
-            {/* <div className="container_cart_item">
-              <div className="box_item_gourp">
-                <div className="sotre_name_box">
-                  <h3>Online shop2</h3>
-                  <div className="cart_close_item_iconn">
-                    <IoClose className="close_item_iconn" />
-                  </div>
-                </div>
-                <div className="box_item_image">
-                  <img src={productImage} alt="" />
-                  <div className="box_item_text">
-                    <p >Name: asdasd</p>
-                    <p >Price: 1,000$</p>
-                  </div>
-                  <div className="box_icon_order">
-                    <div className="btnicon_delete_order" >
-                      <AiOutlineDelete id="btnicon_delete" />
-                    </div>
-
-                    <div className="box_item_icon">
-                      <div className="icon_minus_plus">
-                        -
-                      </div>
-                      <span>
-                        1
-                      </span>
-                      <div className="icon_minus_plus">
-                        +
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="box_item_total">
-                <h3>Cart Total</h3>
-                <div className="box_item_total_text">
-                  <p>Quantity:</p>
-                  <p>2</p>
-                </div>
-                <hr />
-                <div className="box_item_total_text">
-                  <p>Shipping: </p>
-                  <p>free</p>
-                </div>
-                <hr />
-                <div className="box_item_total_text">
-                  <h3>Total: </h3>
-                  <p>1,000$</p>
-                </div>
-                <div className="btn">
-                  <button type="submit" className="checkout_btn">
-                    Checkout
-                  </button>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
@@ -308,65 +252,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
-
-//     {products.map((product, index) => (
-//       <div className='container_cart_item' key={index}>
-//         <div className="box_item_image">
-//           <img src={product.images[0]} alt='img'></img>
-//           <div className='box_item_text'>
-//             <input
-//               type="text"
-//               value={product.productName}
-//               onChange={(e) => handleInputChange(e, index, "name")}
-//               className='name'
-//             />
-//             <input
-//               type="text"
-//               value={product.description}
-//               onChange={(e) => handleInputChange(e, index, "description")}
-//               className='description'
-//             />
-//             <input
-//               type="text"
-//               value={product.price}
-//               onChange={(e) => handleInputChange(e, index, "price")}
-//             />
-//           </div>
-//         </div>
-//         <div className='box_item_icon'>
-//           <div className="icon_minus_plus" onClick={() => decrementCount(product.productID)}>-</div>
-//           <span>
-//             <input
-//               type="text"
-//               value={productCounts[product.productID] || 0}
-//               onChange={() => { }}
-//             />
-//           </span>
-//           <div className="icon_minus_plus" onClick={() => incrementCount(product.productID)}>+</div>
-//         </div>
-//       </div>
-//     ))}
-
-//     {products.length > 0 ?
-// <div className='box_item_total'>
-//   <h1>Cart Total</h1>
-//   <div className='box_item_total_text'>
-//     <p>Subtotal:</p>
-//     <p><input type="text" value={"$ " + price} onChange={() => { }} /></p>
-//   </div>
-//   <hr />
-//   <div className='box_item_total_text'>
-//     <p>Shipping: </p>
-//     <p><input type="text" value={"$ " + shipping} onChange={() => { }} /></p>
-//   </div>
-//   <hr />
-//   <div className='box_item_total_text'>
-//     <h3>Total: </h3>
-//     <p><input type="text" value={"$ " + grandTotal} onChange={() => { }} /></p>
-//   </div>
-//   <div className='btn'>
-//     <Link to="/product_search/" className="Continues_btn">Continues Shopping</Link>
-//     <button type='submit' className="checkout_btn">Checkout</button>
-//   </div>
-// </div>: <p className='cart'>Your cart is empty</p> }
