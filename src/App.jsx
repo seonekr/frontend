@@ -67,7 +67,7 @@ function App() {
 
           {/* --------- Home Page ---------- */}
           <Route path="/" Component={Home} />
-          <Route path="/product-details" Component={ProductDetails} />
+          <Route path="/goods/:goods_id" Component={ProductDetails} />
           <Route path="/cart" Component={Cart} />
           <Route path="/successfulbuy" Component={SuccessfulBuy} />
           <Route path="/address" Component={Address} />

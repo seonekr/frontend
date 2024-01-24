@@ -9,6 +9,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
 export const More = () => {
+  const user = localStorage.getItem("user");
   return (
     <>
       <div className="header_box_management">
@@ -26,7 +27,7 @@ export const More = () => {
           <div className="left_box">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/1200px-Unknown_person.jpg" alt="" />
             <div className="user_name">
-              Name: Sompong
+              Account: {JSON.parse(window.localStorage.getItem("user")).email}
             </div>
           </div>
           <Link to="/profile" className="right_box">
