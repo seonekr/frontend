@@ -80,10 +80,12 @@
     z-index: 999;
     border-radius: 20px;
 }
-.hover_bkgr_fricc p{
+
+.hover_bkgr_fricc p {
     font-size: 16px;
     margin-top: 1rem;
 }
+
 .trigger_popup_fricc {
     cursor: pointer;
     position: relative;

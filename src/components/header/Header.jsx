@@ -41,17 +41,26 @@ const Header = () => {
                     <FaCartShopping className="head_colorr" />
                   </Link>
                 </div>
+                
                 {/* for seller */}
                 {/* <div className="userAndstore">
                   <Link to="/stores">
                     <HiOutlineBuildingStorefront  className="head_colorr" />
                   </Link>
                 </div> */}
+
                 <div className="userAndstore">
                   <Link to="/more">
                     <FaRegUser className="head_colorr" />
                   </Link>
                 </div>
+
+                {/* Login */}
+                {/* <div className="userAndstore">
+                  <Link to="/more">
+                    Login
+                  </Link>
+                </div> */}
               </div>
             </div>
           </div>
