@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import User from '../../img/user.png'
 import './chat_Details.css'
 
 function Chat_Details() {
+
+    const[message, setMessage] = useState('')
+    const handleInputChange = (event) => {
+        setMessage(event.target.value);
+      };
+    
+      useEffect(() => {
+        const textarea = document.getElementById('multiline-input');
+        textarea.style.height = 'auto';
+        const newHeight = `${textarea.scrollHeight}px`;
+        textarea.style.height = newHeight;
+        textarea.scrollTop = textarea.scrollHeight;
+      }, [message]);
+
     return (
         <>
             <div className="box_chatDetails_container">
@@ -13,38 +27,60 @@ function Chat_Details() {
                     </div>
                 </div>
 
-                <div className="box_chat_content_room">
-                    <div className="box_chatUser">
-                        <span className="box_chatUser_txt1">Hi, how are you?</span>
+                <form className='message-form'>
+                    <div className="box_chat_content_room">
+
+                        <div className="sender">
+                            <span className="text-box">Hi, I'm sender</span>
+                        </div>
+
+                        <div className="recipient ">
+                            <span className="text-box">Hi, I'm recipient</span>
+                        </div>
+                        <div className="sender">
+                            <span className="text-box">Hi, I'm sender</span>
+                        </div>
+
+                        <div className="recipient ">
+                            <span className="text-box">Hi, I'm recipient</span>
+                        </div>
+                        <div className="sender">
+                            <span className="text-box">Hi, I'm sender</span>
+                        </div>
+
+                        <div className="recipient ">
+                            <span className="text-box">Hi, I'm recipient</span>
+                        </div>
+                        <div className="sender">
+                            <span className="text-box">Hi, I'm sender</span>
+                        </div>
+
+                        <div className="recipient ">
+                            <span className="text-box">Hi, I'm recipient</span>
+                        </div>
+                        <div className="sender">
+                            <span className="text-box">Hi, I'm sender</span>
+                        </div>
+
+                        <div className="recipient ">
+                            <span className="text-box">Hi, I'm recipient</span>
+                        </div>
+
                     </div>
-                    <div className="box_chatUser">
-                        <span className="box_chatUser_txt2">Hi, how are you?</span>
+                    <div className="send-message">
+                        <div className="send-bar">
+                            <textarea
+                                name="message"
+                                className="multiline-input"
+                                id="multiline-input"
+                                placeholder="Your opinion"
+                                value={message}
+                                onChange={handleInputChange}
+                            />
+                            <button>Send</button>
+                        </div>
                     </div>
-                    <div className="box_chatUser">
-                        <span className="box_chatUser_txt1">Hi, how are you?</span>
-                    </div>
-                    <div className="box_chatUser">
-                        <span className="box_chatUser_txt2">Hi, how are you?</span>
-                    </div>
-                    <div className="box_chatUser">
-                        <span className="box_chatUser_txt1">Hi, how are you?</span>
-                    </div>
-                    <div className="box_chatUser">
-                        <span className="box_chatUser_txt2">Hi, how are you?</span>
-                    </div>
-                    <div className="box_chatUser">
-                        <span className="box_chatUser_txt1">Hi, how are you?</span>
-                    </div>
-                    <div className="box_chatUser">
-                        <span className="box_chatUser_txt2">Hi, how are you?</span>
-                    </div>
-                    <div className="box_chatUser">
-                        <span className="box_chatUser_txt1">Hi, how are you?</span>
-                    </div>
-                    <div className="box_chatUser">
-                        <span className="box_chatUser_txt2">Hi, how are you?</span>
-                    </div>
-                </div>
+                </form>
 
             </div>
         </>
