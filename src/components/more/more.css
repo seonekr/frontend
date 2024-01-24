@@ -1,0 +1,69 @@
+
+.MorePage {
+    width: 60%;
+    margin: auto;
+    padding: 60PX 0;
+}
+
+
+.profile_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 10px 20px;
+}
+
+.left_box {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.left_box img {
+    width: 10%;
+    border-radius: 50%;
+}
+.user_name{
+    font-size: 19px;
+}
+.right_box button {
+    padding: 10px 35px;
+    font-size: 16px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    background-color: #ff471a;
+    color: #fff;
+}
+
+.hr {
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+}
+
+.menu_icon {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+#icon_more {
+    width: 50px;
+    height: 25px;
+    color: #282B30;
+}
+
+.menu_icon:hover {
+    color: var(--orange);
+    transition: 0.5s;
+}
+
+/*============== Responsive =====================*/
+@media (max-width: 768px) {
+    .MorePage {
+        width: 100%;
+    }
+
+}
