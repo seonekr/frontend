@@ -23,6 +23,7 @@ import Home from "./components/homePage/HomePage";
 import ProductDetails from "./components/products/ProductDetails";
 import Cart from "./components/cart/Cart";
 import SuccessfulBuy from "./components/cart/SuccessfulBuy";
+import Chats from "./components/chat/Chats";
 import Address from "./components/cart/Address";
 import Payment from "./components/cart/Payment";
 import Order from "./components/order/Order";
@@ -70,6 +71,7 @@ function App() {
           <Route path="/cart" Component={Cart} />
           <Route path="/successfulbuy" Component={SuccessfulBuy} />
           <Route path="/address" Component={Address} />
+          <Route path="/chats" Component={Chats} />
           <Route path="/payment" Component={Payment} />
           <Route path="/order" Component={Order} />
           <Route path="/bill" Component={Bill} />
