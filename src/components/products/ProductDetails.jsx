@@ -60,35 +60,11 @@ function ProductDetails() {
           <p>Back</p>
         </Link>
 
-        <ul>
-        {joinedData.map((item) => (
-          <li key={item.id}>
-            <p>Name: {item.name}</p>
-            <p>Price: {item.price}</p>
-            <p>CategoryID: {item.categoryID}</p>
-            {/* Displaying sizes */}
-            {item.size && (
-              <p>Sizes: {item.size.join(', ')}</p>
-            )}
-            {/* Add more fields as needed */}
-            {item.image && <img src={item.image} alt={`Product ${item.id}`} />}
-            {item.store && (
-              <div>
-                <p>Store Name: {item.store.name}</p>
-                <p>Store Address: {item.store.address}</p>
-                {/* Add more store fields as needed */}
-              </div>
-            )}
-            <hr />
-          </li>
-        ))}
-      </ul>
-
         <div className="box_betavinOfob">
         {joinedData.map((item) => (
           <div className="boxProduct_deteils" key={item.id}>
             <div className="product-page-img">
-              <img src={productImage} alt="" />
+            <img src={item.image} alt={`Product ${item.id}`} />
             </div>
 
             <form >
@@ -111,7 +87,6 @@ function ProductDetails() {
                   </div>
                   )}
                 </div>
-
                 <div className="container_item_icon">
                   <div className="container_minus_plus" >
                     -
@@ -135,8 +110,6 @@ function ProductDetails() {
             </form>
           </div>
           ))}
-
-
           <div className="description_container">
             <img src={detailproduct} alt="" />
           </div>
@@ -233,11 +206,11 @@ function ProductDetails() {
             </div>
           </div>
         </div>
-        {/* <h2 className="box_betavinOfob asd2">
+        <h2 className="box_betavinOfob asd2">
           <span className="spennofStyle"> </span>
           More products
-        </h2> */}
-        {/* <div className="product-area">
+        </h2>
+        <div className="product-area">
           <div className="box-product" >
             <div>
               <div className="img">
@@ -290,7 +263,7 @@ function ProductDetails() {
             </div>
           </div>
 
-        </div> */}
+        </div>
       </div>
       <Menu />
     </>
