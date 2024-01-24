@@ -7,7 +7,7 @@ const Privacy = () => {
   return (
     <>
         <div className="box_terms">
-            <Link to="#" className="box_iconBack_terms">
+            <Link to="/more" className="box_iconBack_terms">
               <MdArrowBack id='iconBack_terms'/>
             </Link>
             <h2>Privacy policy</h2>
