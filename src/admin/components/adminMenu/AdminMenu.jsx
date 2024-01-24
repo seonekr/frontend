@@ -36,7 +36,7 @@ const AdminMenu = () => {
               <HiOutlineBuildingStorefront />
               <p>Stores</p>
             </NavLink>
-            <NavLink to="/#" className="link">
+            <NavLink to="/users" className="link">
               <BiUser />
               <p>Users</p>
             </NavLink>
