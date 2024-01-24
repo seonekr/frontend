@@ -44,6 +44,9 @@ import BillStore from "./components/seller/orderStore/BillStore";
 
 //------ Admin ------//
 import Dashboard from "./admin/Dashboard";
+import Product_admin from "./admin/components/products/Product_Admin";
+import Addproduct_admin from "./admin/components/products/AddProduct";
+import Editproduct_admin from "./admin/components/products/EditProduct";
 
 
 function App() {
@@ -96,7 +99,10 @@ function App() {
 
 
           {/* --------- Seller ---------- */}
-          <Route path="/dashboard-admin" Component={Dashboard} />
+          <Route path="/dashboard" Component={Dashboard} />
+          <Route path="/product-admin" Component={Product_admin} />
+          <Route path="/addproduct-admin" Component={Addproduct_admin} />
+          <Route path="/editproduct-admin" Component={Editproduct_admin} />
 
 
         </Routes>

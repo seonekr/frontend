@@ -20,11 +20,11 @@ const AdminMenu = () => {
       <section id="dashboard">
         <div className="left">
           <div className="menu">
-            <NavLink to="#" className="link">
+            <NavLink to="/dashboard" className="link">
               <RxDashboard />
               <p>Dashboard</p>
             </NavLink>
-            <NavLink to="/#" className="link">
+            <NavLink to="/product-admin" className="link">
               <IoDocumentText />
               <p>Products</p>
             </NavLink>
