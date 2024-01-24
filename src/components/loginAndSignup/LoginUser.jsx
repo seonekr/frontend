@@ -31,7 +31,8 @@ const LoginUser = () => {
     let config = {
       method: 'post',
       maxBodyLength: Infinity,
-      url: import.meta.env.VITE_API + "/user/signin",
+      // url: import.meta.env.VITE_API + "/user/signin",
+      url: "http://127.0.0.1:8000/user/signin",
       headers: { 
         'Content-Type': 'application/json'
       },
@@ -115,7 +116,6 @@ const LoginUser = () => {
               </svg>
           </Link>
           
-
           </div>
         </div>
       </form>
