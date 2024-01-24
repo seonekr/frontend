@@ -122,15 +122,23 @@ function AddProduct() {
             <form className="addproduct_container" onSubmit={handleSubmit}>
                 <h3>Add product</h3>
                 <div className='inputproduct_box'>
+                    <label for="name">Name:</label>
                     <input className="inputproduct" name='name' type="text" placeholder='Product name' onChange={handleInputChange} />
                 </div>
                 <div className='inputproduct_box'>
+                    <label for="price">Price:</label>
                     <input className="inputproduct" name='price' type="text" placeholder='Product price' onChange={handleInputChange} />
                 </div>
                 <div className='inputproduct_box'>
-                    <input className="inputproduct" name='category' type="text" placeholder='Category' onChange={handleInputChange} />
+                    <label for="category">Category:</label>
+                    <select name="category" className="inputproduct select_box">
+                        <option className='option_itemD' value="Name1">Name1</option>
+                        <option className='option_itemD' value="Name1">Name1</option>
+                        <option className='option_itemD' value="Name1">Name1</option>
+                    </select>
                 </div>
                 <div className='inputproduct_box'>
+                    <label for="description">Description:</label>
                     <input className="inputproduct" name='description' type="text" placeholder='Description' onChange={handleInputChange} />
                 </div>
 
