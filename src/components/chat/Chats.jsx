@@ -1,17 +1,23 @@
 import React from 'react'
+import Header from "../header/Header";
+import Menu from "../menuFooter/Menu";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 import './chats.css'
+
 
 const Chats = () => {
   return (
     <>
+      <Header />
       <div className="boc_chat_container">
-        <div className="header">
-          <div>&lt;</div>
-          <div className="search-box">
-            <input type="text" placeholder="Search..." />
+        <form className="search_box_chat">
+          <div className="search_box_item">
+            <div className="btn_common">
+              <FaMagnifyingGlass className="iconSearch" />
+            </div>
+            <input type="text" className="input_search_heaederr" placeholder="search..."></input>
           </div>
-          <div>...</div>
-        </div>
+        </form>
 
         <ul className="conversation-list">
           <li className="conversation">
@@ -24,6 +30,7 @@ const Chats = () => {
           </li>
         </ul>
       </div>
+      <Menu />
     </>
   )
 }
