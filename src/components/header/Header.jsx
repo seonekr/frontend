@@ -20,7 +20,7 @@ const Header = () => {
               <div className="boxLiMenu">
                 <div className="linkLi">
                   <Link to="/" className="link active">Home</Link>
-                  <Link to="#" className="link ">Chat</Link>
+                  <Link to="/chats" className="link ">Chat</Link>
                   <Link to="/order" className="link ">Orders</Link>
                 </div>
               </div>
@@ -41,17 +41,26 @@ const Header = () => {
                     <FaCartShopping className="head_colorr" />
                   </Link>
                 </div>
+
                 {/* for seller */}
                 {/* <div className="userAndstore">
                   <Link to="/stores">
                     <HiOutlineBuildingStorefront  className="head_colorr" />
                   </Link>
                 </div> */}
+
                 <div className="userAndstore">
                   <Link to="/more">
                     <FaRegUser className="head_colorr" />
                   </Link>
                 </div>
+
+                {/* Login */}
+                {/* <div className="userAndstore">
+                  <Link to="/more">
+                    Login
+                  </Link>
+                </div> */}
               </div>
             </div>
           </div>

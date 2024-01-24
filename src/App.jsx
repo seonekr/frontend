@@ -23,6 +23,8 @@ import Home from "./components/homePage/HomePage";
 import ProductDetails from "./components/products/ProductDetails";
 import Cart from "./components/cart/Cart";
 import SuccessfulBuy from "./components/cart/SuccessfulBuy";
+import Chats from "./components/chat/Chats";
+import Chat_Details from "./components/chat/Chat_Details";
 import Address from "./components/cart/Address";
 import Payment from "./components/cart/Payment";
 import Order from "./components/order/Order";
@@ -39,6 +41,10 @@ import AddPaymentStore from "./components/seller/payment_store/AddPaymentStore";
 import Dashboard_seller from "./components/seller/stores/Dashboard_seller";
 import OrderStore from "./components/seller/orderStore/OrderStore";
 import BillStore from "./components/seller/orderStore/BillStore";
+
+//------ Admin ------//
+import Dashboard from "./admin/Dashboard";
+
 
 function App() {
   return (
@@ -63,13 +69,14 @@ function App() {
           <Route path="/terms" Component={Terms} />
           <Route path="/privacy" Component={Privacy} />
 
-
           {/* --------- Home Page ---------- */}
           <Route path="/" Component={Home} />
           <Route path="/product-details" Component={ProductDetails} />
           <Route path="/cart" Component={Cart} />
           <Route path="/successfulbuy" Component={SuccessfulBuy} />
           <Route path="/address" Component={Address} />
+          <Route path="/chats" Component={Chats} />
+          <Route path="/chat-details" Component={Chat_Details} />
           <Route path="/payment" Component={Payment} />
           <Route path="/order" Component={Order} />
           <Route path="/bill" Component={Bill} />
@@ -86,6 +93,12 @@ function App() {
           <Route path="/dashboard-seller" Component={Dashboard_seller} />
           <Route path="/order-store" Component={OrderStore} />
           <Route path="/bill-store" Component={BillStore} />
+
+
+          {/* --------- Seller ---------- */}
+          <Route path="/dashboard-admin" Component={Dashboard} />
+
+
         </Routes>
       </Router>
     </>
