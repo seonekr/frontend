@@ -29,10 +29,21 @@
 }
 
 .inputproduct {
+    margin-top: 10px;
     width: 100%;
     padding: 15px 10px;
     border-radius: 7px;
     border: 1px solid #DDDCE1;
+}
+
+.select_box {
+    padding: 15px 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.select_box .option_itemD {
+    padding: 100px;
 }
 
 .size_product_box_container {
@@ -130,10 +141,11 @@
 }
 
 @media screen and (max-width: 431px) {
-    .header_box_management{
+    .header_box_management {
         width: 100%;
         margin: 0;
     }
+
     .addproduct_container {
         width: 100%;
         margin: 20px 0;
@@ -158,18 +170,19 @@
     .size_content_box {
         gap: 1rem;
     }
+
     .btn_save_productUser {
         position: unset;
         width: 100%;
         padding: 20px 0;
         border-radius: 30px;
     }
-    
+
     .btn_Delete_productUser {
         position: unset;
         width: 100%;
         padding: 20px 0;
         border-radius: 30px;
     }
-    
+
 }
