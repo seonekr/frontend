@@ -36,9 +36,12 @@ const [store] = useState([
   { id: 3, name: "store 3", address: "vientiane", phone: "20298876565", company_number: "645364", sellerID: 3, sub_address: "donkoy" }
 ]);
 
+// Example userID
+const userID = "u421"
+
 
   // Filter goods with id equal to 1
-  const filteredGoods = goods.filter((good) => good.id === 1);
+  const filteredGoods = goods.filter((good) => good.id === 2);
 
   // Joining data by goods ID (assuming only one item in filteredGoods)
   const joinedData = filteredGoods.map((good) => {
@@ -52,24 +55,26 @@ const [store] = useState([
     };
   });
 
-  const [goodsCount, setGoodsCount] = useState(
-    goods.reduce((acc, product) => ({ ...acc, [product.id]: 1 }), {})
-  );
+  // Number of product
+  const [goodsCount, setGoodsCount] = useState(1);
+
+  // Reduce the number of products
   const incrementCount = (goodsID) => {
     setGoodsCount((prevCounts) => ({
       ...prevCounts,
-      [goodsID]: (prevCounts[goodsID] || 0) + 1,
+      [goodsID]: (prevCounts[goodsID] || 1) + 1,
     }));
   };
 
+  // Increase the number of products
   const decrementCount = (goodsID) => {
     setGoodsCount((prevCounts) => ({
       ...prevCounts,
-      [goodsID]: Math.max(1, (prevCounts[goodsID] || 0) - 1),
+      [goodsID]: Math.max(1, (prevCounts[goodsID] || 1) - 1),
     }));
   };
 
-  // Star
+  // Rating =================
   const storeid = "r4444";
   const productid = "u4434";
   const userid = "John";
@@ -81,14 +86,14 @@ const [store] = useState([
     setComment({ ...comment, rating: newRating });
   };
 
-  // Comment
+  // Comment input box
   const handleChange = (e) => {
     if (comment.rating < 1) {
       e.preventDefault();
       return;
     }
     setComment({ ...comment, [e.target.name]: e.target.value });
-    adjustTextareaHeight(e.target); // Resize box
+    adjustTextareaHeight(e.target);
   };
 
   // Resize grow up if typing full box
@@ -101,6 +106,7 @@ const [store] = useState([
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Review submit
   const handleReviewSubmit = (e) => {
     e.preventDefault();
 
@@ -122,7 +128,7 @@ const [store] = useState([
         rating: 0,
       });
 
-      document.getElementById("multiline-input").style.height = "auto";
+      document.getElementById("review").style.height = "auto";
     } catch (error) {
       console.log(error);
     }
@@ -131,6 +137,24 @@ const [store] = useState([
   useEffect(() => {
     setLoading(false);
   }, []);
+
+  // Buy now function
+  const buyNow = async (e) => {
+    e.preventDefault()
+    const product = joinedData.map((product) => ({
+      userID: userID,
+      productID: product.id,
+      quantity: goodsCount,
+      price: product.price
+    }))
+    console.log(product)
+  }
+
+  // Add to cart
+  const addToCart = async (e) => {
+    e.preventDefault();
+    console.log("Add to cart")
+  }
 
   return (
     <>
@@ -170,14 +194,14 @@ const [store] = useState([
                   </div>
                   <div className="container_item_icon">
                     <div className="container_minus_plus" onClick={() => decrementCount(item.id)}>-</div>
-                    <span>{goodsCount[item.id] || 0}</span>
+                    <span>{goodsCount[item.id] || 1}</span>
                     <div className="container_minus_plus" onClick={() => incrementCount(item.id)}>+</div>
                   </div>
                   <div className="Count_product">
-                    <Link to="/payment" className="echbtn btnBut">
+                    <Link onClick={buyNow} className="echbtn btnBut">
                       Buy Now
                     </Link>
-                    <Link to="/cart" className="echbtn btnAdd">
+                    <Link onClick={addToCart} className="echbtn btnAdd">
                       Add To Cart
                     </Link>
                   </div>
@@ -206,12 +230,11 @@ const [store] = useState([
                   </span>
                 ))}
               </div>
-
               <div className="comment_box_content">
                 <textarea
                   name="commend"
-                  className="multiline-input"
-                  id="multiline-input"
+                  className="review-text"
+                  id="review"
                   value={comment.commend}
                   onChange={handleChange}
                   placeholder="Your opinion"
