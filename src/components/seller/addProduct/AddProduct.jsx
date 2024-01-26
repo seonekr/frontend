@@ -14,9 +14,9 @@ function AddProduct() {
         category: "",
         description: "",
         sizes: [],
-        colors: [],
         image: "",
         image_details: "",
+        currentsizes: "",
     });
 
     const handleInputChange = (e) => {
@@ -40,7 +40,7 @@ function AddProduct() {
             setProduct((prevProduct) => ({
                 ...prevProduct,
                 sizes: [...prevProduct.sizes, prevProduct.currentsizes],
-                currentsizes: "", // Reset the current color after adding
+                currentsizes: ''
             }));
         }
     };
@@ -59,36 +59,36 @@ function AddProduct() {
     };
 
 
-    const handleColorInputChange = (e) => {
-        const { value } = e.target;
-        setProduct((prevProduct) => ({
-            ...prevProduct,
-            currentColor: value,
-        }));
-    };
+    // const handleColorInputChange = (e) => {
+    //     const { value } = e.target;
+    //     setProduct((prevProduct) => ({
+    //         ...prevProduct,
+    //         currentColor: value,
+    //     }));
+    // };
 
-    const addColorInput = () => {
-        if (product.currentColor.trim() !== "") {
-            setProduct((prevProduct) => ({
-                ...prevProduct,
-                colors: [...prevProduct.colors, prevProduct.currentColor],
-                currentColor: "", // Reset the current color after adding
-            }));
-        }
-    };
+    // const addColorInput = () => {
+    //     if (product.currentColor.trim() !== "") {
+    //         setProduct((prevProduct) => ({
+    //             ...prevProduct,
+    //             colors: [...prevProduct.colors, prevProduct.currentColor],
+    //             currentColor: "",
+    //         }));
+    //     }
+    // };
 
-    const removeColorInput = (index) => {
-        if (product.colors.length > 0) {
-            setProduct((prevProduct) => {
-                const updatedColors = [...prevProduct.colors];
-                updatedColors.splice(index, 1);
-                return {
-                    ...prevProduct,
-                    colors: updatedColors,
-                };
-            });
-        }
-    };
+    // const removeColorInput = (index) => {
+    //     if (product.colors.length > 0) {
+    //         setProduct((prevProduct) => {
+    //             const updatedColors = [...prevProduct.colors];
+    //             updatedColors.splice(index, 1);
+    //             return {
+    //                 ...prevProduct,
+    //                 colors: updatedColors,
+    //             };
+    //         });
+    //     }
+    // };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -165,6 +165,7 @@ function AddProduct() {
                                 type="text"
                                 placeholder='Add Size...'
                                 onChange={handleSizeInputChange}
+                                value={product.currentsizes}
                             />
                             <div className="addsize_btn" onClick={addSizeInput}>
                                 Add
