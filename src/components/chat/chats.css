@@ -7,20 +7,53 @@
 }
 
 .conversation_item {
+    width: 100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
     border-bottom: 1px solid #dddddddd;
+}
 
+.conversation_item:last-child {
+    border-bottom: none;
+}
+
+.conversation_item a {
+    width: 95%;
+}
+
+.conversation_item button {
+    background: none;
+    border: none;
 }
 
 .conversation_item img {
     width: 60px;
     border-radius: 50%;
     margin-right: 20px;
+}
+.conversation_item .del-cls {
+    position: absolute;
+    text-align: center;
+    right: -9%;
+    top: -40%;
+    width: 11%;
+    background-color: #ffff;
+    padding: 0 0.5rem;
+    border-radius: 14px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.10);
+}
+
+.conversation_item .del-cls div{
+    margin: 0.3rem 0;
+    padding: 0.3rem 0;
+    cursor: pointer;
+}
+.conversation_item .del-cls div:first-child{
+    color: red;
 }
 
 .conversation_details {
@@ -36,7 +69,6 @@
 .conversation_options {
     right: 20px;
     position: absolute;
-    z-index: 999;
     font-size: 23px;
     cursor: pointer;
 }
