@@ -93,13 +93,16 @@ const userID = "u421"
       return;
     }
     setComment({ ...comment, [e.target.name]: e.target.value });
-    adjustTextareaHeight(e.target);
+    autoGrowTextarea(e.target);
   };
 
   // Resize grow up if typing full box
-  const adjustTextareaHeight = (element) => {
-    element.style.height = "auto";
-    element.style.height = element.scrollHeight + "px";
+  const autoGrowTextarea = () => {
+    const textarea = document.getElementById("multiline-input");
+    const maxHeight = (10 * window.innerHeight) / 100;
+
+    textarea.style.height = "auto";
+    textarea.style.height = Math.min(textarea.scrollHeight, maxHeight) + "px";
   };
 
   // sent review
@@ -289,7 +292,7 @@ const userID = "u421"
                   )}
                 </div>
               ) : (
-                <p>No reviews available.</p>
+                <p className="no-available">No reviews available.</p>
               )}
             </div>
           </div>
