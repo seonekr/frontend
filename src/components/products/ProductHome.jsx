@@ -92,7 +92,7 @@ const ProductHome = () => {
         </div>
 
         <div className="product-area">
-          {console.log(SliceGoodsList)}
+          {/* {console.log(SliceGoodsList)} */}
           {SliceGoodsList.map((i, index) => (
             <div
               className="box-product"
