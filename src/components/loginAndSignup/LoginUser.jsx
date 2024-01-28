@@ -52,7 +52,7 @@ const LoginUser = () => {
       };
       const token = result.token.access;
       if (token) {
-        window.localStorage.setItem("token", JSON.stringify(token));
+        window.localStorage.setItem("token", token);
       }
       window.localStorage.setItem("user", JSON.stringify(user));
       navigate("/", { replace: true });
