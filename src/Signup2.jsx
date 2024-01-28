@@ -6,7 +6,7 @@ import axios from "axios";
 
 const Signup2 = () => {
   const locataion = useLocation();
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const [errorText, set_errorText] = useState("");
   const user_tyep = locataion.state;
   const [timer, set_timer] = useState({
@@ -26,8 +26,8 @@ const Signup2 = () => {
     sub_address: "",
     company_number: "",
     introduce: "",
+    is_seller: false,
   });
-
 
   function onChange(e) {
     const { name, value } = e.target;
@@ -38,32 +38,51 @@ const Signup2 = () => {
   }
 
   const SignUp = () => {
-    // let data = JSON.stringify({
-    //   email: email,
-    //   code: code,
-    //   nickname: nickname,
-    //   password: password,
-    //   password2: password2,
-    // });
+    if (user_tyep == "2") {
+      let config = {
+        method: "post",
+        maxBodyLength: Infinity,
+        url: "http://127.0.0.1:8000/user/signup",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: data,
+      };
 
-    let config = {
-      method: "post",
-      maxBodyLength: Infinity,
-      url: "http://127.0.0.1:8000/user/signup",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      data: data,
-    };
+      axios
+        .request(config)
+        .then((response) => {
+          console.log(JSON.stringify(response.data));
+          navigate("/loginuser");
+          return;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } else {
+      data.is_seller = true;
 
-    axios
-      .request(config)
-      .then((response) => {
-        console.log(JSON.stringify(response.data));
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      let config = {
+        method: "post",
+        maxBodyLength: Infinity,
+        url: "http://127.0.0.1:8000/user/seller-signup",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: data,
+      };
+
+      axios
+        .request(config)
+        .then((response) => {
+          console.log(JSON.stringify(response.data));
+          navigate("/loginuser");
+          return;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   };
 
   useEffect(() => {
