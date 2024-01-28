@@ -6,10 +6,12 @@ import { IoKeySharp } from "react-icons/io5";
 import { BsBackpack4Fill } from "react-icons/bs";
 import { IoPeopleCircle } from "react-icons/io5";
 import { IoIosArrowBack } from "react-icons/io";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 export const More = () => {
   const user = localStorage.getItem("user");
+  const navigate = useNavigate();
   return (
     <>
       <div className="header_box_management">
@@ -52,12 +54,34 @@ export const More = () => {
             <p>Change password</p>
           </div>
           <hr className='hr' />
-          <div className='menu_icon'>
+          <div className='menu_icon' onClick={() => {
+            window.localStorage.removeItem("token");
+            window.localStorage.removeItem("user");
+            navigate("/");
+          }}>
             <IoLogOutOutline id="icon_more" />
             <p>Log out </p>
           </div>
           <hr className='hr' />
-          <div className='menu_icon'>
+          <div className='menu_icon' onClick={() => {
+            let config = {
+              method: 'delete',
+              maxBodyLength: Infinity,
+              url: 'http://127.0.0.1:8000/user/my-page',
+              headers: {"Content-Type": "application/json",}
+            };
+            
+            axios.request(config)
+            .then((response) => {
+              console.log(JSON.stringify(response.data));
+              window.localStorage.removeItem("token");
+              window.localStorage.removeItem("user");
+              navigate("/");
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+          }}>
             <MdDelete id="icon_more" />
             <p>Delete account</p>
           </div>
