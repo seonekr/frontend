@@ -10,6 +10,9 @@ import SellerRegister from "./components/sellerRegister/SellerRegister";
 import SigupGoogle from "./components/sigupforGoogle/SigupGoogle";
 import AdditionalSeller from "./components/additionalSeller/AdditionalSeller";
 
+import Signup1 from './Signup1';
+import Signup2 from './Signup2';
+
 //------ Profile Page ------//
 import ProfileEdit from './components/profile/ProfileEdit';
 import Profile from './components/profile/Profile';
@@ -55,6 +58,10 @@ function App() {
           <Route path="/sellerregister" Component={SellerRegister} />
           <Route path="/sigupgoogle" Component={SigupGoogle} />
           <Route path="/additionalseller" Component={AdditionalSeller} />
+
+          <Route path="/signup1" Component={Signup1} />
+          <Route path="/signup2" Component={Signup2} />
+
 
           {/* --------- Profile page---------- */}
           <Route path="/profileedit" Component={ProfileEdit} />
