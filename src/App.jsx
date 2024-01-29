@@ -50,6 +50,7 @@ import BillStore from "./components/seller/orderStore/BillStore";
   import Users from "./admin/components/menagerUser/Users";
   import User_details from "./admin/components/menagerUser/User_details";
   import Order_admin from "./admin/components/orderPage/OrderPage";
+  import OrderBill_Admin from "./admin/components/orderPage/OrderBill";
   import Admins from "./admin/components/menagerAdmin/Admins";
   import StoreAdmin from "./admin/components/storeMenagement/StoreAdmin";
 
@@ -112,6 +113,7 @@ function App() {
           <Route path="/users" Component={Users} />
           <Route path="/user-details" Component={User_details} />
           <Route path="/order-admin" Component={Order_admin} />
+          <Route path="/orderBill-admin" Component={OrderBill_Admin} />
           <Route path="/admins" Component={Admins} />
           <Route path="/storeAdmin" Component={StoreAdmin} />
 

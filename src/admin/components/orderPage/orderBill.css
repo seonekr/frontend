@@ -6,6 +6,15 @@
     left: 18%;
 }
 
+.box_back_orderbill {
+    display: flex;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.h2OrderrBill_center{
+    text-align: center;
+}
 /* bill no: id: name: */
 .aguopoidHead {
     display: grid;
@@ -13,11 +22,6 @@
     margin-top: 2rem;
 }
 
-.aiconnboxx {
-    text-align: center;
-    font-size: 45px;
-    color: #347FFF;
-}
 
 .abill-detial {
     padding: 25px 40px 50px 40px;
@@ -90,11 +94,12 @@
 }
 
 .aplace_form_button {
-    background-color: #347FFF;
-    padding: 0.7rem 3rem;
-    border-radius: 4px;
+    border-radius: 8px;
+    width: 130px;
+    height: 42px;
+    background: rgba(255, 79, 22, 0.92);
+    color: #fff;
     border: none;
-    color: white;
+    font-size: 18px;
     cursor: pointer;
-    font-size: 19px;
 }

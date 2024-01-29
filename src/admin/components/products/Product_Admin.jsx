@@ -1,4 +1,4 @@
-import "./product.css";
+import "./product_Admin.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import AdminMenu from "../adminMenu/AdminMenu";
@@ -7,6 +7,8 @@ import { IoSearchOutline } from "react-icons/io5";
 import { MdOutlineEdit } from "react-icons/md";
 import { AiOutlineDelete, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import productImage from "../../../img/productImage.png";
+import banner from "../../../img/banner.jpg";
 
 const Product_Admin = () => {
 
@@ -48,10 +50,7 @@ const Product_Admin = () => {
 
             <div className="box-product">
               <div>
-                <img
-                  src="#"
-                  alt="image"
-                />
+                  <img src={productImage} alt="" />
               </div>
               <ul className="txtOFproduct">
                 <li>product name</li>
@@ -69,28 +68,9 @@ const Product_Admin = () => {
                 </div>
               </ul>
             </div>
+            
           </div>
 
-          <div className="box_container_next_product">
-            <button className="box_prev_left_product">
-              <AiOutlineLeft id="box_icon_left_right_product" />
-              <p>Prev</p>
-            </button>
-
-            <div className="box_num_product">
-              <div
-              >
-                <div className="num_admin_product">
-                  <p>1</p>
-                </div>
-              </div>
-            </div>
-
-            <button className="box_prev_right_product" >
-              <p>Next</p>
-              <AiOutlineRight id="box_icon_left_right_product" />
-            </button>
-          </div>
         </div>
       </section>
       {/* PopUp box add banner */}

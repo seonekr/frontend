@@ -52,7 +52,7 @@ const OrderPage = () => {
               <div className='btn_pending'>
                 Pending
               </div>
-              <Link to='/orderbill' className='btn_view' >
+              <Link to='/orderBill-admin' className='btn_view' >
                 View
               </Link>
             </div>
@@ -71,37 +71,11 @@ const OrderPage = () => {
               <div className='btn_pending'>
                 Pending
               </div>
-              <Link to='/orderbill' className='btn_view' >
+              <Link to='/orderBill-admin' className='btn_view' >
                 View
               </Link>
             </div>
           </form>
-
-
-          <div className="box_container_next_product">
-            <button className="box_prev_left_product" onClick={prePage}>
-              <AiOutlineLeft id="box_icon_left_right_product" />
-              <p>Prev</p>
-            </button>
-
-            <div className="box_num_product">
-              {numbers.map((n, i) => (
-                <div
-                  className={`page-link ${currentPage === n ? "active" : ""}`}
-                  key={i}
-                >
-                  <div className="num_admin_product">
-                    <p onClick={() => changeCPage(n)}>{n}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <button className="box_prev_right_product" onClick={nextPage}>
-              <p>Next</p>
-              <AiOutlineRight id="box_icon_left_right_product" />
-            </button>
-          </div>
 
         </div>
       </section>
