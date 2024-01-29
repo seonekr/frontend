@@ -43,15 +43,16 @@ import OrderStore from "./components/seller/orderStore/OrderStore";
 import BillStore from "./components/seller/orderStore/BillStore";
 
 //------ Admin ------//
-import Dashboard from "./admin/Dashboard";
-import Product_admin from "./admin/components/products/Product_Admin";
-import Addproduct_admin from "./admin/components/products/AddProduct";
-import Editproduct_admin from "./admin/components/products/EditProduct";
-import Users from "./admin/components/menagerUser/Users";
-import User_details from "./admin/components/menagerUser/User_details";
-import Order_admin from "./admin/components/orderPage/OrderPage";
+  import Dashboard from "./admin/Dashboard";
+  import Product_admin from "./admin/components/products/Product_Admin";
+  import Addproduct_admin from "./admin/components/products/AddProduct";
+  import Editproduct_admin from "./admin/components/products/EditProduct";
+  import Users from "./admin/components/menagerUser/Users";
+  import User_details from "./admin/components/menagerUser/User_details";
+  import Order_admin from "./admin/components/orderPage/OrderPage";
+  import Admins from "./admin/components/menagerAdmin/Admins";
+  import StoreAdmin from "./admin/components/storeMenagement/StoreAdmin";
 
-import Admins from "./admin/components/menagerAdmin/Admins";
 
 
 function App() {
@@ -111,8 +112,9 @@ function App() {
           <Route path="/users" Component={Users} />
           <Route path="/user-details" Component={User_details} />
           <Route path="/order-admin" Component={Order_admin} />
-
           <Route path="/admins" Component={Admins} />
+          <Route path="/storeAdmin" Component={StoreAdmin} />
+
 
         </Routes>
       </Router>

@@ -32,7 +32,7 @@ const AdminMenu = () => {
               <MdOutlineSell />
               <p>Orders</p>
             </NavLink>
-            <NavLink to="/#" className="link">
+            <NavLink to="/storeAdmin" className="link">
               <HiOutlineBuildingStorefront />
               <p>Stores</p>
             </NavLink>
@@ -40,7 +40,7 @@ const AdminMenu = () => {
               <BiUser />
               <p>Users</p>
             </NavLink>
-            <NavLink to="/#" className="link">
+            <NavLink to="/admins" className="link">
               <LiaUserCogSolid />
               <p>Admins</p>
             </NavLink>
