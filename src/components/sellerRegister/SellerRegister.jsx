@@ -7,7 +7,8 @@ import axios from "axios";
 const SellerRegister = () => {
   const [userData, setUserData] = useState({
     email: '',
-    certificationNumber: '',
+    code: '',
+    nickname:'',
     password: '',
     verifyPassword: '',
     storeName: '',
@@ -58,7 +59,8 @@ const SellerRegister = () => {
     }
   };
 
-  const handleSellerRegister = async () => {
+  const handleSellerRegister = async (e) => {
+    e.preventDefault()
     if (userData.password !== userData.password) {
       setPasswordMatch(false);
       return;
@@ -108,9 +110,17 @@ const SellerRegister = () => {
           </div>
           <input
             type="text"
-            name="certificationNumber"
+            name="code"
             placeholder="Certification number "
-            value={userData.certificationNumber}
+            value={userData.code}
+            onChange={handleUserChange}
+            required
+          />
+          <input
+            type="text"
+            name="nickname"
+            placeholder="nickname"
+            value={userData.nickname}
             onChange={handleUserChange}
             required
           />

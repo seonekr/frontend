@@ -59,29 +59,9 @@ const Chats = () => {
               <IoMdMore />
             </button>
             {isVisible && (
-            <div className="del-cls" ref={divsRef}>
-              <div>delete</div>
-              <div>clear</div>
-            </div>
-            )}
-          </div>
-          <div className="conversation_item">
-            <Link to="/chat-details">
-              <div className="conversation_details">
-                <img src={User} alt="image" />
-                <div className="txt_chat_box">
-                  <h4>Sompong</h4>
-                  <p>new message...</p>
-                </div>
-              </div>
-            </Link>
-            <button className="conversation_options" ref={buttonRef} onClick={toggleVisibility}>
-              <IoMdMore />
-            </button>
-            {isVisible && (
-            <div className="del-cls" ref={divsRef}>
-              <div>delete</div>
-              <div>clear</div>
+            <div className="del-cls phone" ref={divsRef}>
+              <button>delete</button>
+              <button>clear</button>
             </div>
             )}
           </div>
