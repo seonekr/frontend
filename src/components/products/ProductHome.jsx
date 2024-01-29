@@ -116,7 +116,7 @@ const ProductHome = () => {
             </div>
           ))}
 
-        </div> */}
+        </div>
 
         <div className="product-area">
             <div className="box-product">

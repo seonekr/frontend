@@ -372,7 +372,6 @@ const userID = "u421"
             </div>
           </div>
         </div>
-      </div>
       <Menu />
     </>
   );

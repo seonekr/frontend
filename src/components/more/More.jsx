@@ -51,16 +51,7 @@ export const More = () => {
     setShowConfirmation(false);
   };
 
-
-
-import { IoPeopleCircle } from "react-icons/io5";
-import { IoIosArrowBack } from "react-icons/io";
-import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-
-
   const user = localStorage.getItem("user");
-  const navigate = useNavigate();
 
   return (
     <>
