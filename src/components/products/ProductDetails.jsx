@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import "./productDetails.css";
 import Header from "../header/Header";
 import Menu from "../menuFooter/Menu";
@@ -159,6 +160,7 @@ const userID = "u421"
     console.log("Add to cart")
   }
 
+
   return (
     <>
       <Header />
@@ -169,6 +171,7 @@ const userID = "u421"
         </Link>
 
         <div className="box_betavinOfob">
+
           {joinedData.map((item) => (
             <div className="boxProduct_deteils" key={item.id}>
               <div className="product-page-img">
@@ -212,12 +215,14 @@ const userID = "u421"
               </form>
             </div>
           ))}
+
           <div className="description_container">
             <img src={detailproduct} alt="" />
           </div>
 
           <div className="review_box">
             <h3>Reviews(8)</h3>
+
             <form className="review_boxstar" onSubmit={handleReviewSubmit}>
               <div className="star">
                 {[1, 2, 3, 4, 5].map((star) => (
@@ -251,6 +256,7 @@ const userID = "u421"
                 >
                   Sent
                 </button>
+
               </div>
             </form>
             <div className="last_box_review">
@@ -291,9 +297,21 @@ const userID = "u421"
                     </div>
                   )}
                 </div>
+
               ) : (
                 <p className="no-available">No reviews available.</p>
               )}
+
+                <div className="comment_boxOfuser">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    numquam sapiente voluptates ut porro quisquam eveniet
+                    voluptas sed. Nulla ducimus odit esse quam corporis, dolorem
+                    labore. Ipsa quis repudiandae nihil.
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>

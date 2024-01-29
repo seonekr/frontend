@@ -10,6 +10,11 @@ import SellerRegister from "./components/sellerRegister/SellerRegister";
 import SigupGoogle from "./components/sigupforGoogle/SigupGoogle";
 import AdditionalSeller from "./components/additionalSeller/AdditionalSeller";
 
+
+import Signup1 from './components/loginAndSignup/Signup1';
+import Signup2 from './components/loginAndSignup/Signup2';
+
+
 //------ Profile Page ------//
 import ProfileEdit from './components/profile/ProfileEdit';
 import Profile from './components/profile/Profile';
@@ -24,7 +29,9 @@ import ProductDetails from "./components/products/ProductDetails";
 import Cart from "./components/cart/Cart";
 import SuccessfulBuy from "./components/cart/SuccessfulBuy";
 import Chats from "./components/chat/Chats";
+
 import Chat_Details from "./components/chat/Chat_Details";
+
 import Address from "./components/cart/Address";
 import Payment from "./components/cart/Payment";
 import Order from "./components/order/Order";
@@ -42,6 +49,7 @@ import Dashboard_seller from "./components/seller/stores/Dashboard_seller";
 import OrderStore from "./components/seller/orderStore/OrderStore";
 import BillStore from "./components/seller/orderStore/BillStore";
 
+
 //------ Admin ------//
   import Dashboard from "./admin/Dashboard";
   import Product_admin from "./admin/components/products/Product_Admin";
@@ -52,6 +60,7 @@ import BillStore from "./components/seller/orderStore/BillStore";
   import Order_admin from "./admin/components/orderPage/OrderPage";
   import Admins from "./admin/components/menagerAdmin/Admins";
   import StoreAdmin from "./admin/components/storeMenagement/StoreAdmin";
+
 
 
 
@@ -70,6 +79,11 @@ function App() {
           <Route path="/sigupgoogle" Component={SigupGoogle} />
           <Route path="/additionalseller" Component={AdditionalSeller} />
 
+
+          <Route path="/signup1" Component={Signup1} />
+          <Route path="/signup2" Component={Signup2} />
+
+
           {/* --------- Profile page---------- */}
           <Route path="/profileedit" Component={ProfileEdit} />
           <Route path="/profile" Component={Profile} />
@@ -78,14 +92,19 @@ function App() {
           <Route path="/terms" Component={Terms} />
           <Route path="/privacy" Component={Privacy} />
 
+
+
           {/* --------- Home Page ---------- */}
           <Route path="/" Component={Home} />
-          <Route path="/product-details" Component={ProductDetails} />
+          <Route path="/goods/:goods_id" Component={ProductDetails} />
+
           <Route path="/cart" Component={Cart} />
           <Route path="/successfulbuy" Component={SuccessfulBuy} />
           <Route path="/address" Component={Address} />
           <Route path="/chats" Component={Chats} />
+
           <Route path="/chat-details" Component={Chat_Details} />
+
           <Route path="/payment" Component={Payment} />
           <Route path="/order" Component={Order} />
           <Route path="/bill" Component={Bill} />
@@ -104,6 +123,7 @@ function App() {
           <Route path="/bill-store" Component={BillStore} />
 
 
+
           {/* --------- Admin ---------- */}
           <Route path="/dashboard" Component={Dashboard} />
           <Route path="/product-admin" Component={Product_admin} />
@@ -114,6 +134,7 @@ function App() {
           <Route path="/order-admin" Component={Order_admin} />
           <Route path="/admins" Component={Admins} />
           <Route path="/storeAdmin" Component={StoreAdmin} />
+
 
 
         </Routes>

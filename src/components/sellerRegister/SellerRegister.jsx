@@ -59,8 +59,8 @@ const SellerRegister = () => {
     }
   };
 
-  const handleSellerRegister = async (e) => {
-    e.preventDefault()
+
+  const handleSellerRegister = async () => {
     if (userData.password !== userData.password) {
       setPasswordMatch(false);
       return;

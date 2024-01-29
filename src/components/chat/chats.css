@@ -1,3 +1,4 @@
+
 .boc_chat_container {
     width: 60%;
     margin: 7rem auto 0 auto;
@@ -5,6 +6,7 @@
     border-radius: 10px;
     padding: 30px;
 }
+
 
 .conversation_item {
     width: 100%;
