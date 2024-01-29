@@ -41,7 +41,6 @@ const ProductHome = () => {
 
   const [goodsList, setGoodsList] = useState([]);
 
- console.log
   useEffect(() => {
     const config = {
       method: 'get',
