@@ -95,7 +95,7 @@ function App() {
 
 
           {/* --------- Home Page ---------- */}
-          <Route path="/" Component={Home} />
+          <Route path="/" exact Component={Home} />
           <Route path="/goods/:goods_id" Component={ProductDetails} />
 
           <Route path="/cart" Component={Cart} />
