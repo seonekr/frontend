@@ -42,7 +42,7 @@ const Signup2 = () => {
       let config = {
         method: "post",
         maxBodyLength: Infinity,
-        url: "http://127.0.0.1:8000/user/signup",
+        url: import.meta.env.VITE_API + `/user/signup`,
         headers: {
           "Content-Type": "application/json",
         },
@@ -65,7 +65,7 @@ const Signup2 = () => {
       let config = {
         method: "post",
         maxBodyLength: Infinity,
-        url: "http://127.0.0.1:8000/store/store-signup",
+        url: import.meta.env.VITE_API + `/store/store-signup`,
         headers: {
           "Content-Type": "application/json",
         },
