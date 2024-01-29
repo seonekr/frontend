@@ -49,6 +49,7 @@ import Addproduct_admin from "./admin/components/products/AddProduct";
 import Editproduct_admin from "./admin/components/products/EditProduct";
 import Users from "./admin/components/menagerUser/Users";
 import User_details from "./admin/components/menagerUser/User_details";
+import Order_admin from "./admin/components/orderPage/OrderPage";
 
 import Admins from "./admin/components/menagerAdmin/Admins";
 
@@ -109,6 +110,7 @@ function App() {
           <Route path="/editproduct-admin" Component={Editproduct_admin} />
           <Route path="/users" Component={Users} />
           <Route path="/user-details" Component={User_details} />
+          <Route path="/order-admin" Component={Order_admin} />
 
           <Route path="/admins" Component={Admins} />
 

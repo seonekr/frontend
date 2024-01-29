@@ -28,7 +28,7 @@ const AdminMenu = () => {
               <IoDocumentText />
               <p>Products</p>
             </NavLink>
-            <NavLink to="/#" className="link">
+            <NavLink to="/order-admin" className="link">
               <MdOutlineSell />
               <p>Orders</p>
             </NavLink>
