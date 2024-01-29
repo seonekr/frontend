@@ -22,6 +22,7 @@ const User = () => {
         <div className="box_addAdmin">
           <form>
             <div className="addAdminForm">
+              <h3>User Details</h3>
               <div className="del-update">
                 <div
                   className="del"
