@@ -11,11 +11,28 @@ import { IoMdMore } from "react-icons/io";
 const Chats = () => {
 
   //PopUp box add banner
-  const [isPopupVisible, setPopupVisible] = useState(false);
-
-  const togglePopup = () => {
-    setPopupVisible(!isPopupVisible);
+  const [isVisible, setIsVisible] = useState(false);
+  const buttonRef = useRef();
+  const divsRef = useRef();
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
   };
+  const handleDocumentClick = (e) => {
+    if (
+      buttonRef.current &&
+      !buttonRef.current.contains(e.target) &&
+      divsRef.current &&
+      !divsRef.current.contains(e.target)
+    ) {
+      setIsVisible(false);
+    }
+  };
+  useEffect(() => {
+    document.addEventListener('click', handleDocumentClick);
+    return () => {
+      document.removeEventListener('click', handleDocumentClick);
+    };
+  }, []);
 
   return (
     <>
@@ -41,14 +58,14 @@ const Chats = () => {
                   <p>new message...</p>
                 </div>
               </div>
-              <Link to="#" className="conversation_options" onClick={togglePopup}>
+              <Link to="#" className="conversation_options" ref={buttonRef} onClick={toggleVisibility}>
                 <IoMdMore />
               </Link>
 
             </Link>
             {/* PopUp box add banner */}
-            {isPopupVisible && (
-              <div className="box_alter_delelte_chat">
+            {isVisible && (
+              <div className="box_alter_delelte_chat" ref={divsRef}>
                 <p>Delete</p>
                 <span className="spanOfborderButtom_popup"></span>
                 <p>Clear chat</p>

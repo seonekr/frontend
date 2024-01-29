@@ -58,26 +58,6 @@ const AddProduct = () => {
 
   const Addproduct = (e) => {
     e.preventDefault()
-    // let config = {
-    //   method: "post",
-    //   maxBodyLength: Infinity,
-
-    //   url: import.meta.env.VITE_API + "/user/signup",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   data: data,
-    // };
-
-    // axios
-    //   .request(config)
-    //   .then((res) => {
-    //     navigate("/loginuser", { replace: true });
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
-
     const data = {
       name: product.name,
       price: product.price,
