@@ -2,6 +2,10 @@ import React, { useRef, useState, useEffect } from "react";
 import User from "../../img/user.png";
 import { VscSend } from "react-icons/vsc";
 import "./chat_Details.css";
+import Header from "../header/Header";
+import Menu from "../menuFooter/Menu";
+import { FaAngleLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Chat_Details() {
   const [message, setMessage] = useState("");
@@ -27,12 +31,12 @@ function Chat_Details() {
 
     try {
 
-        const ms = {
-            user: user,
-            message: message,
-            store: store
-        }
-    
+      const ms = {
+        user: user,
+        message: message,
+        store: store
+      }
+
       console.log(ms)
 
     } catch (error) {
@@ -41,9 +45,15 @@ function Chat_Details() {
   };
 
   return (
-    <>
+    <div className="box_containerone">
       <div className="box_chatDetails_container">
         <div className="box_chatDetails_details">
+          <div className="goback_box_chatdetils">
+            <Link to="#" className="goback_btn_chatdetils">
+              <FaAngleLeft id="box_icon_Back" />
+              <p>Back</p>
+            </Link>
+          </div>
           <img src={User} alt="image" />
           <div className="txt_chat_boxdetails">
             <h4>Sompong</h4>
@@ -87,6 +97,7 @@ function Chat_Details() {
               <span className="text-box">Hi, I'm recipient</span>
             </div>
           </div>
+          
           <div className="send-bar">
             <textarea
               className="multiline-input"
@@ -102,7 +113,7 @@ function Chat_Details() {
           </div>
         </form>
       </div>
-    </>
+    </div>
   );
 }
 

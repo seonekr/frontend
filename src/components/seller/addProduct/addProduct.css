@@ -5,12 +5,12 @@
     margin: auto;
     width: 60%;
     height: 70px;
-    background: #FFF;
 }
 
 .box_management_iconnback {
     display: flex;
     align-items: center;
+    color: #777;
 }
 
 .addproduct_container {

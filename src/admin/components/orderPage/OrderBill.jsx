@@ -190,16 +190,17 @@ const OrderBill = () => {
     <>
       <AdminMenu />
       <section id="abill">
-        <div className='container_add_admin'>
-          <Link to="/orderpage" className='box_guopIconbAck'>
-            <FaAngleLeft id='box_icon_Back' />
-            <p>Back</p>
-          </Link>
-          <h2>Order</h2>
-          <div></div>
-        </div>
+
         {filteredOrders.map((order) => (
           <div className="abill-detial" key={order.orderID}>
+            <div className='container_Order_Bill'>
+              <Link to="/order-admin" className='back_Order_Bill'>
+                <FaAngleLeft id='box_icon_Back' />
+                <p>Back</p>
+              </Link>
+              <h2>Order</h2>
+              <div></div>
+            </div>
             <div className="aguopoidHead">
               <div className="aidf">
                 <p>OrderID: {order.orderID}</p>
@@ -234,12 +235,13 @@ const OrderBill = () => {
             </div>
             <hr />
             <div className="atitlePrice">
-              <p>Total:</p>
-              <p>${order.totalPrice}</p>
+              <h3>Total:</h3>
+              <h3>${order.totalPrice}</h3>
             </div>
             <div className="aplace-on">
-              <p>Place on: {order.orderDate}</p>
+              <p>Payment date: {order.orderDate}</p>
               <p>Payment method: {order.payment}</p>
+              <p>Delivery: {order.delivery}</p>
               <form onSubmit={handleSubmit}>
                 <div>
                   <select className='aplace_form_select' value={status} onChange={handleStatus}>
@@ -249,7 +251,6 @@ const OrderBill = () => {
                 </div>
                 <button type='submit' className='aplace_form_button '>Confirm</button>
               </form>
-              <p>Delivery: {order.delivery}</p>
             </div>
           </div>
         ))}

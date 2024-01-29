@@ -43,7 +43,7 @@ const Board = () => {
                       <p>Porducts</p>
                     </div>
                     <h2>5</h2>
-                    <Link to="/products" className="txtcol">
+                    <Link to="/product-admin" className="txtcol">
                       View More
                     </Link>
                   </div>
@@ -53,7 +53,7 @@ const Board = () => {
                       <p>Orders</p>
                     </div>
                     <h2>5</h2>
-                    <Link to="/orderpage" className="txtcol">
+                    <Link to="/order-admin" className="txtcol">
                       <p>View More</p>
                     </Link>
                   </div>

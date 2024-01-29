@@ -1,51 +1,57 @@
-import "./user_details.css";
+import "./addAdmin.css";
 import AdminMenu from "../adminMenu/AdminMenu";
-import { FaAngleLeft } from "react-icons/fa";
-import { AiOutlineDelete } from "react-icons/ai";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { LuUser } from "react-icons/lu";
+import { FaAngleLeft } from "react-icons/fa";
+import { CiImageOn } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
-const User = () => {
+const AddAdmin = () => {
+
   return (
     <>
       <AdminMenu />
       <section id="addAmin">
         <div className="goback">
-          <Link to="/users" className="box_guopIconbAck">
+          <Link to="/admins" className="box_guopIconbAck">
             <FaAngleLeft id="box_icon_Back" />
             <p>Back</p>
           </Link>
         </div>
         <div className="box_addAdmin">
-          <form>
+          {/* <h3>{message && message}</h3> */}
+          <form >
             <div className="addAdminForm">
-              <h3>User Details</h3>
-              <div className="del-update">
-                <div
-                  className="del"
-                >
-                  <AiOutlineDelete />
+              <div className="boxhead_subminandtitle">
+                <h2 className="titleaddmin">Add Admin</h2>
+                <div>
+                  <button type="submit" className="submit">Add</button>
+                </div>
+              </div>
+
+              <div className="add-box">
+                <label htmlFor="fname" className="titlelabel">First name:</label>
+                <div className="boxiconnandinput">
+                  <LuUser className="iconinput" />
+                  <input
+                    type="text"
+                    id="fname"
+                    className="input"
+                    placeholder="Fist name..."
+                  />
                 </div>
               </div>
               <div className="add-box">
-                <label htmlFor="fname" className="titlelabel">User ID:</label>
+                <label htmlFor="lname" className="titlelabel">Last name:</label>
                 <div className="boxiconnandinput">
                   <LuUser className="iconinput" />
-                  <div className="input">
-                    <p>a</p>
-                  </div>
-                </div>
-              </div>
-              <div className="add-box">
-                <label htmlFor="fname" className="titlelabel">User Name:</label>
-                <div className="boxiconnandinput">
-                  <LuUser className="iconinput" />
-                  <div className="input">
-                    <p>a</p>
-                  </div>
+                  <input
+                    type="text"
+                    id="lname"
+                    className="input"
+                    placeholder="Last name..."
+                  />
                 </div>
               </div>
 
@@ -53,39 +59,40 @@ const User = () => {
                 <label htmlFor="email" className="titlelabel">Email:</label>
                 <div className="boxiconnandinput">
                   <MdOutlineEmail className="iconinput" />
-                  <div className="input">
-                    <p>a</p>
-                  </div>
+                  <input
+                    type="email"
+                    id="email"
+                    className="input"
+                    placeholder="Email address..."
+                  />
                 </div>
               </div>
               <div className="add-box">
                 <label htmlFor="phone" className="titlelabel">Phone number:</label>
                 <div className="boxiconnandinput">
                   <FiPhone className="iconinput" />
-                  <div className="input">
-                    <p>a</p>
-                  </div>
+                  <input
+                    type="text"
+                    id="phone"
+                    className="input"
+                    placeholder="Phone number..."
+                  />
                 </div>
 
               </div>
               <div className="add-box">
                 <label htmlFor="adminImage" className="titlelabel">Profile image:</label>
-                <div className="BorderinputThenImage">
-                  <div className="input">
-                    <img
-                      src="#"
-                      alt="admin profile"
-                    />
-                  </div>
+                <div className="boxiconnandinput">
+                  <CiImageOn className="iconinput" />
+                  <input type="file" className="input"/>
                 </div>
               </div>
             </div>
           </form>
         </div>
       </section>
-
     </>
   );
 };
 
-export default User;
+export default AddAdmin;

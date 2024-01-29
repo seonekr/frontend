@@ -1,15 +1,35 @@
-.box_chatDetails_container {
-    width: 60%;
+.box_containerone {
+    width: 64%;
+    padding: 30px;
     margin: 2rem auto 1.5rem auto;
+    background-color: #F2F3F7;
+    border-radius: 10px;
+}
+
+.box_chatDetails_container {
+    width: 100%;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.10);
     border-radius: 10px;
+    background-color: #fff;
+}
+
+.goback_box_chatdetils {
+    margin-right: 2rem;
+}
+
+.goback_btn_chatdetils {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 7px;
+    color: #666;
 }
 
 .box_chatDetails_details {
     display: flex;
     align-items: center;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
+    border-bottom: #ddd solid 1px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     padding: 10px;
@@ -45,18 +65,26 @@
     width: 100%;
     margin-bottom: 2.5rem;
 }
+
 .recipient {
     width: 100%;
     text-align: right;
     margin-bottom: 2.5rem;
 }
 
-.sender .text-box,
-.recipient .text-box{
-    border: 1px solid #ccc;
+.sender .text-box {
+    background-color: #F2F3F7;
     padding: 1rem;
-    border-radius: 14px;
+    border-radius: 10px;
 }
+
+.recipient .text-box {
+    background-color: #FF4F16;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
 .send-bar {
     position: fixed;
     display: flex;
@@ -70,26 +98,26 @@
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.10);
 }
 
-
 .multiline-input {
     width: 55%;
     resize: none;
     left: 17%;
     font-size: 1rem;
-    padding-top:0.4rem;
-    border: 1px solid #000;
+    padding-top: 0.4rem;
+    border: 1px solid #aaa;
+    background-color: #F2F3F7;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
     border-radius: 14px;
     line-height: 1.4;
-    position:absolute;
+    position: absolute;
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
 
-.multiline-input:focus{
+.multiline-input:focus {
     outline: none;
 }
 
@@ -126,6 +154,7 @@
         margin-top: 6rem;
         margin-bottom: 1rem;
     }
+
     .send-bar {
         width: 100%;
         top: 90%;
@@ -133,11 +162,12 @@
         box-shadow: none;
         padding-bottom: 0.5rem;
     }
+
     .multiline-input {
         width: 75%;
         left: 6%;
         border-radius: 14px;
-        position:absolute;
+        position: absolute;
     }
 
     .send-bar button {
