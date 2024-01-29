@@ -1,4 +1,3 @@
-
 import React, {useState, useEffect, useRef} from "react";
 import Header from "../header/Header";
 import Menu from "../menuFooter/Menu";
@@ -74,4 +73,3 @@ const Chats = () => {
 };
 
 export default Chats;
-

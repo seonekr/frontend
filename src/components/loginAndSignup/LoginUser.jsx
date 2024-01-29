@@ -31,9 +31,8 @@ const LoginUser = () => {
     let config = {
       method: 'post',
       maxBodyLength: Infinity,
-
-      url: import.meta.env.VITE_API + "/user/signin",
-
+      // url: import.meta.env.VITE_API + "/user/signin",
+      url: "http://127.0.0.1:8000/user/signin",
       headers: { 
         'Content-Type': 'application/json'
       },
@@ -54,9 +53,7 @@ const LoginUser = () => {
       };
       const token = result.token.access;
       if (token) {
-
-        window.localStorage.setItem("token", token);
-
+        window.localStorage.setItem("token", JSON.stringify(token));
       }
       window.localStorage.setItem("user", JSON.stringify(user));
       navigate("/", { replace: true });
@@ -105,7 +102,7 @@ const LoginUser = () => {
           <div className="googlebtn_btn">
             <p className="box_dont">
               Is this your first time?
-              <Link to={"/signup1"} className="loginmoreLink">
+              <Link to={"/registerUser"} className="loginmoreLink">
                 Join the membership
               </Link>
             </p>

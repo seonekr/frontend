@@ -141,9 +141,7 @@
     .banner_no_box_img {
         object-fit: cover;
         overflow: hidden;
-
         height: 25vh;
-
     }
 
     .hover_bkgr_fricc {

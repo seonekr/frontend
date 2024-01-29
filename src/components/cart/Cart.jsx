@@ -63,7 +63,6 @@ const Cart = () => {
   // };
 
 
-
   // Function to calculate total price of goods for a store
   const calculateTotalPrice = (goodsList) => {
     return goodsList.reduce((total, good) => {
@@ -74,7 +73,6 @@ const Cart = () => {
   };
 
   // Function to count goods for a store
-
   const countGoods = (storeId) => {
     return getGoodsByStore(storeId).length;
   };
@@ -189,14 +187,12 @@ const Cart = () => {
           <div>
 
             {store.map((storeItem) => (
-
               <div className="container_cart_item" key={storeItem.id}>
                 <div className="box_item_gourp">
                   <div className="sotre_name_box">
                     <h3>{storeItem.name}</h3>
                     <div className="cart_close_item_iconn">
                       <IoClose className="close_item_iconn" />
-
                     </div>
                   </div>
                   {getGoodsByStore(storeItem.id).map((good) => (
@@ -223,7 +219,6 @@ const Cart = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="box_item_total">
                   <div className="cart_Total_box">
                     <h3>Cart Total</h3>
@@ -244,7 +239,6 @@ const Cart = () => {
                   </div>
                 </div>
               </div>
-
             ))}
           </div>
         </div>
