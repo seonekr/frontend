@@ -1,8 +1,17 @@
 
+.header_box_management{
+    padding: 40px 10px 10px 10px;
+}
+.header_box_management p{
+    font-size: 17px;
+    font-weight: 600;
+    color: #5a5858dd;
+}
+
 .MorePage {
     width: 60%;
     margin: auto;
-    padding: 60PX 0;
+    padding: 40px 0;
 }
 
 
@@ -84,8 +93,8 @@
 
 .confirmation-popup {
     position: fixed;
-    width: 22%;
-    height: 15%;
+    width: 25%;
+    height: 18%;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -105,7 +114,8 @@
     justify-content: center;
 }
 
-.btn_yes {
+.btn_yes{
+    padding: 10px 50px;
     padding: 6px 18px;
     border: none;
     color: #fff;
@@ -113,6 +123,11 @@
     font-weight: 600;
     cursor: pointer;
     border-radius: 5px;
+    background: #347FFF;
+    
+}
+.btn_on{
+    padding: 10px 50px;
     background: rgb(248, 74, 74);
 
 }
@@ -120,12 +135,11 @@
 .btn_on {
     padding: 6px 18px;
     border: none;
-    color: #fff;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     border-radius: 5px;
-    background: #157DEC;
+    background: #cacad2;
 }
 
 
