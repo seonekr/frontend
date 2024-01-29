@@ -32,7 +32,7 @@ const AdminMenu = () => {
               <MdOutlineSell />
               <p>Orders</p>
             </NavLink>
-            <NavLink to="/storeAdmin" className="link">
+            <NavLink to="/store-admin" className="link">
               <HiOutlineBuildingStorefront />
               <p>Stores</p>
             </NavLink>

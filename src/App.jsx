@@ -133,7 +133,7 @@ function App() {
           <Route path="/user-details" Component={User_details} />
           <Route path="/order-admin" Component={Order_admin} />
           <Route path="/admins" Component={Admins} />
-          <Route path="/storeAdmin" Component={StoreAdmin} />
+          <Route path="/store-admin" Component={StoreAdmin} />
 
 
 
