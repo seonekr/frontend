@@ -60,6 +60,8 @@ import BillStore from "./components/seller/orderStore/BillStore";
   import Order_admin from "./admin/components/orderPage/OrderPage";
   import OrderBill_Admin from "./admin/components/orderPage/OrderBill";
   import Admins from "./admin/components/menagerAdmin/Admins";
+  import Add_Admin from "./admin/components/menagerAdmin/AddAdmin";
+  import EditA_dmin from "./admin/components/menagerAdmin/EditAdmin";
   import StoreAdmin from "./admin/components/storeMenagement/StoreAdmin";
 
 
@@ -135,6 +137,8 @@ function App() {
           <Route path="/order-admin" Component={Order_admin} />
           <Route path="/orderbill-admin" Component={OrderBill_Admin} />
           <Route path="/admins" Component={Admins} />
+          <Route path="/add-admin" Component={Add_Admin} />
+          <Route path="/edit-admin" Component={EditA_dmin} />
           <Route path="/store-admin" Component={StoreAdmin} />
 
 

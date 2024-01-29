@@ -25,7 +25,7 @@
     border-radius: 7px;
     padding: 10px 40px;
     border: none;
-    background: #FF4F16;
+    background: #347effda;
     box-shadow: 0px 30px 20px -20px rgba(0, 0, 0, 0.15);
 }
 
@@ -35,6 +35,6 @@
     border-radius: 7px;
     padding: 10px 40px;
     border: none;
-    background: red;
+    background: #fa442cd8;
     box-shadow: 0px 30px 20px -20px rgba(0, 0, 0, 0.15);
 }
