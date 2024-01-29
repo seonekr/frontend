@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import AdminMenu from "../adminMenu/AdminMenu";
 import axios from "axios";
 import { FaAngleLeft } from "react-icons/fa";
@@ -15,9 +15,9 @@ const AddProduct = () => {
     price: "",
     category: "name1",
     description: "",
-    image: [],
-    image_details: [],
-    sizes: [],
+    // image: [],
+    // image_details: [],
+    // sizes: [],
   });
 
   const handleInput = (e) => {
@@ -82,14 +82,78 @@ const AddProduct = () => {
       name: product.name,
       price: product.price,
       category: product.category,
-      size: product.sizes,
+      // size: product.sizes,
       desc: product.description,
-      image: product.image,
-      image_desc: product.image_details
+      // image: product.image,
+      // image_desc: product.image_details
     }
 
     console.log(data)
   }
+
+  ///========================================================================
+
+  const [store, setStore] = useState([])
+
+  const id = 1
+
+  useEffect(() => {
+    const config = {
+      method: 'get',
+      maxBodyLength: Infinity,
+      url: import.meta.env.VITE_API + `/store/${id}`,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    axios
+      .request(config)
+      .then((response) => {
+        setStore(response.data);
+      })
+      .catch((error) => {
+        console.error('Error fetching products:', error);
+      });
+  }, []);
+
+  ///========================================================================
+
+  const addProduct = (e) => {
+    e.preventDefault()
+    const data = {
+      name: product.name,
+      price: product.price,
+      category: product.category,
+      store_id: id,
+      // size: product.sizes,
+      desc: product.description,
+      // image: product.image,
+      // image_desc: product.image_details
+    }
+
+    let config = {
+      method: "post",
+      maxBodyLength: Infinity,
+
+      url: import.meta.env.VITE_API + "/store/setting",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
+
+
+    axios
+      .request(config)
+      // .then((res) => {
+      //   navigate("/", { replace: true });
+      // })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
 
 
 
@@ -102,7 +166,7 @@ const AddProduct = () => {
             <FaAngleLeft id="box_icon_Back" />
             <p>Back</p>
           </Link>
-          <form className="box_content_productadmin" onSubmit={Addproduct}>
+          <form className="box_content_productadmin" onSubmit={addProduct}>
             <h3>Add product</h3>
             <div className='inputproduct_box'>
               <label >Name:</label>
@@ -125,7 +189,7 @@ const AddProduct = () => {
               <input className="inputproduct" name='description' type="text" placeholder='Description' onChange={handleInput} required/>
             </div>
 
-            <div className="size_product_box">
+            {/* <div className="size_product_box">
               <h3>Size:</h3>
               <div className="size_product_box_container">
                 <div className="box_sizeTso_add" >
@@ -155,15 +219,15 @@ const AddProduct = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="add_img_product_box">
+            {/* <div className="add_img_product_box">
               <h3>Product image:</h3>
               <div className="boxicon_img_input">
                 <CiImageOn className='boxicon_img_iconn' />
                 <input type="file" name='image' className="input" onChange={handleInput} required/>
               </div>
-            </div>
+            </div>*/}
 
             <div className="add_img_product_box">
               <h3>Details image:</h3>
@@ -171,7 +235,7 @@ const AddProduct = () => {
                 <CiImageOn className='boxicon_img_iconn' />
                 <input type="file" name='image_details' className="input" onChange={handleInput} required/>
               </div>
-            </div>
+            </div> 
 
             <button type="submit" className="btn_save_productadmin">
               Add
