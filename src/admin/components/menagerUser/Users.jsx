@@ -43,9 +43,10 @@ const User_details = () => {
             </div>
             <div className='btn_box_Cont'>
               <button className='delete_storeDetails'>Delete</button>
-              <Link to="#" className='viewMore_storeDetails'>View</Link>
+              <Link to="/user-details" className='viewMore_storeDetails'>View</Link>
             </div>
           </div>
+
           <div className="box_users_user">
             <div className="box_dp_txtandiamge">
               <div className="box_user_img">
@@ -58,7 +59,7 @@ const User_details = () => {
             </div>
             <div className='btn_box_Cont'>
               <button className='delete_storeDetails'>Delete</button>
-              <Link to="#" className='viewMore_storeDetails'>View</Link>
+              <Link to="/user-details" className='viewMore_storeDetails'>View</Link>
             </div>
           </div>
 
