@@ -9,13 +9,15 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 2rem 2rem 0 2rem ;
-    width:10%;
+    padding: 2rem 2rem 0 2rem;
+    width: 10%;
 }
-.box_content_productadmin{
+
+.box_content_productadmin {
     padding: 30px;
 }
-.box_container_product {
+
+.box_content_productadmin {
     position: relative;
     width: 100%;
     margin-right: 1rem;
