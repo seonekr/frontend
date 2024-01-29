@@ -91,6 +91,7 @@ const ProductHome = () => {
           </div>
         </div>
 
+
         <div className="product-area">
           {/* {console.log(SliceGoodsList)} */}
           {SliceGoodsList.map((i, index) => (
@@ -104,6 +105,7 @@ const ProductHome = () => {
               <div>
                 <div className="img">
                   <img src={"" + i.image} alt="" />
+
                 </div>
                 <ul className="txtOFproduct2">
                   <li className="name">{i.name}</li>
@@ -113,7 +115,61 @@ const ProductHome = () => {
               </div>
             </div>
           ))}
+
+        </div> */}
+
+        <div className="product-area">
+            <div className="box-product">
+              <div>
+                <div className="img">
+                  <img src={productImage} alt="" />
+                </div>
+                <ul className="txtOFproduct2">
+                  <li className="name">asd</li>
+                  <li className="price">asd</li>
+                  <li className="desc">asdas</li>
+                </ul>
+              </div>
+            </div>
+            <div className="box-product">
+              <div>
+                <div className="img">
+                  <img src={productImage} alt="" />
+                </div>
+                <ul className="txtOFproduct2">
+                  <li className="name">asd</li>
+                  <li className="price">asd</li>
+                  <li className="desc">asdas</li>
+                </ul>
+              </div>
+            </div>
+            <div className="box-product">
+              <div>
+                <div className="img">
+                  <img src={productImage} alt="" />
+                </div>
+                <ul className="txtOFproduct2">
+                  <li className="name">asd</li>
+                  <li className="price">asd</li>
+                  <li className="desc">asdas</li>
+                </ul>
+              </div>
+            </div>
+            <div className="box-product">
+              <div>
+                <div className="img">
+                  <img src={productImage} alt="" />
+                </div>
+                <ul className="txtOFproduct2">
+                  <li className="name">asd</li>
+                  <li className="price">asd</li>
+                  <li className="desc">asdas</li>
+                </ul>
+              </div>
+            </div>
+
         </div>
+
       </section>
     </div>
   );

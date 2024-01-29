@@ -14,9 +14,11 @@ function AddProduct() {
         category: "",
         description: "",
         sizes: [],
-        colors: [],
+
         image: "",
         image_details: "",
+        currentsizes: "",
+
     });
 
     const handleInputChange = (e) => {
@@ -40,7 +42,9 @@ function AddProduct() {
             setProduct((prevProduct) => ({
                 ...prevProduct,
                 sizes: [...prevProduct.sizes, prevProduct.currentsizes],
+
                 currentsizes: "", // Reset the current color after adding
+
             }));
         }
     };
@@ -57,6 +61,7 @@ function AddProduct() {
             });
         }
     };
+
 
 
     const handleColorInputChange = (e) => {
@@ -89,6 +94,7 @@ function AddProduct() {
             });
         }
     };
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -132,9 +138,11 @@ function AddProduct() {
                 <div className='inputproduct_box'>
                     <label for="category">Category:</label>
                     <select name="category" className="inputproduct select_box">
+
                         <option className='option_itemD' value="Name1">Name1</option>
                         <option className='option_itemD' value="Name1">Name1</option>
                         <option className='option_itemD' value="Name1">Name1</option>
+
                     </select>
                 </div>
                 <div className='inputproduct_box'>
@@ -165,6 +173,9 @@ function AddProduct() {
                                 type="text"
                                 placeholder='Add Size...'
                                 onChange={handleSizeInputChange}
+
+                                value={product.currentsizes}
+
                             />
                             <div className="addsize_btn" onClick={addSizeInput}>
                                 Add

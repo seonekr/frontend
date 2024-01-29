@@ -30,10 +30,10 @@
 
 @media (max-width: 768px) {
     .box_terms {
-      width: 90%;
+      width: 100%;
     }
     .container_terms{
-        width: 75%;
+        width: 80%;
         max-width: none;
     }
    

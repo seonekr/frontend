@@ -90,15 +90,9 @@ const Header = () => {
               </div>
               <div className="boxLiMenu">
                 <div className="linkLi">
-                  <Link to="/" className="link active">
-                    Home
-                  </Link>
-                  <Link to="/chats" className="link ">
-                    Chat
-                  </Link>
-                  <Link to="/order" className="link ">
-                    Orders
-                  </Link>
+                  <Link to="/" className="link active">Home</Link>
+                  <Link to="/chats" className="link ">Chat</Link>
+                  <Link to="/order" className="link ">Orders</Link>
                 </div>
               </div>
             </div>
@@ -135,6 +129,7 @@ const Header = () => {
                   </Link>
                 </div> */}
 
+
                 {user ? (
                   <div className="userAndstore">
                     <Link to="/more">
@@ -146,6 +141,7 @@ const Header = () => {
                     <Link to="/loginuser">Login</Link>
                   </div>
                 )}
+
               </div>
             </div>
           </div>

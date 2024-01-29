@@ -4,14 +4,64 @@ import { MdDelete } from "react-icons/md";
 import { IoLogOutOutline } from "react-icons/io5";
 import { IoKeySharp } from "react-icons/io5";
 import { BsBackpack4Fill } from "react-icons/bs";
+import { useState, useEffect } from "react";
+import { IoIosArrowBack } from "react-icons/io";
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+export const More = () => {
+
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [userDetail, setUserDetail] = useState([]);
+  const userID = localStorage.getItem("userID");
+  const navigate = useNavigate();
+
+  //Function Log out
+  useEffect(() => {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var requestOptions = {
+      method: "GET",
+      headers: myHeaders,
+      redirect: "follow",
+    };
+    fetch(import.meta.env.VITE_API + "/getAdmin/" + userID, requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.Status === "Success") {
+          setUserDetail(result.Result[0]);
+        }
+      })
+      .catch((error) => console.log("error", error));
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("userID");
+    console.log("Logged out");
+    navigate("/");
+  };
+
+  const handleConfirmLogout = () => {
+    handleLogout();
+    setShowConfirmation(false);
+  };
+  const handleCancelLogout = () => {
+    setShowConfirmation(false);
+  };
+
+
+
 import { IoPeopleCircle } from "react-icons/io5";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-export const More = () => {
+
   const user = localStorage.getItem("user");
   const navigate = useNavigate();
+
   return (
     <>
       <div className="header_box_management">
@@ -39,6 +89,7 @@ export const More = () => {
 
         <hr className='hr' />
         <div className="more-menu-list">
+
           <div className='menu_icon'>
             <BsBackpack4Fill id="icon_more" />
             <p>Terms of use</p>
@@ -82,6 +133,7 @@ export const More = () => {
               console.log(error);
             });
           }}>
+
             <MdDelete id="icon_more" />
             <p>Delete account</p>
           </div>

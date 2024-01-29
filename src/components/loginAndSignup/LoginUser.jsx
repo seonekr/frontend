@@ -31,7 +31,9 @@ const LoginUser = () => {
     let config = {
       method: 'post',
       maxBodyLength: Infinity,
+
       url: import.meta.env.VITE_API + "/user/signin",
+
       headers: { 
         'Content-Type': 'application/json'
       },
@@ -52,7 +54,9 @@ const LoginUser = () => {
       };
       const token = result.token.access;
       if (token) {
+
         window.localStorage.setItem("token", token);
+
       }
       window.localStorage.setItem("user", JSON.stringify(user));
       navigate("/", { replace: true });
@@ -115,7 +119,6 @@ const LoginUser = () => {
               </svg>
           </Link>
           
-
           </div>
         </div>
       </form>

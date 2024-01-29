@@ -32,6 +32,7 @@ const UserRegister = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
+
       url: import.meta.env.VITE_API + "/user/signup",
       headers: {
         "Content-Type": "application/json",
@@ -84,6 +85,7 @@ const UserRegister = () => {
                     let config = {
                       method: "post",
                       maxBodyLength: Infinity,
+
                       // url: "http://127.0.0.1:8000/user/send-email",
                       url: import.meta.env.VITE_API + "/user/send-email",
                       headers: {

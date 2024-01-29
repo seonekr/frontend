@@ -93,9 +93,18 @@
     cursor: pointer;
 }
 
+
+
 .box_item_total {
+
+    position: relative;
     border-left: 1px solid #ddd;
     padding-left: 10px;
+}
+
+.cart_Total_box{
+    margin: 2rem 0;
+
 }
 
 .box_item_total_text {

@@ -51,7 +51,7 @@ const Menu = () => {
                 <Link to="/" className="box-menu active">
                     <span className="iconMenuSpan"><HiOutlineHome /></span><span>Home</span>
                 </Link>
-                <Link to="/product_search" className="box-menu">
+                <Link to="/chats" className="box-menu">
                     <span className="iconMenuSpan"><IoChatbubbleEllipsesOutline />
                     </span><span>Chat</span>
                 </Link>

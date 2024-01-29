@@ -319,12 +319,22 @@ body {
     background: #FFF;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.10);
 }
+/* 
+.review_box form {
+    display: block;
+    background: #000;
+} */
 
 .review_boxstar {
-    display: flex;
+    /* display: flex; */
     gap: 10px;
     align-items: center;
     margin: 30px 0 10px 0;
+}
+
+.review_boxstar .star{
+    /* color: #f6ea07; */
+    font-size: 1.5rem;
 }
 
 .review_boxstar img {
@@ -333,32 +343,35 @@ body {
 }
 
 .comment_box_content {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #DDDCE1;
-    background: #FFF;
 }
 
-.comment_box_content input {
-    padding: 20px;
-    width: 100%;
-    border: 0px solid #DDDCE1;
-    border-radius: 7px;
-    font-size: 17px;
-}
-
-::after .comment_box_content input {
+.comment_box_content .review-text {
+    width: 90%;
     border: none;
+    resize: none;
+    border-bottom: 1px solid #ccc;
+    margin-top: 1rem;
+    line-height: 1.4;
+    padding: 0 1rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.comment_box_content .review-text:focus{
+    outline: none;
 }
 
 .btn_submit_comment {
-    border: none;
     cursor: pointer;
     border-radius: 7px;
     background: rgba(255, 79, 22, 0.10);
     padding: 10px 40px;
-    margin: 10px 0;
     font-size: 16px;
 }
 
@@ -367,6 +380,11 @@ body {
     margin-top: 10px;
     border-radius: 10px;
     background: rgba(255, 79, 22, 0.10);
+}
+
+.no-available {
+    color: red;
+    font-size: 16px;
 }
 
 .box_head_user {
@@ -379,6 +397,8 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
+    color: #FFBF00;
+    font-size: 1.5rem;
     gap: 5px;
     padding-top: 10px;
 }
@@ -394,6 +414,7 @@ body {
 
 .comment_boxOfuser {
     padding: 10px 20px;
+    word-wrap: break-word;
 }
 
 .comment__userImg {
@@ -449,6 +470,10 @@ body {
 
     .last_box_review {
         padding: 10px 0;
+    }
+
+    .no-available {
+        padding: 0 1rem;
     }
 }
 
