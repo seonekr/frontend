@@ -101,7 +101,7 @@ const LoginUser = () => {
           <div className="googlebtn_btn">
             <p className="box_dont">
               Is this your first time?
-              <Link to={"/registerUser"} className="loginmoreLink">
+              <Link to={"/signup1"} className="loginmoreLink">
                 Join the membership
               </Link>
             </p>

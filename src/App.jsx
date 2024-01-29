@@ -10,8 +10,8 @@ import SellerRegister from "./components/sellerRegister/SellerRegister";
 import SigupGoogle from "./components/sigupforGoogle/SigupGoogle";
 import AdditionalSeller from "./components/additionalSeller/AdditionalSeller";
 
-import Signup1 from './Signup1';
-import Signup2 from './Signup2';
+import Signup1 from './components/loginAndSignup/Signup1';
+import Signup2 from './components/loginAndSignup/Signup2';
 
 //------ Profile Page ------//
 import ProfileEdit from './components/profile/ProfileEdit';

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./components/userRegister/userRegister.css";
+import "./userRegister.css";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { MdArrowBack } from "react-icons/md";
 import axios from "axios";
@@ -112,7 +112,7 @@ const Signup2 = () => {
   return (
     <>
       <div className="box_forgot">
-        <Link to="/registeruser" className="box_iconBack">
+        <Link to="/signup1" className="box_iconBack">
           <MdArrowBack id="iconBack" />
         </Link>
 
