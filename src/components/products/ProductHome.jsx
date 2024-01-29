@@ -20,7 +20,7 @@ const ProductHome = () => {
 
   const SliceGoodsList = useMemo(() => {
     return goods_list.slice(0, sliceNum);
-  }, [goods_list]);
+  }, [goods_list, sliceNum]);
 
   useEffect(() => {
     let config = {
@@ -42,6 +42,8 @@ const ProductHome = () => {
         console.log(error);
       });
   }, [category]);
+
+  // console.log(SliceGoodsList)
 
   // useEffect(() => {
   //   if (storage.is_first) {
@@ -91,85 +93,28 @@ const ProductHome = () => {
           </div>
         </div>
 
-
         <div className="product-area">
-          {/* {console.log(SliceGoodsList)} */}
-          {SliceGoodsList.map((i, index) => (
-            <div
-              className="box-product"
-              key={index}
-              onClick={() => {
-                navigate(`/goods/${i.id}`);
-              }}
-            >
-              <div>
-                <div className="img">
-                  <img src={"" + i.image} alt="" />
-
+              {Array.isArray(SliceGoodsList) && SliceGoodsList.map((i, index) => (
+                <div
+                  className="box-product"
+                  key={index}
+                  onClick={() => {
+                    navigate(`/goods/${i.id}`);
+                  }}
+                >
+                  <div>
+                    <div className="img">
+                      <img src={"" + i.image} alt="" />
+                    </div>
+                    <ul className="txtOFproduct2">
+                      <li className="name">{i.name}</li>
+                      <li className="price">{i.price}</li>
+                      <li className="desc">{i.store_address}</li>
+                    </ul>
+                  </div>
                 </div>
-                <ul className="txtOFproduct2">
-                  <li className="name">{i.name}</li>
-                  <li className="price">{i.price}</li>
-                  <li className="desc">{i.store_address}</li>
-                </ul>
-              </div>
-            </div>
-          ))}
-
+              ))}
         </div>
-
-        <div className="product-area">
-            <div className="box-product">
-              <div>
-                <div className="img">
-                  <img src={productImage} alt="" />
-                </div>
-                <ul className="txtOFproduct2">
-                  <li className="name">asd</li>
-                  <li className="price">asd</li>
-                  <li className="desc">asdas</li>
-                </ul>
-              </div>
-            </div>
-            <div className="box-product">
-              <div>
-                <div className="img">
-                  <img src={productImage} alt="" />
-                </div>
-                <ul className="txtOFproduct2">
-                  <li className="name">asd</li>
-                  <li className="price">asd</li>
-                  <li className="desc">asdas</li>
-                </ul>
-              </div>
-            </div>
-            <div className="box-product">
-              <div>
-                <div className="img">
-                  <img src={productImage} alt="" />
-                </div>
-                <ul className="txtOFproduct2">
-                  <li className="name">asd</li>
-                  <li className="price">asd</li>
-                  <li className="desc">asdas</li>
-                </ul>
-              </div>
-            </div>
-            <div className="box-product">
-              <div>
-                <div className="img">
-                  <img src={productImage} alt="" />
-                </div>
-                <ul className="txtOFproduct2">
-                  <li className="name">asd</li>
-                  <li className="price">asd</li>
-                  <li className="desc">asdas</li>
-                </ul>
-              </div>
-            </div>
-
-        </div>
-
       </section>
     </div>
   );
