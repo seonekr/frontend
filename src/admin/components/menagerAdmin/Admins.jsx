@@ -16,7 +16,7 @@ const Admins = () => {
           <div className="container_box_users">
             <div className="box_users">
               <div className="box_add_admin">
-                <Link to="/admin/register" className="btn_addadmin">
+                <Link to="/add-admin" className="btn_addadmin">
                   <BiPlus id="icon_add_admin" />
                   Add Admin
                 </Link>
@@ -31,23 +31,23 @@ const Admins = () => {
                 </div>
               </form>
             </div>
-            <div
-              className="box_users_user"
-            >
-              <Link className="box_user_text">
-                <img
-                  src="#"
-                  alt="admin profile"
-                />
 
-                <div className="container_chat_name" >
-                  <p>
-                    Name: 
-                  </p>
-                  <p>Eamil:</p>
+            <div className="box_users_user">
+              <div className="box_dp_txtandiamge">
+                <div className="box_user_img">
+                  <img src={user} alt="" />
                 </div>
-              </Link>
+                <div className="box_user_text">
+                  <p>name</p>
+                  <p>Email</p>
+                </div>
+              </div>
+              <div className='btn_box_Cont'>
+                <button className='delete_storeDetails'>Delete</button>
+                <Link to="/edit-admin" className='viewMore_storeDetails'>Edit</Link>
+              </div>
             </div>
+
             <div className="box_container_next_product">
               <button className="box_prev_left_product" >
                 <AiOutlineLeft id="box_icon_left_right_product" />
@@ -57,7 +57,7 @@ const Admins = () => {
               <div className="box_num_product">
                 <div >
                   <div className="num_admin_product">
-                    <p>a</p>
+                    <p>1</p>
                   </div>
                 </div>
               </div>

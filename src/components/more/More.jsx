@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 export const More = () => {
 
@@ -50,8 +51,28 @@ export const More = () => {
   const handleCancelLogout = () => {
     setShowConfirmation(false);
   };
-
   const user = localStorage.getItem("user");
+
+  //Function Delete
+  const handleDeleteAccount = () => {
+    let config = {
+      method: 'delete',
+      url: 'http://127.0.0.1:8000/user/my-page',
+      headers: { "Content-Type": "application/json" }
+    };
+
+    axios.request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+        window.localStorage.removeItem("token");
+        window.localStorage.removeItem("user");
+        navigate("/"); // Redirect to the home page after successful deletion
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
 
   return (
     <>
@@ -70,7 +91,7 @@ export const More = () => {
           <div className="left_box">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/1200px-Unknown_person.jpg" alt="" />
             <div className="user_name">
-              Account: {JSON.parse(window.localStorage.getItem("user")).email}
+              Name: Sompong
             </div>
           </div>
           <Link to="/profile" className="right_box">
@@ -80,54 +101,45 @@ export const More = () => {
 
         <hr className='hr' />
         <div className="more-menu-list">
-
-          <div className='menu_icon'>
+          <Link to="/terms" className='menu_icon'>
             <BsBackpack4Fill id="icon_more" />
             <p>Terms of use</p>
-          </div>
+          </Link>
           <hr className='hr' />
-          <div className='menu_icon'>
+          <Link to="/privacy" className='menu_icon'>
             <BsBackpack4Fill id="icon_more" />
             <p>Privay Policy</p>
-          </div>
+          </Link>
           <hr className='hr' />
-          <div className='menu_icon'>
+          <Link to="/forgotpassword" className='menu_icon'>
             <IoKeySharp id="icon_more" />
             <p>Change password</p>
-          </div>
+          </Link>
           <hr className='hr' />
-          <div className='menu_icon' onClick={() => {
-            window.localStorage.removeItem("token");
-            window.localStorage.removeItem("user");
-            navigate("/");
-          }}>
+          <div onClick={() => setShowConfirmation(true)} className='menu_icon'>
             <IoLogOutOutline id="icon_more" />
             <p>Log out </p>
           </div>
-          <hr className='hr' />
-          <div className='menu_icon' onClick={() => {
-            let config = {
-              method: 'delete',
-              maxBodyLength: Infinity,
-              url: 'http://127.0.0.1:8000/user/my-page',
-              headers: {"Content-Type": "application/json",}
-            };
-            
-            axios.request(config)
-            .then((response) => {
-              console.log(JSON.stringify(response.data));
-              window.localStorage.removeItem("token");
-              window.localStorage.removeItem("user");
-              navigate("/");
-            })
-            .catch((error) => {
-              console.log(error);
-            });
-          }}>
-
+          {showConfirmation && (
+            <div className="confirmation-popup">
+              <p>Are you sure you want to logout?</p>
+              <div className="btn_ok_on">
+                <button onClick={handleCancelLogout} className="btn_on">
+                  No
+                </button>
+                <button onClick={handleConfirmLogout} className="btn_yes">
+                  Yes
+                </button>
+              </div>
+            </div>
+          )}
+          
+          <hr className='hr'/>
+          <div className='menu_icon' onClick={handleDeleteAccount}>
             <MdDelete id="icon_more" />
             <p>Delete account</p>
           </div>
+          
           <hr className='hr' />
         </div>
       </div>

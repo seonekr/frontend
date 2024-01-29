@@ -12,6 +12,7 @@ import Logo1 from "../../../img/Logo1.png";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import user from "../../../img/user.png";
 
 const AdminMenu = () => {
 
@@ -32,7 +33,7 @@ const AdminMenu = () => {
               <MdOutlineSell />
               <p>Orders</p>
             </NavLink>
-            <NavLink to="/storeAdmin" className="link">
+            <NavLink to="/store-admin" className="link">
               <HiOutlineBuildingStorefront />
               <p>Stores</p>
             </NavLink>
@@ -58,9 +59,10 @@ const AdminMenu = () => {
               </NavLink>
             </div>
             <div className="boximage_admin">
-              <NavLink to="/admin/acount" className="userAdminImage">
+              <NavLink to="/account-admin" className="userAdminImage">
+                <p>Name admin</p>
                 <img
-                  src="#"
+                  src={user}
                   alt="admin profile"
                 />
               </NavLink>

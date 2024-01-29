@@ -1,74 +1,66 @@
 import "./productHome.css";
 import productImage from "../../img/productImage.png";
-import { Link } from "react-router-dom";
 import { useState, useEffect, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 const ProductHome = () => {
   const navigate = useNavigate();
-  const [ShowFilter, setShowFilter] = useState(false);
+  // const [ShowFilter, setShowFilter] = useState(false);
   const [goods_list, set_goods_list] = useState([]);
-  const [sliceNum, set_sliceNum] = useState(8);
-  const storage = JSON.parse(window.localStorage.getItem("user"));
-  const [seatch, set_search] = useState("");
-  const [category, set_category] = useState(6);
+  // const [sliceNum, set_sliceNum] = useState(8);
+  // const storage = JSON.parse(window.localStorage.getItem("user"));
+  // const [seatch, set_search] = useState("");
+  // const [category, set_category] = useState(6);
 
-  const handleMore = () => {
-    set_sliceNum(sliceNum + 8);
-  };
+  // const handleMore = () => {
+  //   set_sliceNum(sliceNum + 8);
+  // };
 
-  const SliceGoodsList = useMemo(() => {
-    return goods_list.slice(0, sliceNum);
-  }, [goods_list, sliceNum]);
+
+  // useEffect(() => {
+  //   let config = {
+  //     method: "get",
+  //     maxBodyLength: Infinity,
+  //     url: import.meta.env.VITE_API + `/store/?category=${category}`,
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   };
+
+  //   axios
+  //     .request(config)
+  //     .then((response) => {
+  //       set_goods_list(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }, [category]);
+
+
+  const [goodsList, setGoodsList] = useState([]);
 
   useEffect(() => {
-    let config = {
-      method: "get",
+    const config = {
+      method: 'get',
       maxBodyLength: Infinity,
-      url: import.meta.env.VITE_API + `/store/?category=${category}`,
+      url: import.meta.env.VITE_API + `/store/`,
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     };
 
     axios
       .request(config)
       .then((response) => {
-        // console.log(response.data);
-        set_goods_list(response.data);
+        setGoodsList(response.data);
       })
       .catch((error) => {
-        console.log(error);
+        console.error('Error fetching products:', error);
       });
-  }, [category]);
+  }, []);
 
-  // console.log(SliceGoodsList)
-
-  // useEffect(() => {
-  //   if (storage.is_first) {
-  //     window.localStorage.setItem(
-  //       "user",
-  //       JSON.stringify({ ...storage, is_first: false })
-  //     );
-  //     change_modal({
-  //       title: (
-  //         <>
-  //           <div className="img">
-  //             <img src={user_type02} alt="" />
-  //           </div>
-  //           <div className="txt">
-  //             <span className="ty01">Seller Registration</span> Do you want to
-  //             do it?
-  //           </div>
-  //         </>
-  //       ),
-  //       onClick: () => {
-  //         navigate("/change-seller");
-  //       },
-  //     });
-  //   }
-  // }, []);
 
   return (
     <div>
@@ -94,25 +86,18 @@ const ProductHome = () => {
         </div>
 
         <div className="product-area">
-              {Array.isArray(SliceGoodsList) && SliceGoodsList.map((i, index) => (
-                <div
-                  className="box-product"
-                  key={index}
-                  onClick={() => {
-                    navigate(`/goods/${i.id}`);
-                  }}
-                >
-                  <div>
+              {goodsList.map((goods, index) => (
+                <div className="box-product" key={index}>
+                  <Link  to={`/goods/${goods.id}`}>
                     <div className="img">
-                      {/* <img src={"" + i.image} alt="" /> */}
-                      <img src={i.image} alt="" />
+                      <img src={"" + i.image} alt="" />
                     </div>
                     <ul className="txtOFproduct2">
-                      <li className="name">{i.name}</li>
-                      <li className="price">{i.price}</li>
-                      <li className="desc">{i.store_address}</li>
+                      <li className="name">{goods.name}</li>
+                      <li className="price">{goods.price}</li>
+                      <li className="desc">{goods.store_address}</li>
                     </ul>
-                  </div>
+                  </Link>
                 </div>
               ))}
         </div>

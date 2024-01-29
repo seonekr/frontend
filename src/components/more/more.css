@@ -1,17 +1,17 @@
 
 .header_box_management{
-    padding: 60px 10px 10px 10px;
+    padding: 40px 10px 10px 10px;
 }
 .header_box_management p{
     font-size: 17px;
     font-weight: 600;
-    color: var(--gray);
+    color: #5a5858dd;
 }
 
 .MorePage {
     width: 60%;
     margin: auto;
-    padding: 60PX 0;
+    padding: 40px 0;
 }
 
 
@@ -22,7 +22,7 @@
     padding: 0 20px 10px 12px;
 }
 
-#icons_back{
+#icons_back {
     width: 25px;
     height: 25px;
 }
@@ -38,9 +38,11 @@
     width: 10%;
     border-radius: 50%;
 }
-.user_name{
+
+.user_name {
     font-size: 19px;
 }
+
 .right_box button {
     padding: 10px 35px;
     font-size: 16px;
@@ -56,7 +58,8 @@
     border: 1px solid #ddd;
 
 }
-.more-menu-list:hover{
+
+.more-menu-list:hover {
     color: var(--orange);
 
 }
@@ -75,7 +78,7 @@
     width: 50px;
     height: 25px;
     color: #5a5858dd;
-
+}
 
 #icon_more {
     width: 50px;
@@ -88,10 +91,10 @@
     transition: 0.5s;
 }
 
-.confirmation-popup{
+.confirmation-popup {
     position: fixed;
-    width: 22%;
-    height: 15%;
+    width: 25%;
+    height: 18%;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -104,7 +107,7 @@
     transform: translate(-50%, -50%);
 }
 
-.btn_ok_on{
+.btn_ok_on {
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -112,6 +115,7 @@
 }
 
 .btn_yes{
+    padding: 10px 50px;
     padding: 6px 18px;
     border: none;
     color: #fff;
@@ -119,18 +123,23 @@
     font-weight: 600;
     cursor: pointer;
     border-radius: 5px;
-    background: rgb(248, 74, 74);
+    background: #347FFF;
     
 }
 .btn_on{
+    padding: 10px 50px;
+    background: rgb(248, 74, 74);
+
+}
+
+.btn_on {
     padding: 6px 18px;
     border: none;
-    color: #fff;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     border-radius: 5px;
-    background: #157DEC;
+    background: #cacad2;
 }
 
 
@@ -141,10 +150,12 @@
         width: 100%;
 
     }
+
     .left_box img {
         width: 16%;
     }
-    .confirmation-popup{
+
+    .confirmation-popup {
         width: 80%;
         height: 15%;
         top: 50%;

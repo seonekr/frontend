@@ -1,6 +1,5 @@
 import React from 'react'
 import './storeAdmin.css'
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { IoSearchOutline } from "react-icons/io5";
 import AdminMenu from "../adminMenu/AdminMenu";
 import { Link } from "react-router-dom";
@@ -30,15 +29,21 @@ function StoreAdmin() {
                                 </div>
                             </form>
                         </div>
-                        <div className="box_users_user" >
-                            <Link className="box_user_text">
-                                <div className="container_chat_name" >
-                                    <p>
-                                        Name:
-                                    </p>
-                                    <p>Eamil:</p>
+                        <div className="box_contanier_stoerNumonevb">
+                            <div className="box_contanier_stoer">
+                                <p>Store name</p>
+                                <div className='btn_box_Cont'>
+                                    <button className='delete_storeDetails'>Delete</button>
+                                    <button className='viewMore_storeDetails'>View</button>
                                 </div>
-                            </Link>
+                            </div>
+                            <div className="box_contanier_stoer">
+                                <p>Store name</p>
+                                <div className='btn_box_Cont'>
+                                    <button className='delete_storeDetails'>Delete</button>
+                                    <button className='viewMore_storeDetails'>View</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

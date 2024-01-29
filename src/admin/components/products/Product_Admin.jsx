@@ -1,4 +1,4 @@
-import "./product.css";
+import "./product_Admin.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import AdminMenu from "../adminMenu/AdminMenu";
@@ -7,6 +7,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { MdOutlineEdit } from "react-icons/md";
 import { AiOutlineDelete, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import productImage from "../../../img/productImage.png";
 
 const Product_Admin = () => {
 
@@ -49,7 +50,7 @@ const Product_Admin = () => {
             <div className="box-product">
               <div>
                 <img
-                  src="#"
+                  src={productImage}
                   alt="image"
                 />
               </div>
@@ -78,8 +79,7 @@ const Product_Admin = () => {
             </button>
 
             <div className="box_num_product">
-              <div
-              >
+              <div>
                 <div className="num_admin_product">
                   <p>1</p>
                 </div>
