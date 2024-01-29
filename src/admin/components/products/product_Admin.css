@@ -197,7 +197,6 @@
 .box_container_next_product {
     display: flex;
     gap: 1rem;
-    cursor: pointer;
     border: none;
     align-items: center;
     justify-content: center;
