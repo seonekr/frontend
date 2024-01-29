@@ -104,7 +104,8 @@ const ProductHome = () => {
                 >
                   <div>
                     <div className="img">
-                      <img src={"" + i.image} alt="" />
+                      {/* <img src={"" + i.image} alt="" /> */}
+                      <img src={i.image} alt="" />
                     </div>
                     <ul className="txtOFproduct2">
                       <li className="name">{i.name}</li>
