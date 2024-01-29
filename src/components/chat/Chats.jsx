@@ -1,5 +1,5 @@
 
-import React, {useState, useEffect, useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Header from "../header/Header";
 import Menu from "../menuFooter/Menu";
 import { FaMagnifyingGlass } from "react-icons/fa6";
@@ -10,6 +10,7 @@ import { IoMdMore } from "react-icons/io";
 
 const Chats = () => {
 
+  //PopUp box add banner
   const [isVisible, setIsVisible] = useState(false);
   const buttonRef = useRef();
   const divsRef = useRef();
@@ -32,6 +33,7 @@ const Chats = () => {
       document.removeEventListener('click', handleDocumentClick);
     };
   }, []);
+
   return (
     <>
       <Header />
@@ -45,9 +47,10 @@ const Chats = () => {
           ></input>
         </form>
 
-        <div className="conversation_list_box">
-          <div className="conversation_item">
-            <Link to="/chat-details">
+        <div className="conversation_list_box" >
+
+          <div className="conversation_item_box">
+            <Link to="/chat-details" className="conversation_item">
               <div className="conversation_details">
                 <img src={User} alt="image" />
                 <div className="txt_chat_box">
@@ -55,17 +58,21 @@ const Chats = () => {
                   <p>new message...</p>
                 </div>
               </div>
+              <Link to="#" className="conversation_options" ref={buttonRef} onClick={toggleVisibility}>
+                <IoMdMore />
+              </Link>
+
             </Link>
-            <button className="conversation_options" ref={buttonRef} onClick={toggleVisibility}>
-              <IoMdMore />
-            </button>
+            {/* PopUp box add banner */}
             {isVisible && (
-            <div className="del-cls phone" ref={divsRef}>
-              <button>delete</button>
-              <button>clear</button>
-            </div>
+              <div className="box_alter_delelte_chat" ref={divsRef}>
+                <p>Delete</p>
+                <span className="spanOfborderButtom_popup"></span>
+                <p>Clear chat</p>
+              </div>
             )}
           </div>
+
         </div>
       </div>
       <Menu />

@@ -45,11 +45,13 @@ const AddProduct = () => {
     <>
       <AdminMenu />
       <section id="post">
-        <div className="box_container_product">
-          <Link to="/product-admin" className="box_adminIconbAck">
+        <div className="goback">
+          <Link to="/product-admin" className="box_guopIconbAck">
             <FaAngleLeft id="box_icon_Back" />
             <p>Back</p>
           </Link>
+        </div>
+        <div className="box_container_product">
           <form className="box_content_productadmin">
             <h3>Edit Product</h3>
             <div className='inputproduct_box'>

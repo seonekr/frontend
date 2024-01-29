@@ -58,26 +58,6 @@ const AddProduct = () => {
 
   const Addproduct = (e) => {
     e.preventDefault()
-    // let config = {
-    //   method: "post",
-    //   maxBodyLength: Infinity,
-
-    //   url: import.meta.env.VITE_API + "/user/signup",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   data: data,
-    // };
-
-    // axios
-    //   .request(config)
-    //   .then((res) => {
-    //     navigate("/loginuser", { replace: true });
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
-
     const data = {
       name: product.name,
       price: product.price,
@@ -161,20 +141,20 @@ const AddProduct = () => {
     <>
       <AdminMenu />
       <section id="post">
-        <div className="box_container_product">
-          <Link to="/product-admin" className="box_adminIconbAck">
+        <div className="goback">
+          <Link to="/product-admin" className="box_guopIconbAck">
             <FaAngleLeft id="box_icon_Back" />
             <p>Back</p>
           </Link>
-          <form className="box_content_productadmin" onSubmit={addProduct}>
+          <form className="box_content_productadmin" onSubmit={Addproduct}>
             <h3>Add product</h3>
             <div className='inputproduct_box'>
               <label >Name:</label>
-              <input className="inputproduct" name='name' type="text" placeholder='Product name' onChange={handleInput} required/>
+              <input className="inputproduct" name='name' type="text" placeholder='Product name' onChange={handleInput} required />
             </div>
             <div className='inputproduct_box'>
               <label >Price:</label>
-              <input className="inputproduct" name='price' type="text" placeholder='Product price' onChange={handleInput} required/>
+              <input className="inputproduct" name='price' type="text" placeholder='Product price' onChange={handleInput} required />
             </div>
             <div className='inputproduct_box'>
               <label>Category:</label>
@@ -186,7 +166,7 @@ const AddProduct = () => {
             </div>
             <div className='inputproduct_box'>
               <label >Description:</label>
-              <input className="inputproduct" name='description' type="text" placeholder='Description' onChange={handleInput} required/>
+              <input className="inputproduct" name='description' type="text" placeholder='Description' onChange={handleInput} required />
             </div>
 
             {/* <div className="size_product_box">
@@ -225,7 +205,7 @@ const AddProduct = () => {
               <h3>Product image:</h3>
               <div className="boxicon_img_input">
                 <CiImageOn className='boxicon_img_iconn' />
-                <input type="file" name='image' className="input" onChange={handleInput} required/>
+                <input type="file" name='image' className="input" onChange={handleInput} required />
               </div>
             </div>*/}
 
@@ -233,7 +213,7 @@ const AddProduct = () => {
               <h3>Details image:</h3>
               <div className="boxicon_img_input">
                 <CiImageOn className='boxicon_img_iconn' />
-                <input type="file" name='image_details' className="input" onChange={handleInput} required/>
+                <input type="file" name='image_details' className="input" onChange={handleInput} required />
               </div>
             </div> 
 

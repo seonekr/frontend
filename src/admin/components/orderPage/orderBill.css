@@ -6,6 +6,19 @@
     left: 18%;
 }
 
+
+.container_Order_Bill {
+    justify-content: space-between;
+}
+
+.container_Order_Bill,
+.back_Order_Bill {
+    display: flex;
+    align-items: center;
+}
+.back_Order_Bill{
+    gap: 10px;
+}
 /* bill no: id: name: */
 .aguopoidHead {
     display: grid;
@@ -64,7 +77,7 @@
 }
 
 .atitlePrice {
-    padding: 2rem;
+    padding: 2rem 4rem;
     display: flex;
     justify-content: space-between;
 }
@@ -90,11 +103,12 @@
 }
 
 .aplace_form_button {
-    background-color: #347FFF;
-    padding: 0.7rem 3rem;
-    border-radius: 4px;
+    border-radius: 8px;
+    width: 150px;
+    height: 42px;
+    background: rgba(255, 79, 22, 0.92);
+    color: #fff;
     border: none;
-    color: white;
+    font-size: 17px;
     cursor: pointer;
-    font-size: 19px;
 }

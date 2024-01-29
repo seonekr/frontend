@@ -22,7 +22,7 @@
     padding: 0 20px 10px 12px;
 }
 
-#icons_back{
+#icons_back {
     width: 25px;
     height: 25px;
 }
@@ -38,9 +38,11 @@
     width: 10%;
     border-radius: 50%;
 }
-.user_name{
+
+.user_name {
     font-size: 19px;
 }
+
 .right_box button {
     padding: 10px 35px;
     font-size: 16px;
@@ -56,7 +58,8 @@
     border: 1px solid #ddd;
 
 }
-.more-menu-list:hover{
+
+.more-menu-list:hover {
     color: var(--orange);
 
 }
@@ -88,7 +91,7 @@
     transition: 0.5s;
 }
 
-.confirmation-popup{
+.confirmation-popup {
     position: fixed;
     width: 25%;
     height: 18%;
@@ -104,7 +107,7 @@
     transform: translate(-50%, -50%);
 }
 
-.btn_ok_on{
+.btn_ok_on {
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -113,6 +116,7 @@
 
 .btn_yes{
     padding: 10px 50px;
+    padding: 6px 18px;
     border: none;
     color: #fff;
     font-size: 14px;
@@ -124,6 +128,12 @@
 }
 .btn_on{
     padding: 10px 50px;
+    background: rgb(248, 74, 74);
+
+}
+
+.btn_on {
+    padding: 6px 18px;
     border: none;
     font-size: 14px;
     font-weight: 600;
@@ -140,10 +150,12 @@
         width: 100%;
 
     }
+
     .left_box img {
         width: 16%;
     }
-    .confirmation-popup{
+
+    .confirmation-popup {
         width: 80%;
         height: 15%;
         top: 50%;

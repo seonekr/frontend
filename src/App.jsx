@@ -58,8 +58,12 @@ import BillStore from "./components/seller/orderStore/BillStore";
   import Users from "./admin/components/menagerUser/Users";
   import User_details from "./admin/components/menagerUser/User_details";
   import Order_admin from "./admin/components/orderPage/OrderPage";
+  import OrderBill_Admin from "./admin/components/orderPage/OrderBill";
   import Admins from "./admin/components/menagerAdmin/Admins";
+  import Add_Admin from "./admin/components/menagerAdmin/AddAdmin";
+  import EditA_dmin from "./admin/components/menagerAdmin/EditAdmin";
   import StoreAdmin from "./admin/components/storeMenagement/StoreAdmin";
+  import Account_Admin from "./admin/components/accountAdmin/AccountAdmin";
 
 
 
@@ -132,8 +136,12 @@ function App() {
           <Route path="/users" Component={Users} />
           <Route path="/user-details" Component={User_details} />
           <Route path="/order-admin" Component={Order_admin} />
+          <Route path="/orderbill-admin" Component={OrderBill_Admin} />
           <Route path="/admins" Component={Admins} />
+          <Route path="/add-admin" Component={Add_Admin} />
+          <Route path="/edit-admin" Component={EditA_dmin} />
           <Route path="/store-admin" Component={StoreAdmin} />
+          <Route path="/account-admin" Component={Account_Admin} />
 
 
 
