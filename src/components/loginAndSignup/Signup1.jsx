@@ -30,6 +30,7 @@ const Signup1 = () => {
   return (
     <>
         <div className="signup_page">
+      <div className="signup_page">
           <div className="box_back">
             <Link to="/loginuser" className="box_iconBack_user">
               <MdArrowBack id='iconBack'/>
@@ -80,6 +81,7 @@ const Signup1 = () => {
             }} className="btn_register_next">Next</button>
           </div>
         </div>
+      </div>
     </>
   );
 };
