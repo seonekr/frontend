@@ -6,60 +6,60 @@ import axios from "axios";
 
 const ProductHome = () => {
   const navigate = useNavigate();
-  // const [ShowFilter, setShowFilter] = useState(false);
+  const [ShowFilter, setShowFilter] = useState(false);
   const [goods_list, set_goods_list] = useState([]);
-  // const [sliceNum, set_sliceNum] = useState(8);
-  // const storage = JSON.parse(window.localStorage.getItem("user"));
-  // const [seatch, set_search] = useState("");
-  // const [category, set_category] = useState(6);
+  const [sliceNum, set_sliceNum] = useState(8);
+  const storage = JSON.parse(window.localStorage.getItem("user"));
+  const [seatch, set_search] = useState("");
+  const [category, set_category] = useState(6);
 
-  // const handleMore = () => {
-  //   set_sliceNum(sliceNum + 8);
-  // };
+  const handleMore = () => {
+    set_sliceNum(sliceNum + 8);
+  };
 
-
-  // useEffect(() => {
-  //   let config = {
-  //     method: "get",
-  //     maxBodyLength: Infinity,
-  //     url: import.meta.env.VITE_API + `/store/?category=${category}`,
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   };
-
-  //   axios
-  //     .request(config)
-  //     .then((response) => {
-  //       set_goods_list(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }, [category]);
-
-
-  const [goodsList, setGoodsList] = useState([]);
 
   useEffect(() => {
-    const config = {
-      method: 'get',
+    let config = {
+      method: "get",
       maxBodyLength: Infinity,
-      url: import.meta.env.VITE_API + `/store/`,
+      url: import.meta.env.VITE_API + `/store/?category=${category}`,
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     };
 
     axios
       .request(config)
       .then((response) => {
-        setGoodsList(response.data);
+        set_goods_list(response.data);
       })
       .catch((error) => {
-        console.error('Error fetching products:', error);
+        console.log(error);
       });
-  }, []);
+  }, [category]);
+
+
+  // const [goodsList, setGoodsList] = useState([]);
+
+  // useEffect(() => {
+  //   const config = {
+  //     method: 'get',
+  //     maxBodyLength: Infinity,
+  //     url: import.meta.env.VITE_API + `/store/`,
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //   };
+
+  //   axios
+  //     .request(config)
+  //     .then((response) => {
+  //       setGoodsList(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error fetching products:', error);
+  //     });
+  // }, []);
 
 
   return (
@@ -86,20 +86,24 @@ const ProductHome = () => {
         </div>
 
         <div className="product-area">
-              {goodsList.map((goods, index) => (
+              {goods_list.map((i, index) => (
                 <div className="box-product" key={index}>
-                  <Link  to={`/goods/${goods.id}`}>
+                  <Link  to={`/goods/${i.id}`}>
                     <div className="img">
                       <img src={"" + i.image} alt="" />
                     </div>
                     <ul className="txtOFproduct2">
-                      <li className="name">{goods.name}</li>
-                      <li className="price">{goods.price}</li>
-                      <li className="desc">{goods.store_address}</li>
+                      <li className="name">{i.name}</li>
+                      <li className="price">{i.price}</li>
+                      <li className="desc">{i.store_address}</li>
                     </ul>
                   </Link>
                 </div>
               ))}
+
+              
+                
+              
         </div>
       </section>
     </div>
