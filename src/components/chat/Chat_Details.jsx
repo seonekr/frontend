@@ -49,7 +49,7 @@ function Chat_Details() {
       <div className="box_chatDetails_container">
         <div className="box_chatDetails_details">
           <div className="goback_box_chatdetils">
-            <Link to="#" className="goback_btn_chatdetils">
+            <Link to="/chats" className="goback_btn_chatdetils">
               <FaAngleLeft id="box_icon_Back" />
               <p>Back</p>
             </Link>

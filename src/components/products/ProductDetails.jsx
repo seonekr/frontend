@@ -221,18 +221,18 @@ function ProductDetails() {
                         ))}
                       </div>
                     )}
-                  </div>
+                  </div> */}
                   <div className="container_item_icon">
                     <div
                       className="container_minus_plus"
-                      onClick={() => decrementCount(item.id)}
+                      onClick={() => decrementCount(product.id)}
                     >
                       -
                     </div>
-                    <span>{goodsCount[item.id] || 1}</span>
+                    <span>{goodsCount[product.id] || 1}</span>
                     <div
                       className="container_minus_plus"
-                      onClick={() => incrementCount(item.id)}
+                      onClick={() => incrementCount(product.id)}
                     >
                       +
                     </div>
@@ -244,7 +244,7 @@ function ProductDetails() {
                     <Link onClick={addToCart} className="echbtn btnAdd">
                       Add To Cart
                     </Link>
-                  </div> */}
+                  </div>
                 </div>
               </form>
             </div>
@@ -257,7 +257,7 @@ function ProductDetails() {
             <img src={detailproduct} alt="" />
           </div>
 
-          {/* <div className="review_box">
+          <div className="review_box">
             <h3>Reviews(8)</h3>
 
             <form className="review_boxstar" onSubmit={handleReviewSubmit}>
@@ -356,7 +356,7 @@ function ProductDetails() {
                 </p>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
       <h2 className="box_betavinOfob asd2">

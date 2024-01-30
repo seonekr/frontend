@@ -5,8 +5,6 @@ import "./app.css";
 import LoginUser from "./components/loginAndSignup/LoginUser";
 import RegisterUser from "./components/loginAndSignup/RegisterUser";
 import ForgotPassword from "./components/forgotPassword/ForgotPassword";
-import UserRegister from "./components/userRegister/UserRegister";
-import SellerRegister from "./components/sellerRegister/SellerRegister";
 import SigupGoogle from "./components/sigupforGoogle/SigupGoogle";
 import AdditionalSeller from "./components/additionalSeller/AdditionalSeller";
 
@@ -18,7 +16,6 @@ import Signup2 from './components/loginAndSignup/Signup2';
 //------ Profile Page ------//
 import ProfileEdit from './components/profile/ProfileEdit';
 import Profile from './components/profile/Profile';
-import SellerEdit from './components/sellerRegister/SellerEdit';
 import Terms from './components/termsandprivacy/Terms';
 import Privacy from './components/termsandprivacy/Privacy';
 import More from "./components/more/More";
@@ -78,8 +75,6 @@ function App() {
           <Route path="/loginuser" Component={LoginUser} />
           <Route path="/registeruser" Component={RegisterUser} />
           <Route path="/forgotpassword" Component={ForgotPassword} />
-          <Route path="/userregister" Component={UserRegister} />
-          <Route path="/sellerregister" Component={SellerRegister} />
           <Route path="/sigupgoogle" Component={SigupGoogle} />
           <Route path="/additionalseller" Component={AdditionalSeller} />
 
@@ -91,7 +86,7 @@ function App() {
           {/* --------- Profile page---------- */}
           <Route path="/profileedit" Component={ProfileEdit} />
           <Route path="/profile" Component={Profile} />
-          <Route path="/selleredit" Component={SellerEdit} />
+          {/* <Route path="/selleredit" Component={SellerEdit} /> */}
           <Route path="/more" Component={More} />
           <Route path="/terms" Component={Terms} />
           <Route path="/privacy" Component={Privacy} />
