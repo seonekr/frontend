@@ -90,7 +90,7 @@ const ProductHome = () => {
                 <div className="box-product" key={index}>
                   <Link  to={`/goods/${goods.id}`}>
                     <div className="img">
-                      <img src={"" + goods.image} alt="" />
+                      <img src={"" + i.image} alt="" />
                     </div>
                     <ul className="txtOFproduct2">
                       <li className="name">{goods.name}</li>
