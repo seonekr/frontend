@@ -33,7 +33,7 @@ const Header = () => {
     axios
       .request(config)
       .then((response) => {
-        if(response.data.result != "success") {
+        if (response.data.result != "success") {
           localStorage.removeItem("token");
           localStorage.removeItem("user");
           navigate("/");
@@ -60,9 +60,15 @@ const Header = () => {
               </div>
               <div className="boxLiMenu">
                 <div className="linkLi">
-                  <Link to="/" className="link active">Home</Link>
-                  <Link to="/chats" className="link ">Chat</Link>
-                  <Link to="/order" className="link ">Orders</Link>
+                  <Link to="/" className="link active">
+                    Home
+                  </Link>
+                  <Link to="#" className="link ">
+                    Chat
+                  </Link>
+                  <Link to="/order" className="link ">
+                    Orders
+                  </Link>
                 </div>
               </div>
             </div>
@@ -81,19 +87,18 @@ const Header = () => {
                   ></input>
                 </div>
               </form>
-              <div className="right_ofHeadBox">
+              {/* <div className="right_ofHeadBox">
                 <div className="boxsearchContainer">
                   <Link to="/cart">
                     <FaCartShopping className="head_colorr" />
                   </Link>
                 </div>
 
-                {/* for seller */}
-                {/* <div className="userAndstore">
+                <div className="userAndstore">
                   <Link to="/stores">
                     <HiOutlineBuildingStorefront  className="head_colorr" />
                   </Link>
-                </div> */}
+                </div>
 
 
                 {user ? (
@@ -108,7 +113,40 @@ const Header = () => {
                   </div>
                 )}
 
-              </div>
+              </div> */}
+
+              {user ? (
+                <div className="right_ofHeadBox">
+                  <div className="boxsearchContainer">
+                    <Link to="/cart">
+                      <FaCartShopping className="head_colorr" />
+                    </Link>
+                  </div>
+                  
+                  <div className="userAndstore">
+                    <Link to={`/stores`}>
+                      <HiOutlineBuildingStorefront className="head_colorr" />
+                    </Link>
+                  </div>
+
+                  <div className="userAndstore">
+                    <Link to="/more">
+                      <FaRegUser className="head_colorr" />
+                    </Link>
+                  </div>
+                </div>
+              ) : (
+                <div className="right_ofHeadBox">
+                  <div className="boxsearchContainer">
+                    <Link to="/cart">
+                      <FaCartShopping className="head_colorr" />
+                    </Link>
+                  </div>
+                  <div className="userAndstore">
+                    <Link to="/loginuser">Login</Link>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

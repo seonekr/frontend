@@ -14,6 +14,11 @@ import axios from "axios";
 
 function ProductDetails() {
   const { goods_id } = useParams();
+  const [goods_list, set_goods_list] = useState([]);
+  const [reiews_list, set_reviews_list] = useState([]);
+  const [sliceNum, set_sliceNum] = useState(8);
+  const [category, set_category] = useState(6);
+  const storage = JSON.parse(window.localStorage.getItem("user"));
 
   const [product, setProduct] = useState(null);
 
@@ -37,152 +42,31 @@ function ProductDetails() {
       });
   }, [goods_id]);
 
-  // const [goods] = useState([
-  //   { id: 1, name: "Product 1", price: 20, categoryID: 1, storeID: 1, desc: "desc", size: ["s", "m", "l", "xl"] },
-  //   { id: 2, name: "Product 2", price: 30, categoryID: 2, storeID: 2, desc: "desc", size: ["s", "m", "l", "xl", "xxl"] },
-  //   { id: 3, name: "Product 3", price: 20, categoryID: 1, storeID: 3, desc: "desc", size: ["s", "m", "l", "xl", "xxl"] },
-  //   { id: 4, name: "Product 4", price: 20, categoryID: 1, storeID: 1, desc: "desc", size: ["s", "m", "l", "xl", "xxl"] },
-  //   { id: 5, name: "Product 4", price: 50, categoryID: 1, storeID: 1, desc: "desc", size: ["s", "m", "l", "xl", "xxl"] },
-  // ]);
+  const handleMore = () => {
+    set_sliceNum(sliceNum + 8);
+  };
 
-  // const [imageGoods] = useState([
-  //   { id: 1, image: productImage, goodsID: 1 },
-  //   { id: 2, image: productImage, goodsID: 2 },
-  //   { id: 3, image: productImage, goodsID: 3 },
-  //   { id: 4, image: productImage, goodsID: 4 },
-  //   { id: 5, image: productImage, goodsID: 5 },
-  // ]);
+  useEffect(() => {
+    let config = {
+      method: "get",
+      maxBodyLength: Infinity,
+      url: import.meta.env.VITE_API + `/store/?category=${category}`,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
 
-  // const [store] = useState([
-  //   { id: 1, name: "store 1", address: "vientiane", phone: "02099933393", company_number: "927835", sellerID: 2, sub_address: "sikhot" },
-  //   { id: 2, name: "store 2", address: "vientiane", phone: "02053635454", company_number: "456354", sellerID: 1, sub_address: "donkoy" },
-  //   { id: 3, name: "store 3", address: "vientiane", phone: "20298876565", company_number: "645364", sellerID: 3, sub_address: "donkoy" }
-  // ]);
+    axios
+      .request(config)
+      .then((response) => {
+        set_goods_list(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [category]);
 
-  // Example userID
-  // const userID = "u421"
-
-  // Filter goods with id equal to 1
-  // const filteredGoods = goods.filter((good) => good.id === 2);
-
-  // Joining data by goods ID (assuming only one item in filteredGoods)
-  // const joinedData = filteredGoods.map((good) => {
-  // const imageInfo = imageGoods.find((img) => img.goodsID === good.id);
-  // const storeInfo = store.find((s) => s.id === good.storeID);
-
-  // return {
-  //     ...good,
-  //     image: imageInfo ? imageInfo.image : null,
-  //     store: storeInfo ? storeInfo : null,
-  //   };
-  // });
-
-  // Number of product
-  // const [goodsCount, setGoodsCount] = useState(1);
-
-  // Reduce the number of products
-  // const incrementCount = (goodsID) => {
-  //   setGoodsCount((prevCounts) => ({
-  //     ...prevCounts,
-  //     [goodsID]: (prevCounts[goodsID] || 1) + 1,
-  //   }));
-  // };
-
-  // Increase the number of products
-  // const decrementCount = (goodsID) => {
-  //   setGoodsCount((prevCounts) => ({
-  //     ...prevCounts,
-  //     [goodsID]: Math.max(1, (prevCounts[goodsID] || 1) - 1),
-  //   }));
-  // };
-
-  // Rating =================
-  // const storeid = "r4444";
-  // const productid = "u4434";
-  // const userid = "John";
-  // const [comment, setComment] = useState({
-  //   commend: "",
-  //   rating: 0,
-  // });
-  // const handleRatingChange = (newRating) => {
-  //   setComment({ ...comment, rating: newRating });
-  // };
-
-  // Comment input box
-  // const handleChange = (e) => {
-  //   if (comment.rating < 1) {
-  //     e.preventDefault();
-  //     return;
-  //   }
-  //   setComment({ ...comment, [e.target.name]: e.target.value });
-  //   autoGrowTextarea(e.target);
-  // };
-
-  // Resize grow up if typing full box
-  // const autoGrowTextarea = () => {
-  //   const textarea = document.getElementById("multiline-input");
-  //   const maxHeight = (10 * window.innerHeight) / 100;
-
-  //   textarea.style.height = "auto";
-  //   textarea.style.height = Math.min(textarea.scrollHeight, maxHeight) + "px";
-  // };
-
-  // sent review
-  // const [reviews, setReviews] = useState([]);
-  // const [loading, setLoading] = useState(true);
-
-  // Review submit
-  // const handleReviewSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   try {
-  //     const newReview = {
-  //       id: reviews.length + 1,
-  //       storeid,
-  //       productid,
-  //       userid,
-  //       ...comment,
-  //     };
-
-  //     console.log(newReview);
-
-  //     setReviews((prevReviews) => [...prevReviews, newReview]);
-
-  //     setComment({
-  //       commend: "",
-  //       rating: 0,
-  //     });
-
-  //     document.getElementById("review").style.height = "auto";
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   setLoading(false);
-  // }, []);
-
-  // Buy now function
-  // const buyNow = async (e) => {
-  //   e.preventDefault();
-  //   const product = joinedData.map((product) => ({
-  //     userID: userID,
-  //     productID: product.id,
-  //     quantity: goodsCount,
-  //     price: product.price,
-  //   }));
-  //   console.log(product);
-  // };
-
-  // Add to cart
-  // const addToCart = async (e) => {
-  //   e.preventDefault();
-  //   console.log("Add to cart");
-  // };
-
-
-  console.log(product)
+  console.log(product);
 
   return (
     <>
@@ -196,10 +80,10 @@ function ProductDetails() {
         <div className="box_betavinOfob">
           {/* {joinedData.map((item) => ( */}
           {product ? (
-            <div >
+            <div>
               <form className="boxProduct_deteils">
                 <div className="product-page-img">
-                  <img src={productImage} alt="" />
+                  <img src={product.image_set} alt="" />
                 </div>
                 <div className="txtContentproduct">
                   <h1 className="txt_nameP">{product.name}</h1>
@@ -253,9 +137,9 @@ function ProductDetails() {
           )}
           {/* ))} */}
 
-          <div className="description_container">
+          {/* <div className="description_container">
             <img src={detailproduct} alt="" />
-          </div>
+          </div> */}
 
           {/* <div className="review_box">
             <h3>Reviews(8)</h3>
@@ -302,7 +186,7 @@ function ProductDetails() {
                     <p>Loading reviews...</p>
                   ) : (
                     <div>
-                      {reviews.map((item) => (
+                      {reviews.map((item, index) => (
                         <div className="box_comment_connntent" key={item.id}>
                           <div className="box_head_user">
                             <div className="box_head_user_title">
@@ -364,57 +248,21 @@ function ProductDetails() {
         More products
       </h2>
       <div className="product-area">
-        <div className="box-product">
-          <div>
-            <div className="img">
-              <img src={productImage} alt="image" />
-            </div>
-            <ul className="txtOFproduct2">
-              <li className="name">Name</li>
-              <li className="price">Price</li>
-              <li className="desc">desc</li>
-            </ul>
+        {goods_list.map((i, index) => (
+          <div className="box-product" key={index} >
+            <Link to={"/goods/"+i.id}>
+              <div className="img">
+                <img src={i.image} alt="image" />
+              </div>
+              <ul className="txtOFproduct2">
+                <li className="name">{i.name}</li>
+                <li className="price">{i.price}</li>
+                <li className="desc">{i.description}</li>
+              </ul>
+            </Link>
           </div>
-        </div>
+        ))}
 
-        <div className="box-product">
-          <div>
-            <div className="img">
-              <img src={productImage} alt="image" />
-            </div>
-            <ul className="txtOFproduct2">
-              <li className="name">Name</li>
-              <li className="price">Price</li>
-              <li className="desc">desc</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="box-product">
-          <div>
-            <div className="img">
-              <img src={productImage} alt="image" />
-            </div>
-            <ul className="txtOFproduct2">
-              <li className="name">Name</li>
-              <li className="price">Price</li>
-              <li className="desc">desc</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="box-product">
-          <div>
-            <div className="img">
-              <img src={productImage} alt="image" />
-            </div>
-            <ul className="txtOFproduct2">
-              <li className="name">Name</li>
-              <li className="price">Price</li>
-              <li className="desc">desc</li>
-            </ul>
-          </div>
-        </div>
       </div>
       <Menu />
     </>

@@ -7,6 +7,9 @@ import { CiImageOn } from "react-icons/ci";
 import { useState, useEffect } from "react";
 
 function AddProduct() {
+    const [categories, set_categories] = useState([])
+
+    
 
     const [product, setProduct] = useState({
         name: "",
@@ -128,15 +131,15 @@ function AddProduct() {
             <form className="addproduct_container" onSubmit={handleSubmit}>
                 <h3>Add product</h3>
                 <div className='inputproduct_box'>
-                    <label for="name">Name:</label>
+                    <label htmlFor="name">Name:</label>
                     <input className="inputproduct" name='name' type="text" placeholder='Product name' onChange={handleInputChange} />
                 </div>
                 <div className='inputproduct_box'>
-                    <label for="price">Price:</label>
+                    <label htmlFor="price">Price:</label>
                     <input className="inputproduct" name='price' type="text" placeholder='Product price' onChange={handleInputChange} />
                 </div>
                 <div className='inputproduct_box'>
-                    <label for="category">Category:</label>
+                    <label htmlFor="category">Category:</label>
                     <select name="category" className="inputproduct select_box">
 
                         <option className='option_itemD' value="Name1">Name1</option>
@@ -146,7 +149,7 @@ function AddProduct() {
                     </select>
                 </div>
                 <div className='inputproduct_box'>
-                    <label for="description">Description:</label>
+                    <label htmlFor="description">Description:</label>
                     <input className="inputproduct" name='description' type="text" placeholder='Description' onChange={handleInputChange} />
                 </div>
 

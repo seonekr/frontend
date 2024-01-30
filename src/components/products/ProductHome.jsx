@@ -17,7 +17,6 @@ const ProductHome = () => {
     set_sliceNum(sliceNum + 8);
   };
 
-
   useEffect(() => {
     let config = {
       method: "get",
@@ -37,30 +36,6 @@ const ProductHome = () => {
         console.log(error);
       });
   }, [category]);
-
-
-  // const [goodsList, setGoodsList] = useState([]);
-
-  // useEffect(() => {
-  //   const config = {
-  //     method: 'get',
-  //     maxBodyLength: Infinity,
-  //     url: import.meta.env.VITE_API + `/store/`,
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //   };
-
-  //   axios
-  //     .request(config)
-  //     .then((response) => {
-  //       setGoodsList(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.error('Error fetching products:', error);
-  //     });
-  // }, []);
-
 
   return (
     <div>
@@ -86,24 +61,19 @@ const ProductHome = () => {
         </div>
 
         <div className="product-area">
-              {goods_list.map((i, index) => (
-                <div className="box-product" key={index}>
-                  <Link  to={`/goods/${i.id}`}>
-                    <div className="img">
-                      <img src={"" + i.image} alt="" />
-                    </div>
-                    <ul className="txtOFproduct2">
-                      <li className="name">{i.name}</li>
-                      <li className="price">{i.price}</li>
-                      <li className="desc">{i.store_address}</li>
-                    </ul>
-                  </Link>
+          {goods_list.map((i, index) => (
+            <div className="box-product" key={index}>
+              <Link to={`/goods/${i.id}`}>
+                <div className="img">
+                  <img src={i.image} alt="" />
                 </div>
-              ))}
-
-              
-                
-              
+                <ul className="txtOFproduct2">
+                  <li className="name">{i.name}</li>
+                  <li className="price">{i.price}</li>
+                </ul>
+              </Link>
+            </div>
+          ))}
         </div>
       </section>
     </div>

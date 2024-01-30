@@ -13,35 +13,15 @@ import axios from 'axios';
 export const More = () => {
 
   const [showConfirmation, setShowConfirmation] = useState(false);
-  const [userDetail, setUserDetail] = useState([]);
   const userID = localStorage.getItem("userID");
   const navigate = useNavigate();
-
-  //Function Log out
-  useEffect(() => {
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
-    var requestOptions = {
-      method: "GET",
-      headers: myHeaders,
-      redirect: "follow",
-    };
-    fetch(import.meta.env.VITE_API + "/getAdmin/" + userID, requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        if (result.Status === "Success") {
-          setUserDetail(result.Result[0]);
-        }
-      })
-      .catch((error) => console.log("error", error));
-  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("userID");
     console.log("Logged out");
     navigate("/");
+    return
   };
 
   const handleConfirmLogout = () => {
@@ -57,7 +37,7 @@ export const More = () => {
   const handleDeleteAccount = () => {
     let config = {
       method: 'delete',
-      url: 'http://127.0.0.1:8000/user/my-page',
+      url: import.meta.env.VITE_API + "/user/my-page", 
       headers: { "Content-Type": "application/json" }
     };
 
@@ -91,7 +71,8 @@ export const More = () => {
           <div className="left_box">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/1200px-Unknown_person.jpg" alt="" />
             <div className="user_name">
-              Name: Sompong
+              Name: {JSON.parse(window.localStorage.getItem("user")).user_name ||
+                JSON.parse(window.localStorage.getItem("user")).email}
             </div>
           </div>
           <Link to="/profile" className="right_box">

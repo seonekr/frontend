@@ -4,8 +4,35 @@ import { IoIosArrowBack } from "react-icons/io";
 import banner from "../../../img/banner.jpg";
 import productImage from "../../../img/productImage.png";
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const Store = () => {
+  const [store_id, set_store_id] = useState(
+    JSON.parse(window.localStorage.getItem("user")).store_id
+  );
+
+  const [category, set_category] = useState(6);
+  const [goods_list, set_goods_list] = useState([]);
+
+  useEffect(() => {
+    let config = {
+      method: "get",
+      maxBodyLength: Infinity,
+      url: import.meta.env.VITE_API + `/store/?category=${category}`,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    axios
+      .request(config)
+      .then((response) => {
+        set_goods_list(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [category]);
 
   return (
     <>
@@ -19,9 +46,15 @@ const Store = () => {
             <div className="title_nameStore">
               <h3>online shop</h3>
             </div>
-            <Link to="/store-management" className="btn_add_editStore">
-              Add/Edit
-            </Link>
+            {store_id !== false && (
+              <Link to="/store-management" className="btn_add_editStore">
+                Add/Edit
+              </Link>
+            )}
+
+            {store_id === false && (
+              <div></div>
+            )}
           </div>
 
           <div className="link_btn_store">
@@ -41,20 +74,20 @@ const Store = () => {
           </div>
 
           <div className="product-area">
-            <div className="box-product" >
-              <div>
-                <div className="img">
-                  <img src={productImage} alt="image" />
+            {goods_list.map((i, index) => (
+              <div className="box-product" key={index}>
+                <div>
+                  <div className="img">
+                    <img src={i.image} alt="image" />
+                  </div>
+                  <ul className="txtOFproduct2">
+                    <li className="name">{i.name}</li>
+                    <li className="price">{i.price}</li>
+                  </ul>
                 </div>
-                <ul className="txtOFproduct2">
-                  <li className="name">asd</li>
-                  <li className="price">123</li>
-                  <li className="desc">aasdfasdf</li>
-                </ul>
               </div>
-            </div>
+            ))}
           </div>
-
         </div>
       </div>
     </>

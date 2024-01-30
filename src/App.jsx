@@ -113,7 +113,7 @@ function App() {
           <Route path="/stores" Component={Stores} />
           <Route path="/store-management" Component={Store_management} />
           <Route path="/add-product" Component={AddProduct} />
-          <Route path="/edit-product" Component={EditProduct} />
+          <Route path="/edit-product/:product_id" Component={EditProduct} />
           <Route path="/eview-store" Component={ReviewStore} />
           <Route path="/payment-store" Component={Payment_store} />
           <Route path="/add-payment-store" Component={AddPaymentStore} />
