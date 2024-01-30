@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./loginUser.css";
 // import { GoogleLogin, useGoogleLogin } from "@react-oauth/google";
-import { GoogleOAuthProvider } from '@react-oauth/google';
+// import { GoogleOAuthProvider } from '@react-oauth/google';
 import axios from "axios";
 
 const LoginUser = () => {
