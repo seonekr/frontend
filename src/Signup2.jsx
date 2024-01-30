@@ -65,7 +65,7 @@ const Signup2 = () => {
       let config = {
         method: "post",
         maxBodyLength: Infinity,
-        url: "http://127.0.0.1:8000/store/store-signup",
+        url: "http://13.209.9.240:8080/store/store-signup",
         headers: {
           "Content-Type": "application/json",
         },

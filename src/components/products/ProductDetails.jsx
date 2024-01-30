@@ -78,23 +78,23 @@ function ProductDetails() {
   // });
 
   // Number of product
-  // const [goodsCount, setGoodsCount] = useState(1);
+  const [goodsCount, setGoodsCount] = useState(1);
 
   // Reduce the number of products
-  // const incrementCount = (goodsID) => {
-  //   setGoodsCount((prevCounts) => ({
-  //     ...prevCounts,
-  //     [goodsID]: (prevCounts[goodsID] || 1) + 1,
-  //   }));
-  // };
+  const incrementCount = (goodsID) => {
+    setGoodsCount((prevCounts) => ({
+      ...prevCounts,
+      [goodsID]: (prevCounts[goodsID] || 1) + 1,
+    }));
+  };
 
   // Increase the number of products
-  // const decrementCount = (goodsID) => {
-  //   setGoodsCount((prevCounts) => ({
-  //     ...prevCounts,
-  //     [goodsID]: Math.max(1, (prevCounts[goodsID] || 1) - 1),
-  //   }));
-  // };
+  const decrementCount = (goodsID) => {
+    setGoodsCount((prevCounts) => ({
+      ...prevCounts,
+      [goodsID]: Math.max(1, (prevCounts[goodsID] || 1) - 1),
+    }));
+  };
 
   // Rating =================
   // const storeid = "r4444";
@@ -172,17 +172,37 @@ function ProductDetails() {
   //     quantity: goodsCount,
   //     price: product.price,
   //   }));
+
   //   console.log(product);
   // };
 
+  const buyNow = (e) => {
+    e.preventDefault();
+
+    if (e.nativeEvent.submitter.classList.contains()) {
+      const setProduct = joinedData.map((product) => ({
+        userID: userID,
+        productID: product.id,
+        quantity: goodsCount,
+        price: product.price,
+      }));
+  
+      navigate('/payment', {
+        state: {
+          products: setProduct,
+        },
+      });
+      // console.log(product);
+    }
+  };
+
   // Add to cart
-  // const addToCart = async (e) => {
-  //   e.preventDefault();
-  //   console.log("Add to cart");
-  // };
-
-
+  const addToCart = async (e) => {
+    e.preventDefault();
+    console.log("Add to cart");
+  };
   console.log(product)
+
 
   return (
     <>
@@ -221,18 +241,18 @@ function ProductDetails() {
                         ))}
                       </div>
                     )}
-                  </div>
+                  </div> */}
                   <div className="container_item_icon">
                     <div
                       className="container_minus_plus"
-                      onClick={() => decrementCount(item.id)}
+                      onClick={() => decrementCount(product.id)}
                     >
                       -
                     </div>
-                    <span>{goodsCount[item.id] || 1}</span>
+                    <span>{goodsCount[product.id] || 1}</span>
                     <div
                       className="container_minus_plus"
-                      onClick={() => incrementCount(item.id)}
+                      onClick={() => incrementCount(product.id)}
                     >
                       +
                     </div>
@@ -244,7 +264,7 @@ function ProductDetails() {
                     <Link onClick={addToCart} className="echbtn btnAdd">
                       Add To Cart
                     </Link>
-                  </div> */}
+                  </div>
                 </div>
               </form>
             </div>
