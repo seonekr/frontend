@@ -25,6 +25,12 @@
     font-weight: 600;
     margin-top: 2rem;
 }
+.title_seller2{
+    text-align: start;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 2rem;
+}
 
 .container_form_user {
   display: grid;
